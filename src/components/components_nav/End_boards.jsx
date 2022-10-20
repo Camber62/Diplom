@@ -7,7 +7,7 @@ import image  from '../../icons/lemur.jpg'
 const EndBoard = (props) => {
     return (
         <>
-            <img src={image} alt="img"/>
+            {/*<img src={image} alt="img"/>*/}
             {props.elem.map((int, element) => {
                 return (<div>
                     <img src={int.src} alt="img"/>
