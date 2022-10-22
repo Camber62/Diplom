@@ -1,13 +1,13 @@
 import React from 'react';
-import {Link,useNavigate} from "react-router-dom";
-
+import {useNavigate,useParams} from "react-router-dom";
+import {Button} from "react-bootstrap";
 const CardElement = (props) => {
     const navigate = useNavigate()
-
+    const { name } = useParams();
     return (
         <div>
-            <p>red</p>
-            <button onClick={() => navigate(-1)}>Back</button>
+            <p>{name}</p>
+            <Button onClick={() => navigate(-1)}>Back</Button>
 
         </div>
     )

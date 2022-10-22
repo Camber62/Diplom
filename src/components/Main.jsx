@@ -48,7 +48,7 @@ const Main = () => {
                                 <Route path="/" element={<Slider/>}/>
                                 <Route path="/Table" element={<EndBoard setPath={setPath} elem={EndBoards}/>}/>
                                 <Route path="/qwe" element={<EndBoard setPath={setPath} elem={Servirovka}/>}/>
-                                <Route path={path} element={<CardElement/>}/>
+                                <Route path="/:name" element={<CardElement/>}/>
                             </Routes>
                         </Nav>
                     </Col>
