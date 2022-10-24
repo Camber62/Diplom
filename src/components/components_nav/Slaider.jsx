@@ -2,9 +2,9 @@ import React from "react";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
-import image from '../../icons/Picture1.png'
+
 const News = [
-    {id: 0, name: "Stocks", about: "StocksStocksStocks", img: {image}},
+    {id: 0, name: "Stocks", about: "StocksStocksStocks", img:"/"},
     {id: 1, name: "Stocks1", about: "StocksStocksStocks1", img: "/"},
     {id: 2, name: "Stocks2", about: "StocksStocksStocks2", img: "/"},
 ]

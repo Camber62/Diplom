@@ -22,3 +22,6 @@ body {
     /*max-height: 100vh;*/
     /*overflow: auto;*/
 }
+.textAnnouncement{
+    font-size: smaller
+}

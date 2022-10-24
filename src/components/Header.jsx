@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from "../icons/img.JPEG";
 import {Navbar,Nav,Button} from "react-bootstrap";
-// import {Link} from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+
+
 ////background-color: rgb(74,123,66)
 ////background-color: rgb(57,50,48)
 const Header = () => {
@@ -9,6 +10,7 @@ const Header = () => {
     return (
 <>
         <Navbar collapseOnSelect expand="lg" className="bgNavbar" variant="dark">
+            <Container>
             <Navbar.Brand>Web</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsev-navbar-nav"/>
             <Navbar.Collapse id="responsev-navbar-nav">
@@ -23,6 +25,7 @@ const Header = () => {
                     <Button variant="primary" className="mr-2">Корзина </Button>
                 </Nav>
             </Navbar.Collapse>
+            </Container>
         </Navbar>
 
 
