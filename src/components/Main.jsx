@@ -4,7 +4,7 @@ import CardElement from "./components_nav/CardElement";
 import EndBoard from "./components_nav/AllCardsElement";
 import Slider from "./components_nav/Slaider";
 import Nav from 'react-bootstrap/Nav'
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -21,7 +21,7 @@ const EndBoards=props.EndBoards
 
     return (
         <>
-            <Container >
+            {/*<Container >*/}
                 <Row className="mt-5">
                     <Col className="p-0 pr-3 " sm={4}>
                     <Nav  className="h-100 flex-column bg-white Rounded">
@@ -48,7 +48,7 @@ const EndBoards=props.EndBoards
                         </Nav>
                     </Col>
                 </Row>
-            </Container>
+            {/*</Container>*/}
         </>
     );
 };
