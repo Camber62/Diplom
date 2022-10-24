@@ -1,1 +1,24 @@
-.bgNavbar{background-color:#393230}
+body {
+    background-color : #f5f9fa!important
+}
+
+.bgNavbar {
+    background-color: #393230
+}
+
+/*////background-color: rgb(74,123,66)*/
+.bg_container {
+    background-color: rgb(74, 123, 66)
+}
+
+.Rounded {
+    border-radius: 15px
+}
+
+.awssld__wrapper {
+    border-radius: 15px
+}
+.max_W_Nav{
+    /*max-height: 100vh;*/
+    /*overflow: auto;*/
+}
