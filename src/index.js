@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,11 +15,11 @@ import Picture6 from "../src/icons/Picture6.png"
 // import Picture1_1 from "../src/icons/Picture1_1.png"
 // import Picture1_2 from "../src/icons/Pictur1_2.png"
 import Slideshow from "./components/Carusel_blog";
-// import Container from "react-bootstrap/Container";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+// eslint-disable-next-line react-hooks/rules-of-hooks
+const [basket,setBasket]=useState([])   //Корзина
 
 const Serving = [
     {
@@ -150,13 +150,11 @@ const EndBoards = [];
 
 root.render(
     <React.StrictMode>
-        {/*<Container >*/}
-            <Header/>
+            <Header basket={basket} setBasket={setBasket}/>
             <BrowserRouter>
                 <Main Serving={Serving} ServingDishes={ServingDishes} TeaStationsTrays={TeaStationsTrays}
-                      EndBoards={EndBoards}/>
+                      EndBoards={EndBoards} basket={basket} setBasket={setBasket}/>
             </BrowserRouter>
             <Slideshow/>
-        {/*</Container>*/}
     </React.StrictMode>
 );

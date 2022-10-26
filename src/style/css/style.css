@@ -19,7 +19,7 @@ body {
     border-radius: 15px
 }
 .awssld__bullets{
-    display: none;
+    display: none !important;
 }
 .textAnnouncement{
     font-size: smaller

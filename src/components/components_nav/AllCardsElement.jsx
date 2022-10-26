@@ -3,6 +3,9 @@ import {Link} from "react-router-dom";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import {Image} from "react-bootstrap";
+import {Button} from "react-bootstrap";
+
+
 
 
 const EndBoard = (props) => {
@@ -16,6 +19,7 @@ const EndBoard = (props) => {
                                 <p className="h6"><Link to={`/${int.name}`}>{int.name}</Link></p>
                                 <p className="textAnnouncement"><Link to={`/${int.name}`}>{int.TextAnnouncement}</Link></p>
                                 <p>{int.price}</p>
+                                <Button onClick={Basket}>Добавить в заказ</Button>
                             </p>
                         </Col>
                     )
