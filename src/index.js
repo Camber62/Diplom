@@ -11,9 +11,12 @@ import Picture3 from "../src/icons/Picture3.png"
 import Picture4 from "../src/icons/Picture4.png"
 import Picture5 from "../src/icons/Picture5.png"
 import Picture6 from "../src/icons/Picture6.png"
-import Picture7 from "../src/icons/Picture7.png"
-import Picture1_1 from "../src/icons/Picture1_1.png"
-import Picture1_2 from "../src/icons/Pictur1_2.png"
+// import Picture7 from "../src/icons/Picture7.png"
+// import Picture1_1 from "../src/icons/Picture1_1.png"
+// import Picture1_2 from "../src/icons/Pictur1_2.png"
+import Slideshow from "./components/Carusel_blog";
+// import Container from "react-bootstrap/Container";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -129,6 +132,14 @@ const ServingDishes = [
         price: "1680р/шт.",
         about: "Незаменимая доска для любого ресторана. Идеальна как для самостоятельной подачи блюд (стейки, закуски, бургеры), так и для сервировки под тарелку.Изготовлена из массива дуба, склейка профессиональным клеем (допустим к контакту с пищей). Обработана профессиональными льняными маслами и карнаубским воском.Размер доски - 24*32 см., можно сделать больше или меньше, убрать желоб, добавить ручки и т.д. -  просто перейдите в раздел 'Индивидуальные заказы' и напишите нам.Предлагается в классическом светлом варианте, по желанию можно добавить: колер +50р/шт, обжиг + 100р/шт, толщину доски +250р/шт.Пожалуйста, оформляйте заказ заранее. Помимо изготовления, тарелке необходимо 'напитаться маслом'. Масло должно проникнуть в поры дерева и полимеризоваться, это не быстрый процесс. Ваши тарелки прослужат очень долго, если данный этап будет пройден до конца.     + текст который ко всем я писала из файлика",
         src: ""
+    },{
+        id: 6,
+        name: "Доска для подачи прямоугольних с желобом",
+        series: "серия",
+        TextAnnouncement: "Доска для подачи стейков, бургеров. Желоб предназначен для стекания сока. Можно использовать для сервировки под тарелку.",
+        price: "1680р/шт.",
+        about: "Незаменимая доска для любого ресторана. Идеальна как для самостоятельной подачи блюд (стейки, закуски, бургеры), так и для сервировки под тарелку.Изготовлена из массива дуба, склейка профессиональным клеем (допустим к контакту с пищей). Обработана профессиональными льняными маслами и карнаубским воском.Размер доски - 24*32 см., можно сделать больше или меньше, убрать желоб, добавить ручки и т.д. -  просто перейдите в раздел 'Индивидуальные заказы' и напишите нам.Предлагается в классическом светлом варианте, по желанию можно добавить: колер +50р/шт, обжиг + 100р/шт, толщину доски +250р/шт.Пожалуйста, оформляйте заказ заранее. Помимо изготовления, тарелке необходимо 'напитаться маслом'. Масло должно проникнуть в поры дерева и полимеризоваться, это не быстрый процесс. Ваши тарелки прослужат очень долго, если данный этап будет пройден до конца.     + текст который ко всем я писала из файлика",
+        src: ""
     },
 ];
 const TeaStationsTrays = [
@@ -137,17 +148,15 @@ const TeaStationsTrays = [
 const EndBoards = [];
 
 
-
-
-
-
-
 root.render(
     <React.StrictMode>
-        <Header/>
-        <BrowserRouter>
-            <Main Serving={Serving} ServingDishes={ServingDishes} TeaStationsTrays={TeaStationsTrays}
-                  EndBoards={EndBoards}/>
-        </BrowserRouter>
+        {/*<Container >*/}
+            <Header/>
+            <BrowserRouter>
+                <Main Serving={Serving} ServingDishes={ServingDishes} TeaStationsTrays={TeaStationsTrays}
+                      EndBoards={EndBoards}/>
+            </BrowserRouter>
+            <Slideshow/>
+        {/*</Container>*/}
     </React.StrictMode>
 );

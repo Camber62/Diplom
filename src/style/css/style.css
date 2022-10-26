@@ -12,16 +12,22 @@ body {
 }
 
 .Rounded {
-    border-radius: 15px
+    border-radius: 15px;
 }
 
 .awssld__wrapper {
     border-radius: 15px
 }
-.max_W_Nav{
-    /*max-height: 100vh;*/
-    /*overflow: auto;*/
+.awssld__bullets{
+    display: none;
 }
 .textAnnouncement{
     font-size: smaller
+}
+.img_All_Cards{
+    text-align: center;
+}
+
+.bg_All_Cards{
+    background-color: rgba(191, 195, 196, 0.26);
 }
