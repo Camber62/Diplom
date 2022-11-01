@@ -15,11 +15,15 @@ import Picture6 from "../src/icons/Picture6.png"
 // import Picture1_1 from "../src/icons/Picture1_1.png"
 // import Picture1_2 from "../src/icons/Pictur1_2.png"
 import Slideshow from "./components/Carusel_blog";
+import Basket from "./components/Basket";
+import IndividualOrders from "./components/individualOrders";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// eslint-disable-next-line react-hooks/rules-of-hooks
-const [basket,setBasket]=useState([])   //Корзина
+
+
+// const [basket, setBasket] = useState()
+
 
 const Serving = [
     {
@@ -132,7 +136,7 @@ const ServingDishes = [
         price: "1680р/шт.",
         about: "Незаменимая доска для любого ресторана. Идеальна как для самостоятельной подачи блюд (стейки, закуски, бургеры), так и для сервировки под тарелку.Изготовлена из массива дуба, склейка профессиональным клеем (допустим к контакту с пищей). Обработана профессиональными льняными маслами и карнаубским воском.Размер доски - 24*32 см., можно сделать больше или меньше, убрать желоб, добавить ручки и т.д. -  просто перейдите в раздел 'Индивидуальные заказы' и напишите нам.Предлагается в классическом светлом варианте, по желанию можно добавить: колер +50р/шт, обжиг + 100р/шт, толщину доски +250р/шт.Пожалуйста, оформляйте заказ заранее. Помимо изготовления, тарелке необходимо 'напитаться маслом'. Масло должно проникнуть в поры дерева и полимеризоваться, это не быстрый процесс. Ваши тарелки прослужат очень долго, если данный этап будет пройден до конца.     + текст который ко всем я писала из файлика",
         src: ""
-    },{
+    }, {
         id: 6,
         name: "Доска для подачи прямоугольних с желобом",
         series: "серия",
@@ -150,11 +154,13 @@ const EndBoards = [];
 
 root.render(
     <React.StrictMode>
-            <Header basket={basket} setBasket={setBasket}/>
-            <BrowserRouter>
-                <Main Serving={Serving} ServingDishes={ServingDishes} TeaStationsTrays={TeaStationsTrays}
-                      EndBoards={EndBoards} basket={basket} setBasket={setBasket}/>
-            </BrowserRouter>
-            <Slideshow/>
+        <Header/>
+        <BrowserRouter>
+            <Main Serving={Serving} ServingDishes={ServingDishes} TeaStationsTrays={TeaStationsTrays}
+                  EndBoards={EndBoards}/>
+        </BrowserRouter>
+        <IndividualOrders/>
+        <Basket/>
+        <Slideshow/>
     </React.StrictMode>
 );

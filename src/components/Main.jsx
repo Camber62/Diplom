@@ -1,6 +1,6 @@
 import {Route, Routes, Link} from "react-router-dom";
 import CardElement from "./components_nav/CardElement";
-import EndBoard from "./components_nav/AllCardsElement";
+import AddCardsElement from "./components_nav/AllCardsElement";
 import Slider from "./components_nav/Slaider";
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container';
@@ -8,21 +8,22 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
+import React, {useState} from 'react';
+import Header from "./Header";
 // const color_one= "rgb(57,50,48)"
-
 const Main = (props) => {
+
+    const [basket,setBasket]=useState([])   //Корзина
     const Serving = props.Serving
     const ServingDishes = props.ServingDishes
     const TeaStationsTrays = props.TeaStationsTrays
     const EndBoards = props.EndBoards
-
-
     return (
         <>
-            <Container className="max_W_Nav">
+            <Container>
                 <Row className="mt-5">
-                    <Col className="p-0 pr-3" sm={4} md={4} lg={3}>
-                        <Nav className="pl-3 h-100 flex-column bg-white Rounded">
+                    <Col sm={4} md={4} lg={3}>
+                        <Nav className="p-3 h-100 flex-column bg-white Rounded">
                             <div className="container_nav_catalog">
                                 <p>Каталог</p>
                             </div>
@@ -34,15 +35,14 @@ const Main = (props) => {
                         </Nav>
                     </Col>
                     <Col sm={8} md={8} lg={9} className="p-0 ">
-                        <SimpleBar style={{maxHeight: 550}}>
+                        <SimpleBar style={{maxHeight: 600}}>
                             <Nav className="Rounded  bg-white ">
                                 <Routes>
                                     <Route path="/" element={<Slider />}/>
-
-                                    <Route path="/Serving" element={<EndBoard elem={Serving}/>}/>
-                                    <Route path="/ServingDishes" element={<EndBoard elem={ServingDishes}/>}/>
-                                    <Route path="/TeaStationsTrays" element={<EndBoard elem={TeaStationsTrays}/>}/>
-                                    <Route path="/EndBoards" element={<EndBoard elem={EndBoards}/>}/>
+                                    <Route path="/Serving" element={<AddCardsElement basket={basket} setBasket={setBasket} elem={Serving}/>}/>
+                                    <Route path="/ServingDishes" element={<AddCardsElement basket={basket} setBasket={setBasket} elem={ServingDishes}/>}/>
+                                    <Route path="/TeaStationsTrays" element={<AddCardsElement basket={basket} setBasket={setBasket} elem={TeaStationsTrays}/>}/>
+                                    <Route path="/EndBoards" element={<AddCardsElement basket={basket} setBasket={setBasket} elem={EndBoards}/>}/>
                                     <Route path="/:name" element={<CardElement/>}/>
                                 </Routes>
 

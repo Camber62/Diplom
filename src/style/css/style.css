@@ -31,3 +31,21 @@ body {
 .bg_All_Cards{
     background-color: rgba(191, 195, 196, 0.26);
 }
+td,tr{
+    text-align: center;
+}
+.border_radius{
+    border-radius:15px
+}
+.homeTransition-appear{
+    opacity: 0;
+}
+
+.homeTransition-appear{
+    opacity: 0;
+}
+
+.homeTransition-appear.homeTransition-appear-active{
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
