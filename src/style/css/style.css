@@ -2,6 +2,9 @@ body {
     background-color : #f5f9fa!important
 }
 
+.none{
+    display: none;
+}
 .bgNavbar {
     background-color: #393230
 }
@@ -48,4 +51,24 @@ td,tr{
 .homeTransition-appear.homeTransition-appear-active{
     opacity: 1;
     transition: all .5s ease-in-out;
+}
+
+
+
+
+
+
+
+.about{
+    color: red;
+}
+
+.aboutTransition-appear{
+    opacity: 0;
+}
+
+.aboutTransition-appear.aboutTransition-appear-active{
+    opacity: 1;
+    color: red;
+    transition: all .4s ease-in-out;
 }

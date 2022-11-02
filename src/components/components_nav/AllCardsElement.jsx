@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import {Image} from "react-bootstrap";
 import {Button} from "react-bootstrap";
+import {TransitionGroup}  from 'react-transition-group'
 
 
 const AddCardsElement = (props) => {
@@ -27,7 +28,10 @@ const AddCardsElement = (props) => {
 
 
     return (
-
+        <TransitionGroup
+            transitionName="example"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}>
         <Row className=" m-0 justify-content-around" md={3} sm={1} xs={1}>
             {props.elem.map((int, element) => {
                 return (
@@ -49,7 +53,7 @@ const AddCardsElement = (props) => {
             })}
 
         </Row>
-
+        </TransitionGroup>
     )
 }
 export default AddCardsElement

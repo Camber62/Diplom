@@ -9,7 +9,8 @@ import Col from 'react-bootstrap/Col';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import React, {useState} from 'react';
-import Header from "./Header";
+
+// import Header from "./Header";
 // const color_one= "rgb(57,50,48)"
 const Main = (props) => {
 
