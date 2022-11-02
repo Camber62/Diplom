@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 import React from 'react';
 import {Slide} from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
+import { motion, AnimatePresence } from "framer-motion"
 
 const blog = [
     {name: "blog1", TextAnnouncement: "anonce", data: "12.12.2022", img: Picture7},
@@ -26,10 +27,12 @@ const Slideshow = () => {
                         {/*<Col>*/}
                             <Slide>
                                 {blog.map((slideImage, index) => (
+
                                     <Row className="each-slide" key={index}>
                                         <Col sm={4}><img className="w-100" src={slideImage.img} alt="ssdf"/></Col>
                                         <Col sm={8}><span>{slideImage.TextAnnouncement}</span></Col>
                                     </Row>
+
                                 ))}
                              </Slide>
                         {/*</Col>*/}

@@ -2,7 +2,6 @@ import React from "react";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
-import { TransitionGroup } from 'react-transition-group'
 
 const News = [
     {id: 0, name: "Stocks", about: "StocksStocksStocks", img: "/"},
@@ -14,10 +13,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 const Slider = () => {
 
     return (<>
-        <TransitionGroup
-            transitionName="example"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}>
+
             <AutoplaySlider className="AutoplaySlider "
                 // play={true}
                             cancelOnInteraction={false} // should stop playing on user interaction
@@ -33,7 +29,6 @@ const Slider = () => {
                     );
                 })}
             </AutoplaySlider>
-        </TransitionGroup>
         </>
     );
 }

@@ -9,16 +9,24 @@ import Col from 'react-bootstrap/Col';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import React, {useState} from 'react';
+// import {AnimatePresence} from "framer-motion"
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-// import Header from "./Header";
+
+
+
 // const color_one= "rgb(57,50,48)"
 const Main = (props) => {
 
-    const [basket,setBasket]=useState([])   //Корзина
+    const [basket, setBasket] = useState([])   //Корзина
     const Serving = props.Serving
     const ServingDishes = props.ServingDishes
     const TeaStationsTrays = props.TeaStationsTrays
     const EndBoards = props.EndBoards
+
+
+
+
     return (
         <>
             <Container>
@@ -38,15 +46,33 @@ const Main = (props) => {
                     <Col sm={8} md={8} lg={9} className="p-0 ">
                         <SimpleBar style={{maxHeight: 600}}>
                             <Nav className="Rounded  bg-white ">
-                                <Routes>
-                                    <Route path="/" element={<Slider />}/>
-                                    <Route path="/Serving" element={<AddCardsElement basket={basket} setBasket={setBasket} elem={Serving}/>}/>
-                                    <Route path="/ServingDishes" element={<AddCardsElement basket={basket} setBasket={setBasket} elem={ServingDishes}/>}/>
-                                    <Route path="/TeaStationsTrays" element={<AddCardsElement basket={basket} setBasket={setBasket} elem={TeaStationsTrays}/>}/>
-                                    <Route path="/EndBoards" element={<AddCardsElement basket={basket} setBasket={setBasket} elem={EndBoards}/>}/>
+                                {/*<AnimatePresence>*/}
+                                {/*<TransitionGroup>*/}
+                                {/*    <CSSTransition*/}
+                                {/*        // key={location.key}*/}
+                                {/*        classNames='slide'*/}
+                                {/*        timeout={1000}*/}
+                                {/*    >*/}
+                                    <Routes>
+
+                                    <Route path="/" element={<Slider/>}/>
+                                    <Route path="/Serving"
+                                           element={<AddCardsElement basket={basket} setBasket={setBasket}
+                                                                     elem={Serving}/>}/>
+                                    <Route path="/ServingDishes"
+                                           element={<AddCardsElement basket={basket} setBasket={setBasket}
+                                                                     elem={ServingDishes}/>}/>
+                                    <Route path="/TeaStationsTrays"
+                                           element={<AddCardsElement basket={basket} setBasket={setBasket}
+                                                                     elem={TeaStationsTrays}/>}/>
+                                    <Route path="/EndBoards"
+                                           element={<AddCardsElement basket={basket} setBasket={setBasket}
+                                                                     elem={EndBoards}/>}/>
                                     <Route path="/:name" element={<CardElement/>}/>
                                 </Routes>
-
+                                {/*    </CSSTransition>*/}
+                                {/*</TransitionGroup>*/}
+                                {/*</AnimatePresence>*/}
                             </Nav>
                         </SimpleBar>
                     </Col>

@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link,} from "react-router-dom";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import {Image} from "react-bootstrap";
 import {Button} from "react-bootstrap";
-import {TransitionGroup}  from 'react-transition-group'
+import {motion} from "framer-motion"
 
 
 const AddCardsElement = (props) => {
@@ -25,35 +25,52 @@ const AddCardsElement = (props) => {
 
         console.log(basket)
     }
-
+    const pageTransition = {
+        in: {
+            opacity: 1,
+            y: 0
+        },
+        out: {
+            opacity: 0,
+            y: "-100%"
+        }
+    }
+    // <motion.div
+    //     initial="out"
+    //     animate="in"
+    //     exit="out"
+    //     variants={pageTransition}>
+    // </motion.div>
 
     return (
-        <TransitionGroup
-            transitionName="example"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}>
-        <Row className=" m-0 justify-content-around" md={3} sm={1} xs={1}>
-            {props.elem.map((int, element) => {
-                return (
+        <motion.div
+            initial="out"
+            animate="in"
+            exit="out"
+            variants={pageTransition}>
 
+            <Row className=" m-0 justify-content-around" md={3} sm={1} xs={1}>
+                {props.elem.map((int, element) => {
+                    return (
                         <Col className="m-1 bg_All_Cards">
-                            <p className="img_All_Cards"><Link to={`/${int.name}`}><Image src={int.src} alt="alt"
-                                                                                          width="100"/></Link></p>
-                            <p key={element}>
-                                <p className="h6"><Link to={`/${int.name}`}>{int.name}</Link></p>
-                                <p className="textAnnouncement"><Link to={`/${int.name}`}>{int.TextAnnouncement}</Link>
+                                <p className="img_All_Cards"><Link to={`/${int.name}`}><Image src={int.src} alt="alt" width="100"/></Link></p>
+                                <p key={element}>
+                                    <p className="h6"><Link to={`/${int.name}`}>{int.name}</Link></p>
+                                    <p className="textAnnouncement"><Link
+                                        to={`/${int.name}`}>{int.TextAnnouncement}</Link>
+                                    </p>
+                                    <p>{int.price}</p>
+                                    <Button onClick={() => {
+                                        addBasket(int)
+                                    }}>Добавить в заказ</Button>
                                 </p>
-                                <p>{int.price}</p>
-                                <Button onClick={() => {
-                                    addBasket(int)
-                                }}>Добавить в заказ</Button>
-                            </p>
                         </Col>
-                )
-            })}
+                    )
+                })}
+            </Row>
 
-        </Row>
-        </TransitionGroup>
+
+             </motion.div>
     )
 }
 export default AddCardsElement
