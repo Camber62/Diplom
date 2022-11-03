@@ -12,7 +12,6 @@ import React, {useState} from 'react';
 
 
 
-
 // const color_one= "rgb(57,50,48)"
 const Main = (props) => {
 
