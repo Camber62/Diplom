@@ -29,7 +29,6 @@ function FormExample() {
                         required
                         type="text"
                         placeholder="First name"
-                        // defaultValue="Mark"
                     />
                     <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                 </Form.Group>
@@ -39,7 +38,6 @@ function FormExample() {
                         required
                         type="text"
                         placeholder="Last name"
-                        // defaultValue="Otto"
                     />
                     <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                 </Form.Group>
@@ -69,7 +67,6 @@ function FormExample() {
                     <h5 className="mb-3 mt-3">НАНЕСЕНИЕ ЛОГОТИПА</h5>
                     <ToggleButtonGroup className="w-25" type="radio" name="options" defaultValue={2}
                                        onClick={(e) => {
-                                           // setCargo(e.target)
                                            console.log(e.target.id)
                                        }}>
                         <ToggleButton

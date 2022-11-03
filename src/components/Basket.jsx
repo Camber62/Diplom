@@ -1,71 +1,95 @@
 import React, {useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
-
 import FormExample from "./Form";
-const Basket = () => {
 
-    const [count, setCount] = useState(1)
-    const [amount, SetAmount] = useState(500)
-    const [openForm,setOpenForm]=useState(false)
 
-    const Count = (e) => {
+const Basket = (props) => {
+    const setBasket = props.setBasket
+    const basket = props.basket
+    const [openForm, setOpenForm] = useState(false)
+
+    const Count = (e,int) => {
         e.preventDefault()
+            console.log(int.id,e)
 
-        if (e.target.value === "+") {
-            const newCount = count+1
-            setCount(newCount)
-            SetAmount(newCount*500)
-
-        } else if (e.target.value === "-" && count > 1) {
-            const newCount = count-1
-            setCount(newCount)
-            SetAmount(newCount*500)
+        for (let i = 0; i < basket.length; i++) {
+            if(basket[i].id===int.id){
+                if (e.target.value === "+") {
+                    basket[i].count++
+                    basket[i].totalPrice=basket[i].count*basket[i].price
+                    setBasket([...basket])
+                }else if (e.target.value === "-" && basket[i].count > 1){
+                    basket[i].count--
+                    basket[i].totalPrice=basket[i].count*basket[i].price
+                    setBasket([...basket])
+                }
+            }
         }
+    }
 
 
+    const DeleteBasket = (elem) => {
+        const newToDoList = basket.filter(function (entry, index) {
+            return index !== Number(elem);
+        });
+        setBasket(newToDoList);
+        console.log(elem)
 
     }
 
 
-
-
     return (
-        <Container fluid  className="p-0 pt-3 bg-white">
+        <Container fluid className="p-0 pt-3 bg-white">
             <Container>
-                <div className=" bg-white border_radius"><h4>Form zakaz</h4>
-                <Table>
-                    <tr>
-                        <th>Товар</th>
-                        <th>Цена</th>
-                        <th>Кол-во</th>
-                        <th>Сумма</th>
-                        <th><h4>Рачсет</h4></th>
-                    </tr>
-                    <br/>
-                    <tr>
-                        <td>"Name"</td>
-                        <td>1234</td>
-                        <td>
-                            <button value="-" onClick={Count}>-</button>
-                            {count}
-                            <button value="+" onClick={Count}>+</button>
-                        </td>
-                        <td>{amount}</td>
-                        <td>Raschet</td>
-                    </tr>
-                </Table>
-            </div>
+                <div className=" bg-white border_radius"><h4>Форма заказа</h4>
+                    <Table>
+                        <tr>
+                            <th>Товар</th>
+                            <th>Цена</th>
+                            <th>Кол-во</th>
+                            <th>Сумма</th>
+                            <th>удаление</th>
+                            <th><h4>Рачсет</h4></th>
+                        </tr>
+                        <br/>
+                        {basket.map((int, element) => {
+                                return (
+                                    <tr>
+                                        <td>{int.name}</td>
+                                        <td>{int.price}</td>
+                                        <td>
+                                            <button value="-" onClick={(e)=>{Count(e,int)}}>-</button>
+                                            {int.count}
+                                            <button value="+" onClick={(e)=>{Count(e,int)}}>+</button>
+                                        </td>
+                                        <td>{int.totalPrice}</td>
+                                        <td>
+                                            <button onClick={() => {
+                                                DeleteBasket(element)
+                                            }}>Del
+                                            </button>
+                                        </td>
+                                        <td>Raschet</td>
+                                    </tr>
+                                )
+                            }
+                        )
+                        }
+                    </Table>
+                </div>
 
-                <button className="w-100 mb-5 mt-5  bg-white border-0"  onClick={()=>{setOpenForm(!openForm)}}>
+                <button className="w-100 mb-5 mt-5  bg-white border-0" onClick={() => {
+                    setOpenForm(!openForm)
+                }}>
                     {openForm ?
-                    <img src="https://img.icons8.com/office/64/000000/ostrich-head-in-sand.png"/> :
-                        <img src="https://img.icons8.com/external-icongeek26-flat-icongeek26/64/000000/external-ostrich-birds-icongeek26-flat-icongeek26.png"/>}
+                        <img src="https://img.icons8.com/office/64/000000/ostrich-head-in-sand.png" alt="img"/> :
+                        <img
+                            src="https://img.icons8.com/external-icongeek26-flat-icongeek26/64/000000/external-ostrich-birds-icongeek26-flat-icongeek26.png"
+                            alt="img"/>}
 
                 </button>
                 {openForm ? <FormExample/> : <></>}
-
-
             </Container>
         </Container>
     )

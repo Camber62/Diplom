@@ -7,7 +7,6 @@ import Basket from "./Basket";
 ////background-color: rgb(74,123,66)
 ////background-color: rgb(57,50,48)
 const Header = (props) => {
-// props.basket
 
     return (
 <>
