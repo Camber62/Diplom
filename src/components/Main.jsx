@@ -22,12 +22,11 @@ const Main = (props) => {
     const TeaStationsTrays = props.TeaStationsTrays
     const EndBoards = props.EndBoards
 
-    const AllCardsServing=()=>{ return <AddCardsElement basket={basket} setBasket={setBasket}
-                                                        elem={Serving}/>}
-    const AllCardsServingDishes=()=>{return <AddCardsElement basket={basket} setBasket={setBasket}
-                                                             elem={ServingDishes}/>}
-    const AllCardsTeaStationsTrays=()=>{return <AddCardsElement basket={basket} setBasket={setBasket}
-                                                                elem={TeaStationsTrays}/>}
+    const AllCardsServing=()=>{ return <AddCardsElement basket={basket} setBasket={setBasket} elem={Serving}/>}
+    const AllCardsServingDishes=()=>{return <AddCardsElement basket={basket} setBasket={setBasket} elem={ServingDishes}/>}
+    const AllCardsTeaStationsTrays=()=>{return <AddCardsElement basket={basket} setBasket={setBasket} elem={TeaStationsTrays}/>}
+    const AllCardsEndBoards =()=>{return <AddCardsElement basket={basket} setBasket={setBasket} elem={EndBoards}/>}
+
     return (
         <>
             <Container>
@@ -57,7 +56,7 @@ const Main = (props) => {
                                     <Route path="/TeaStationsTrays"
                                            element={<AllCardsTeaStationsTrays/>}/>
                                     <Route path="/EndBoards"
-                                           element={<EndBoards basket={basket} setBasket={setBasket}
+                                           element={<AllCardsEndBoards basket={basket} setBasket={setBasket}
                                                                      elem={EndBoards}/>}/>
                                     <Route path="/:name" element={<CardElement/>}/>
                                 </Routes>
