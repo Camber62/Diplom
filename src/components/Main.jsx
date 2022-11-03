@@ -22,9 +22,12 @@ const Main = (props) => {
     const TeaStationsTrays = props.TeaStationsTrays
     const EndBoards = props.EndBoards
 
-
-
-
+    const AllCardsServing=()=>{ return <AddCardsElement basket={basket} setBasket={setBasket}
+                                                        elem={Serving}/>}
+    const AllCardsServingDishes=()=>{return <AddCardsElement basket={basket} setBasket={setBasket}
+                                                             elem={ServingDishes}/>}
+    const AllCardsTeaStationsTrays=()=>{return <AddCardsElement basket={basket} setBasket={setBasket}
+                                                                elem={TeaStationsTrays}/>}
     return (
         <>
             <Container>
@@ -48,16 +51,13 @@ const Main = (props) => {
 
                                     <Route path="/" element={<Slider/>}/>
                                     <Route path="/Serving"
-                                           element={<AddCardsElement basket={basket} setBasket={setBasket}
-                                                                     elem={Serving}/>}/>
+                                           element={<AllCardsServing/>}/>
                                     <Route path="/ServingDishes"
-                                           element={<AddCardsElement basket={basket} setBasket={setBasket}
-                                                                     elem={ServingDishes}/>}/>
+                                           element={<AllCardsServingDishes/>}/>
                                     <Route path="/TeaStationsTrays"
-                                           element={<AddCardsElement basket={basket} setBasket={setBasket}
-                                                                     elem={TeaStationsTrays}/>}/>
+                                           element={<AllCardsTeaStationsTrays/>}/>
                                     <Route path="/EndBoards"
-                                           element={<AddCardsElement basket={basket} setBasket={setBasket}
+                                           element={<EndBoards basket={basket} setBasket={setBasket}
                                                                      elem={EndBoards}/>}/>
                                     <Route path="/:name" element={<CardElement/>}/>
                                 </Routes>
