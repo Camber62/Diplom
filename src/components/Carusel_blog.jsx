@@ -8,7 +8,6 @@ import Container from "react-bootstrap/Container";
 import React from 'react';
 import {Slide} from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import { motion, AnimatePresence } from "framer-motion"
 
 const blog = [
     {name: "blog1", TextAnnouncement: "anonce", data: "12.12.2022", img: Picture7},

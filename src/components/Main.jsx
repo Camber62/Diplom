@@ -9,8 +9,6 @@ import Col from 'react-bootstrap/Col';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import React, {useState} from 'react';
-// import {AnimatePresence} from "framer-motion"
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 
 
@@ -46,13 +44,6 @@ const Main = (props) => {
                     <Col sm={8} md={8} lg={9} className="p-0 ">
                         <SimpleBar style={{maxHeight: 600}}>
                             <Nav className="Rounded  bg-white ">
-                                {/*<AnimatePresence>*/}
-                                {/*<TransitionGroup>*/}
-                                {/*    <CSSTransition*/}
-                                {/*        // key={location.key}*/}
-                                {/*        classNames='slide'*/}
-                                {/*        timeout={1000}*/}
-                                {/*    >*/}
                                     <Routes>
 
                                     <Route path="/" element={<Slider/>}/>
@@ -70,9 +61,7 @@ const Main = (props) => {
                                                                      elem={EndBoards}/>}/>
                                     <Route path="/:name" element={<CardElement/>}/>
                                 </Routes>
-                                {/*    </CSSTransition>*/}
-                                {/*</TransitionGroup>*/}
-                                {/*</AnimatePresence>*/}
+
                             </Nav>
                         </SimpleBar>
                     </Col>

@@ -12,25 +12,18 @@ const Basket = () => {
     const Count = (e) => {
         e.preventDefault()
 
-        const Amount = () => {
-            SetAmount(count * 500)
-        }
-
-
-
         if (e.target.value === "+") {
-            setCount(count + 1)
-            Amount()
-
+            const newCount = count+1
+            setCount(newCount)
+            SetAmount(newCount*500)
 
         } else if (e.target.value === "-" && count > 1) {
-            setCount(count - 1)
-            Amount()
-
+            const newCount = count-1
+            setCount(newCount)
+            SetAmount(newCount*500)
         }
 
 
-//уточнить с добавлением Amount
 
     }
 

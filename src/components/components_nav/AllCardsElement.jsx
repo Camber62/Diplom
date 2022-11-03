@@ -7,24 +7,16 @@ import {Button} from "react-bootstrap";
 import {motion} from "framer-motion"
 
 
+
 const AddCardsElement = (props) => {
     let setBasket = props.setBasket
     let basket = props.basket
     const addBasket = (e) => {
-        setBasket(basket.concat([e
-            // {
-            //     TextAnnouncement: e.TextAnnouncement,
-            //     about: e.about,
-            //     id:e.id,
-            //     name:e.name ,
-            //     price:e.price ,
-            //     series: e.series,
-            //     src: e.src
-            // }
-        ]))
-
-        console.log(basket)
+        setBasket(basket.concat([e]))
+        // console.log(basket)
     }
+
+
     const pageTransition = {
         in: {
             opacity: 1,
@@ -35,12 +27,6 @@ const AddCardsElement = (props) => {
             y: "-100%"
         }
     }
-    // <motion.div
-    //     initial="out"
-    //     animate="in"
-    //     exit="out"
-    //     variants={pageTransition}>
-    // </motion.div>
 
     return (
         <motion.div
