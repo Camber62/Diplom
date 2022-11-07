@@ -22,12 +22,11 @@ const Header = (props) => {
                             <Nav className="mr-auto ">
                                 <Nav.Link href="/#" title="catalog"><a href="#AboutUs" className="yacor">О НАС</a></Nav.Link>
                                 <Nav.Link href="/#" title="catalog"><a href="#catalog" className="yacor">КАТАЛОГ</a></Nav.Link>
-                                <Nav.Link href="/#" title="catalog"><a href="/#form" className="yacor">ДОСТАВКА И ОПЛАТА</a></Nav.Link>
                                 <Nav.Link href="/#" title="catalog"><a href="/#Contacts" className="yacor">КОНТАКТЫ</a></Nav.Link>
                                 <Nav.Link href="/#" title="catalog"><a href="#blog" className="yacor">БЛОГ</a></Nav.Link>
                             </Nav>
                             <Nav>
-                                <Button onClick={Basket} variant="primary" className="mr-2 ant-ribbon-color-red"><a href="#form" className="yacor ">Корзина</a></Button>
+                                <Nav.Link href="/#" title="catalog"><a href="/#form" className="yacor">ДОСТАВКА И ОПЛАТА</a></Nav.Link>
                             </Nav>
 
                         </Navbar.Collapse>
