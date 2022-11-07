@@ -21,7 +21,7 @@ function FormExample() {
     };
 
     return (
-        <Form className="telegram-form" method="post" action='form_Telegram/send.php' noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form className="telegram-form form" method="post" action='form_Telegram/send.php' noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-3">
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                     <Form.Label>First name</Form.Label>
@@ -178,7 +178,7 @@ function FormExample() {
                     feedbackType="invalid"
                 />
             </Form.Group>
-            <Button type="submit">Submit form</Button>
+            <Button name="act" value="order" type="submit">Submit form</Button>
         </Form>
     );
 }
