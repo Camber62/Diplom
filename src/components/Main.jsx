@@ -11,6 +11,8 @@ import Picture4 from "../icons/Picture4.png"
 import Picture5 from "../icons/Picture5.png"
 import Picture6 from "../icons/Picture6.png"
 import NavComponent from "./components_nav/NavComponent";
+import Contacts from "./Contactsю";
+import AboutUs from "./AboutUs";
 // import  from "@types/react";
 // import Picture7 from "../src/icons/Picture7.png"
 // import Picture1_1 from "../src/icons/Picture1_1.png"
@@ -179,17 +181,11 @@ const Main = () => {
             <NavComponent basket={basket} setBasket={setBasket} Serving={Serving} ServingDishes={ServingDishes}
                           TeaStationsTrays={TeaStationsTrays}
                           EndBoards={EndBoards}/>
-            <IndividualOrders/>
-            <IndividualOrders/>
-            <IndividualOrders/>
-            <IndividualOrders/>
-
             <Basket basket={basket} setBasket={setBasket}/>
             <Slideshow/>
             <IndividualOrders/>
-            <IndividualOrders/>
-            <IndividualOrders/>
-
+            <AboutUs/>
+            <Contacts/>
         </>
     )
 }

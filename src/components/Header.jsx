@@ -2,6 +2,8 @@ import React from 'react';
 import {Navbar, Nav, Button} from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
 import Basket from "./Basket";
+import AboutUs from "./AboutUs";
+import Contacts from "./Contactsю";
 // import {Anchor} from 'antd'
 ////background-color: rgb(74,123,66)
 ////background-color: rgb(57,50,48)
@@ -18,10 +20,10 @@ const Header = (props) => {
                         <Navbar.Collapse id="responsev-navbar-nav" className="justify-content-between">
 
                             <Nav className="mr-auto ">
-                                <Nav.Link href="/#" title="catalog"><a href="#catalog" className="yacor">О НАС</a></Nav.Link>
-                                <Nav.Link href="/#" title="catalog"><a href="#form" className="yacor">КАТАЛОГ</a></Nav.Link>
-                                <Nav.Link href="/#" title="catalog"><a href="/#" className="yacor">ДОСТАВКА И ОПЛАТА</a></Nav.Link>
-                                <Nav.Link href="/#" title="catalog"><a href="/#" className="yacor">КОНТАКТЫ</a></Nav.Link>
+                                <Nav.Link href="/#" title="catalog"><a href="#AboutUs" className="yacor">О НАС</a></Nav.Link>
+                                <Nav.Link href="/#" title="catalog"><a href="#catalog" className="yacor">КАТАЛОГ</a></Nav.Link>
+                                <Nav.Link href="/#" title="catalog"><a href="/#form" className="yacor">ДОСТАВКА И ОПЛАТА</a></Nav.Link>
+                                <Nav.Link href="/#" title="catalog"><a href="/#Contacts" className="yacor">КОНТАКТЫ</a></Nav.Link>
                                 <Nav.Link href="/#" title="catalog"><a href="#blog" className="yacor">БЛОГ</a></Nav.Link>
                             </Nav>
                             <Nav>
