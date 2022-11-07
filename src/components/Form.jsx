@@ -21,7 +21,7 @@ function FormExample() {
     };
 
     return (
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form className="telegram-form" method="post" action='form_Telegram/send.php' noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-3">
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                     <Form.Label>First name</Form.Label>
@@ -29,6 +29,7 @@ function FormExample() {
                         required
                         type="text"
                         placeholder="First name"
+                        name="name"
                     />
                     <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                 </Form.Group>
@@ -38,6 +39,8 @@ function FormExample() {
                         required
                         type="text"
                         placeholder="Last name"
+                        name="lastName"
+
                     />
                     <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                 </Form.Group>
@@ -50,6 +53,7 @@ function FormExample() {
                             placeholder="Email"
                             aria-describedby="inputGroupPrepend"
                             required
+                            name='Email'
                         />
                         <Form.Control.Feedback type="invalid">
                             Please choose a email.
@@ -65,7 +69,7 @@ function FormExample() {
             <Row>
                 <InputGroup className="flex-column">
                     <h5 className="mb-3 mt-3">НАНЕСЕНИЕ ЛОГОТИПА</h5>
-                    <ToggleButtonGroup className="w-25" type="radio" name="options" defaultValue={2}
+                    <ToggleButtonGroup className="w-25" type="radio" name="options-logo" defaultValue={2}
                                        onClick={(e) => {
                                            console.log(e.target.id)
                                        }}>
