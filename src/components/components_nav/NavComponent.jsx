@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
-import React, {useState} from 'react';
+import React from 'react';
 import Slider from "./Slaider";
 import CardElement from "./CardElement";
 import AddCardsElement from "./AllCardsElement";
@@ -56,8 +56,8 @@ const NavComponent = (props) => {
                     <Col sm={4} md={4} lg={3}>
                         <Nav className="p-3 h-100 flex-column bg-white Rounded">
                             <div className="container_nav_catalog">
-                                <p>Каталог</p>
-                            </div>
+                                <p id="catalog">Каталог</p>
+                           </div>
                             <Link to="/">Home</Link>
                             <Link to="/Serving">Serving</Link>
                             <Link to="/ServingDishes">Serving Dishes</Link>

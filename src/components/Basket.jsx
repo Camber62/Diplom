@@ -40,9 +40,10 @@ const Basket = (props) => {
 
 
     return (
-        <Container fluid className="p-0 pt-3 bg-white">
-            <Container>
-                <div className=" bg-white border_radius"><h4>Форма заказа</h4>
+        <Container   fluid className="p-0 pt-3 bg-white">
+            <Container >
+                <h4 id="form">Форма заказа</h4>
+                <div className=" bg-white border_radius" >
                     <Table>
                         <tr>
                             <th>Товар</th>

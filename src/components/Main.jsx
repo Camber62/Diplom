@@ -180,8 +180,16 @@ const Main = () => {
                           TeaStationsTrays={TeaStationsTrays}
                           EndBoards={EndBoards}/>
             <IndividualOrders/>
+            <IndividualOrders/>
+            <IndividualOrders/>
+            <IndividualOrders/>
+
             <Basket basket={basket} setBasket={setBasket}/>
             <Slideshow/>
+            <IndividualOrders/>
+            <IndividualOrders/>
+            <IndividualOrders/>
+
         </>
     )
 }

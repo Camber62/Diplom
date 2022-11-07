@@ -19,23 +19,23 @@ const blog = [
 const Slideshow = () => {
     return (
         <Container className="pl-0 pr-0 pt-5 pb-5">
+            <h3 id='blog'>blog</h3>
             <div className="slide-container">
 
+                {/*<Row>*/}
+                {/*<Col>*/}
+                <Slide>
+                    {blog.map((slideImage, index) => (
 
-                    {/*<Row>*/}
-                        {/*<Col>*/}
-                            <Slide>
-                                {blog.map((slideImage, index) => (
+                        <Row className="each-slide" key={index}>
+                            <Col sm={4}><img className="w-100" src={slideImage.img} alt="ssdf"/></Col>
+                            <Col sm={8}><span>{slideImage.TextAnnouncement}</span></Col>
+                        </Row>
 
-                                    <Row className="each-slide" key={index}>
-                                        <Col sm={4}><img className="w-100" src={slideImage.img} alt="ssdf"/></Col>
-                                        <Col sm={8}><span>{slideImage.TextAnnouncement}</span></Col>
-                                    </Row>
-
-                                ))}
-                             </Slide>
-                        {/*</Col>*/}
-                    {/*</Row>*/}
+                    ))}
+                </Slide>
+                {/*</Col>*/}
+                {/*</Row>*/}
 
 
             </div>
