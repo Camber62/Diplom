@@ -51,7 +51,6 @@ const Basket = (props) => {
                             <th>Кол-во</th>
                             <th>Сумма</th>
                             <th>удаление</th>
-                            <th><h4>Рачсет</h4></th>
                         </tr>
                         <br/>
                         {basket.map((int, element) => {
@@ -71,7 +70,6 @@ const Basket = (props) => {
                                             }}>Del
                                             </button>
                                         </td>
-                                        <td>Raschet</td>
                                     </tr>
                                 )
                             }
@@ -79,6 +77,8 @@ const Basket = (props) => {
                         }
                         </tbody>
                     </Table>
+                    <strong>Rashet:</strong>
+                    <strong className="p-5">qweqw</strong>
                 </div>
 
                 <button className="w-100 mb-5 mt-5  bg-white border-0" onClick={() => {

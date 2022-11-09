@@ -12,7 +12,6 @@ import AddCardsElement from "./AllCardsElement";
 import {motion} from "framer-motion"
 
 
-// const color_one= "rgb(57,50,48)"
 const NavComponent = (props) => {
     const setBasket = props.setBasket
     const basket = props.basket

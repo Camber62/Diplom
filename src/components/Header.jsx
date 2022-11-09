@@ -1,29 +1,27 @@
 import React from 'react';
 import {Navbar, Nav} from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
-////background-color: rgb(74,123,66)
-////background-color: rgb(57,50,48)
+
 const Header = (props) => {
 
     return (
         <>
-                <Navbar collapseOnSelect expand="lg" className="bgNavbar" variant="dark">
+                <Navbar collapseOnSelect expand="lg" className="bgNavbar">
                     <Container className="container-fluid">
                         <Navbar.Brand>Web</Navbar.Brand>
-                        <Navbar.Toggle aria-controls="responsev-navbar-nav"/>
-                        <Navbar.Collapse id="responsev-navbar-nav" className="justify-content-between">
-
+                        {/*<Navbar.Collapse className="justify-content-between link_nav">*/}
                             <Nav className="mr-auto ">
-                                <Nav.Link href="/#" title="catalog"><a href="#AboutUs" className="yacor">О НАС</a></Nav.Link>
-                                <Nav.Link href="/#" title="catalog"><a href="#catalog" className="yacor">КАТАЛОГ</a></Nav.Link>
-                                <Nav.Link href="/#" title="catalog"><a href="/#Contacts" className="yacor">КОНТАКТЫ</a></Nav.Link>
-                                <Nav.Link href="/#" title="catalog"><a href="#blog" className="yacor">БЛОГ</a></Nav.Link>
+                                <a href="#AboutUs" className="yacor">КАТАЛОГ</a>
+                                <a href="#AboutUs" className="yacor">О НАС</a>
+                                <a href="#catalog" className="yacor">БЛОГ</a>
+                                <a href="/#Contacts" className="yacor">ДОСТАВКА И ОПЛАТА</a>
+                                <a href="#blog" className="yacor">ИНДМВИДУАЛЬНЫЙ ЗАКАЗ</a>
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/#" title="catalog"><a href="/#form" className="yacor">ДОСТАВКА И ОПЛАТА</a></Nav.Link>
+                                <a href="/#form" className="yacor">КОНТАКТЫ</a>
                             </Nav>
 
-                        </Navbar.Collapse>
+                        {/*</Navbar.Collapse>*/}
                     </Container>
                 </Navbar>
         </>
