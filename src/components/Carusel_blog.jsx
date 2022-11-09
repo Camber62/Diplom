@@ -19,11 +19,9 @@ const blog = [
 const Slideshow = () => {
     return (
         <Container className="pl-0 pr-0 pt-5 pb-5">
-            <h3 id='blog'>blog</h3>
+            <h4 id='blog'>blog</h4>
             <div className="slide-container">
 
-                {/*<Row>*/}
-                {/*<Col>*/}
                 <Slide>
                     {blog.map((slideImage, index) => (
 
@@ -34,8 +32,6 @@ const Slideshow = () => {
 
                     ))}
                 </Slide>
-                {/*</Col>*/}
-                {/*</Row>*/}
 
 
             </div>
@@ -44,32 +40,5 @@ const Slideshow = () => {
 }
 
 
-// function UncontrolledExample() {
-//     return (
-//         <Container>
-//             <Row>
-//                 <Col>
-//                     <Carousel>
-//                         {blog.map((int, element) => {
-//                             return (
-//                                 <Carousel.Item>
-//                                     <img
-//                                         src={int.img}
-//                                         alt="First slide"
-//                                     />
-//                                     <Carousel.Caption className="bg-dark">
-//                                         <h3>{int.name}</h3>
-//                                         <p>{int.TextAnnouncement}</p>
-//                                     </Carousel.Caption>
-//                                 </Carousel.Item>
-//                                 )
-//
-//                         })}
-//                     </Carousel></Col>
-//             </Row>
-//         </Container>
-//
-//     );
-// }
 
 export default Slideshow;

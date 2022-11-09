@@ -50,13 +50,15 @@ const NavComponent = (props) => {
     }
     return (
         <>
-            <Container>
-                <Row className="mt-5">
+            <Container className="p-0">
+                <Row className=" m-0 mt-5 col-lg-12 p-0">
                     <Col sm={4} md={4} lg={3}>
-                        <Nav className="p-3 h-100 flex-column bg-white Rounded">
-                            <div className="container_nav_catalog">
-                                <p id="catalog">Каталог</p>
-                           </div>
+                        <div className="mb-1 text-center container_nav_catalog Rounded text-white">
+                            <h4 id="catalog">Каталог</h4>
+                        </div>
+
+                        <Nav className="p-3 ps-5 h-auto flex-column bg-white Rounded">
+
                             <Link to="/">Home</Link>
                             <Link to="/Serving">Serving</Link>
                             <Link to="/ServingDishes">Serving Dishes</Link>
