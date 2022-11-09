@@ -1,18 +1,12 @@
 import React from 'react';
-import {Navbar, Nav, Button} from "react-bootstrap";
+import {Navbar, Nav} from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
-import Basket from "./Basket";
-import AboutUs from "./AboutUs";
-import Contacts from "./Contactsю";
-// import {Anchor} from 'antd'
 ////background-color: rgb(74,123,66)
 ////background-color: rgb(57,50,48)
-// const {Link} = Anchor
 const Header = (props) => {
 
     return (
         <>
-            {/*<Anchor>*/}
                 <Navbar collapseOnSelect expand="lg" className="bgNavbar" variant="dark">
                     <Container className="container-fluid">
                         <Navbar.Brand>Web</Navbar.Brand>
@@ -32,11 +26,7 @@ const Header = (props) => {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-            {/*</Anchor>*/}
-
-
         </>
-
     )
 }
 export default Header

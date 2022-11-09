@@ -3,7 +3,6 @@ import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
 import FormExample from "./Form";
 
-
 const Basket = (props) => {
     const setBasket = props.setBasket
     const basket = props.basket
@@ -45,6 +44,7 @@ const Basket = (props) => {
                 <h4 id="form">Форма заказа</h4>
                 <div className=" bg-white border_radius" >
                     <Table>
+                        <tbody>
                         <tr>
                             <th>Товар</th>
                             <th>Цена</th>
@@ -56,7 +56,7 @@ const Basket = (props) => {
                         <br/>
                         {basket.map((int, element) => {
                                 return (
-                                    <tr>
+                                    <tr key={int.id}>
                                         <td>{int.name}</td>
                                         <td>{int.price}</td>
                                         <td>
@@ -77,6 +77,7 @@ const Basket = (props) => {
                             }
                         )
                         }
+                        </tbody>
                     </Table>
                 </div>
 

@@ -8,6 +8,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 
 function FormExample() {
+
     const [validated, setValidated] = useState(false);
     const [cargo, setCargo] = useState('')
     const handleSubmit = (event) => {
@@ -20,8 +21,14 @@ function FormExample() {
         setValidated(true);
     };
 
+
+
+
+
+
     return (
-        <Form className="telegram-form form" method="post" action='form_Telegram/send.php' noValidate validated={validated} onSubmit={handleSubmit}>
+
+        <Form id="tg" className="telegram-form form" noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-3">
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                     <Form.Label>First name</Form.Label>
