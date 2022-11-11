@@ -50,8 +50,8 @@ const NavComponent = (props) => {
     }
     return (
         <>
-            <Container className="p-0">
-                <Row className=" m-0 mt-5 col-lg-12 p-0">
+            <Container fluid="md" className="p-0 ">
+                <Row className=" m-0 mt-5">
                     <Col sm={4} md={4} lg={3}>
                         <div className="mb-1 text-center container_nav_catalog Rounded text-white">
                             <h4 id="catalog">Каталог</h4>
@@ -66,7 +66,7 @@ const NavComponent = (props) => {
                             <Link to="/EndBoards">EndBoards</Link>
                         </Nav>
                     </Col>
-                    <Col sm={8} md={8} lg={9} className="p-0 ">
+                    <Col sm={8} md={8} lg={9} className="mt-1 mt-sm-0">
                         <SimpleBar style={{maxHeight: 600}}>
                             <Nav className="Rounded  bg-white ">
 
