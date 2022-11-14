@@ -3,7 +3,7 @@ import Header from "./Header";
 // import {BrowserRouter} from "react-router-dom";
 import IndividualOrders from "./individualOrders";
 import Basket from "./Basket";
-import Slideshow from "./Carusel_blog";
+// import Slideshow from "./Carusel_blog";
 import Picture1 from "../icons/Picture1.png"
 import Picture2 from "../icons/Picture2.png"
 import Picture3 from "../icons/Picture3.png"
@@ -13,6 +13,7 @@ import Picture6 from "../icons/Picture6.png"
 import NavComponent from "./components_nav/NavComponent";
 import Contacts from "./Contactsю";
 import AboutUs from "./AboutUs";
+import BlogNavComponent from "./component_blog/Blog";
 // import  from "@types/react";
 // import Picture7 from "../src/icons/Picture7.png"
 // import Picture1_1 from "../src/icons/Picture1_1.png"
@@ -182,8 +183,8 @@ const Main = () => {
                           TeaStationsTrays={TeaStationsTrays}
                           EndBoards={EndBoards}/>
             <Basket basket={basket} setBasket={setBasket}/>
-            <Slideshow/>
             <IndividualOrders/>
+            <BlogNavComponent/>
             <AboutUs/>
             <Contacts/>
         </>

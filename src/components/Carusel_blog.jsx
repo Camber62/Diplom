@@ -1,4 +1,3 @@
-// import Carousel from 'react-bootstrap/Carousel';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Picture7 from "../icons/Picture7.png"

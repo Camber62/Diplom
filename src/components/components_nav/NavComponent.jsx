@@ -50,7 +50,7 @@ const NavComponent = (props) => {
     }
     return (
         <>
-            <Container fluid="md" className="p-0 ">
+            <Container fluid="md" className="p-0">
                 <Row className=" m-0 mt-5">
                     <Col sm={4} md={4} lg={3}>
                         <div className="mb-1 text-center container_nav_catalog Rounded text-white">
