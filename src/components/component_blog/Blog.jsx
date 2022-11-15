@@ -2,15 +2,12 @@ import React, {useState} from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {Link, useNavigate, useParams} from "react-router-dom";
-import {Route, Routes} from "react-router-dom";
-import {Button, Image} from "react-bootstrap";
-import Nav from "react-bootstrap/Nav";
-
+import {Button} from "react-bootstrap";
 
 const BlogNavComponent = () => {
 
-    // const [targ,setTarg]=useState(false)
+    const [classContainer, setClassContainer] = useState(false)
+    const [showContainer, setShowContainer] = useState(false)
     const arrBlog = [
         {
             img: '1',
@@ -44,19 +41,18 @@ const BlogNavComponent = () => {
         },
     ]
 
-    const CardBlog = () => {
-        // setTarg(true)
-        const navigate = useNavigate()
-        const {name} = useParams();
+
+
+    const CardBlog = (int) => {
+        // console.log(int)
+        setShowContainer(true)
+        setClassContainer(true)
         return (
-
-
             <div>
-                <p>{name}</p>
-                <Button onClick={() =>{navigate(-1)}}>Back</Button>
-
+                <p>{int.name}</p>
+                <Button onClick={()=>{setShowContainer(false);setClassContainer(false)}}>Back
+                </Button>
             </div>
-
         )
     }
 
@@ -64,30 +60,40 @@ const BlogNavComponent = () => {
     return (
         <>
 
-            <Container>
-                <Col>
-                    <Nav>
+            <Container className={classContainer ? 'overContainerAnimacia' : 'overContainer' }>
+                <h4>БЛОГ|кейсы,новости,полезные материалы</h4>
+                {showContainer ? <CardBlog/>:
+                    <Row>
                         {arrBlog.map((int, element) => {
                             return (
-                                // targ ? <></>:
-                                <Col>
-                                    <Link to="blog/test">{int.name}</Link>
+                                <Col sm={12} md={6} className="my-5">
+                                    <div className="mb-3 border-0">
+                                        <div className="row g-0">
+                                            <div className="col-sm-4 Rounded">
+                                                <img alt="qwe" src={int.img}/></div>
+                                            <div className="col-md-8">
+                                                <div className="card-body">
+                                                    <h5 className="card-title">{int.name}</h5>
+                                                    <p className="card-text">{int.TextAnnouncement}</p>
+                                                    <Button onClick={() => {
+                                                        CardBlog(int)
+                                                    }}>cklic</Button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </Col>
-
                             )
-
                         })}
+                    </Row>
 
-                    </Nav>
-                </Col>
-                <Col>
-                    <Routes>
-                        <Route path="/blog" element={<CardBlog/>}/>
-                    </Routes>
-                </Col>
-
+                }
             </Container>
-
+            <div className= {showContainer ? "none":"text-center arrowOpaciti"}>
+                <img alt="alt" src= {classContainer ? "https://img.icons8.com/windows/96/000000/circled-chevron-up.png"
+                :
+                "https://img.icons8.com/windows/96/null/circled-chevron-down.png"} onClick={()=>{setClassContainer(!classContainer)}}/>
+                </div>
 
         </>
     )
