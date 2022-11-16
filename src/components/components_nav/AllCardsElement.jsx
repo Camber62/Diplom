@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import {Image} from "react-bootstrap";
 import {Button} from "react-bootstrap";
+import {AwesomeButton} from "react-awesome-button";
 
 
 const AddCardsElement = (props) => {
@@ -44,11 +45,11 @@ console.log(basket[i].totalPrice)
                                 to={`/${int.name}`}>{int.TextAnnouncement}</Link>
                             </p>
                             <p>{int.price}</p>
-                            <Button onClick={(e) => {
+                            <AwesomeButton type="primary" onPress={(e) => {
                                 e.preventDefault()
 
                                 addBasket(int)
-                            }}>Добавить в заказ</Button>
+                            }}>Добавить в заказ</AwesomeButton>
                         </p>
                     </Col>
                 )

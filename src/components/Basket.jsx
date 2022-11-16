@@ -44,12 +44,6 @@ const Basket = (props) => {
 
 
 
-   let summa=0
-    forEach((basket)=>{
-        summa+=basket.totalPrice
-
-    })
-
 
     return (
         <Container fluid className="p-0 mt-5 bg-white">
@@ -97,7 +91,7 @@ const Basket = (props) => {
                         </tbody>
                     </Table>
                     <strong>Rashet:</strong>
-                    <strong className="p-5">{summa}</strong>
+                    <strong className="p-5">0</strong>
                 </div>
 
                 <button className="w-100 mb-5 mt-5  bg-white border-0" onClick={() => {
