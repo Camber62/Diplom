@@ -90,9 +90,9 @@ const BlogNavComponent = () => {
                 }
             </Container>
             <div className= {showContainer ? "none":"text-center arrowOpaciti"}>
-                <img alt="alt" src= {classContainer ? "https://img.icons8.com/windows/96/000000/circled-chevron-up.png"
+                <img alt="alt" src= {classContainer ? "https://img.icons8.com/windows/56/000000/circled-chevron-up.png"
                 :
-                "https://img.icons8.com/windows/96/null/circled-chevron-down.png"} onClick={()=>{setClassContainer(!classContainer)}}/>
+                "https://img.icons8.com/windows/56/null/circled-chevron-down.png"} onClick={()=>{setClassContainer(!classContainer)}}/>
                 </div>
 
         </>

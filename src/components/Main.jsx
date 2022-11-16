@@ -182,8 +182,8 @@ const Main = () => {
             <NavComponent basket={basket} setBasket={setBasket} Serving={Serving} ServingDishes={ServingDishes}
                           TeaStationsTrays={TeaStationsTrays}
                           EndBoards={EndBoards}/>
-            <Basket basket={basket} setBasket={setBasket}/>
             <IndividualOrders/>
+            <Basket basket={basket} setBasket={setBasket}/>
             <BlogNavComponent/>
             <AboutUs/>
             <Contacts/>

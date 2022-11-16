@@ -2,25 +2,30 @@ import React, {useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
 import FormExample from "./Form";
+import {forEach} from "react-bootstrap/ElementChildren";
 
 const Basket = (props) => {
     const setBasket = props.setBasket
     const basket = props.basket
     const [openForm, setOpenForm] = useState(false)
 
-    const Count = (e,int) => {
+
+
+
+
+    const Count = (e, int) => {
         e.preventDefault()
-            console.log(int.id,e)
+        // console.log(int.id, e)
 
         for (let i = 0; i < basket.length; i++) {
-            if(basket[i].id===int.id){
+            if (basket[i].id === int.id) {
                 if (e.target.value === "+") {
                     basket[i].count++
-                    basket[i].totalPrice=basket[i].count*basket[i].price
+                    basket[i].totalPrice = basket[i].count * basket[i].price
                     setBasket([...basket])
-                }else if (e.target.value === "-" && basket[i].count > 1){
+                } else if (e.target.value === "-" && basket[i].count > 1) {
                     basket[i].count--
-                    basket[i].totalPrice=basket[i].count*basket[i].price
+                    basket[i].totalPrice = basket[i].count * basket[i].price
                     setBasket([...basket])
                 }
             }
@@ -33,16 +38,24 @@ const Basket = (props) => {
             return index !== Number(elem);
         });
         setBasket(newToDoList);
-        console.log(elem)
+        // console.log(elem)
 
     }
 
 
+
+   let summa=0
+    forEach((basket)=>{
+        summa+=basket.totalPrice
+
+    })
+
+
     return (
-        <Container   fluid className="p-0 mt-5 bg-white">
-            <Container >
+        <Container fluid className="p-0 mt-5 bg-white">
+            <Container>
                 <h4 id="form">Форма заказа</h4>
-                <div className=" bg-white border_radius" >
+                <div className=" bg-white border_radius">
                     <Table>
                         <tbody>
                         <tr>
@@ -59,9 +72,15 @@ const Basket = (props) => {
                                         <td>{int.name}</td>
                                         <td>{int.price}</td>
                                         <td>
-                                            <button value="-" onClick={(e)=>{Count(e,int)}}>-</button>
+                                            <button value="-" onClick={(e) => {
+                                                Count(e, int)
+                                            }}>-
+                                            </button>
                                             {int.count}
-                                            <button value="+" onClick={(e)=>{Count(e,int)}}>+</button>
+                                            <button value="+" onClick={(e) => {
+                                                Count(e, int)
+                                            }}>+
+                                            </button>
                                         </td>
                                         <td>{int.totalPrice}</td>
                                         <td>
@@ -78,7 +97,7 @@ const Basket = (props) => {
                         </tbody>
                     </Table>
                     <strong>Rashet:</strong>
-                    <strong className="p-5">qweqw</strong>
+                    <strong className="p-5">{summa}</strong>
                 </div>
 
                 <button className="w-100 mb-5 mt-5  bg-white border-0" onClick={() => {

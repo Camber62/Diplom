@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-
+import { AwesomeButton } from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
 function FormExample() {
 
     const [validated, setValidated] = useState(false);
@@ -185,7 +186,9 @@ function FormExample() {
                     feedbackType="invalid"
                 />
             </Form.Group>
-            <Button name="act" value="order" type="submit">Submit form</Button>
+
+            <AwesomeButton type="primary">Button</AwesomeButton>
+
         </Form>
     );
 }
