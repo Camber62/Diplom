@@ -21,11 +21,7 @@ const NavComponent = (props) => {
     const EndBoards = props.EndBoards
 
     const AllCardsServing = () => {
-        return <motion.div
-            initial="out"
-            animate="in"
-            exit="out"
-            variants={pageTransition}><AddCardsElement basket={basket} setBasket={setBasket} elem={Serving}/></motion.div>
+        return <AddCardsElement basket={basket} setBasket={setBasket} elem={Serving}/>
     }
     const AllCardsServingDishes = () => {
         return <AddCardsElement basket={basket} setBasket={setBasket} elem={ServingDishes}/>

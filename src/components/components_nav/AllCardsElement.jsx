@@ -3,7 +3,6 @@ import {Link,} from "react-router-dom";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import {Image} from "react-bootstrap";
-import {Button} from "react-bootstrap";
 import {AwesomeButton} from "react-awesome-button";
 
 
@@ -21,13 +20,6 @@ const AddCardsElement = (props) => {
         if (!siInArray)
             setBasket(basket.concat([e]))
 
-
-
-
-
-        for (let i = 0; i < basket.length; i++) {
-console.log(basket[i].totalPrice)
-        }
     }
 
 
@@ -47,9 +39,8 @@ console.log(basket[i].totalPrice)
                             <p>{int.price}</p>
                             <AwesomeButton type="primary" onPress={(e) => {
                                 e.preventDefault()
-
                                 addBasket(int)
-                            }}>Добавить в заказ</AwesomeButton>
+                            }}><h6>Добавить в заказ</h6></AwesomeButton>
                         </p>
                     </Col>
                 )
