@@ -23,7 +23,6 @@ const Header = () => {
                     <div className="me-2"><Nav.Link href="#Contacts" eventKey="link-5">КОНТАКТЫ</Nav.Link></div>
                 </Nav>
                 </Navbar.Collapse>
-
             </Container>
             </Navbar>
         </>

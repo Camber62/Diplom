@@ -61,6 +61,8 @@ const NavComponent = (props) => {
                             <Link to="/TeaStationsTrays">Tea Stations Trays</Link>
                             <Link to="/EndBoards">EndBoards</Link>
                         </Nav>
+                        <div className="pt-5 text-center"><h5 >МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ НАТУРАЛЬНОГО ДЕРЕВА ДЛЯ ВАШЕГО БИЗНЕСА</h5></div>
+
                     </Col>
                     <Col sm={8} md={8} lg={9} className="mt-1 mt-sm-0">
                         <SimpleBar style={{maxHeight: 600}}>
@@ -81,8 +83,6 @@ const NavComponent = (props) => {
                                     <Route path="/:name" element={<CardElement/>}/>
 
                                 </Routes>
-
-
                             </Nav>
                         </SimpleBar>
                     </Col>
