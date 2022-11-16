@@ -32,7 +32,6 @@ console.log(basket[i].totalPrice)
 
     return (
 
-
         <Row className=" m-0 justify-content-around" md={3} sm={1} xs={1}>
             {props.elem.map((int, element) => {
                 return (
