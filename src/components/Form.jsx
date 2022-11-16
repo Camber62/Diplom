@@ -187,7 +187,9 @@ function FormExample() {
                 />
             </Form.Group>
 
-            <AwesomeButton type="primary">Button</AwesomeButton>
+            <AwesomeButton type="primary"
+            onPress="asda"
+            >Button</AwesomeButton>
 
         </Form>
     );

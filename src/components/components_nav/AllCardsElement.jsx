@@ -28,7 +28,7 @@ const AddCardsElement = (props) => {
         <Row className=" m-0 justify-content-around" md={3} sm={1} xs={1}>
             {props.elem.map((int, element) => {
                 return (
-                    <Col className="m-1 bg_All_Cards">
+                    <Col className="m-1 bg_All_Cards" key={element}>
                         <p className="img_All_Cards"><Link to={`/${int.name}`}><Image src={int.src} alt="alt"
                                                                                       width="100"/></Link></p>
                         <p key={element}>

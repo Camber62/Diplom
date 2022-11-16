@@ -10,7 +10,11 @@ const Basket = (props) => {
     const [openForm, setOpenForm] = useState(false)
 
 
+    function total() {
+        console.log('basket', basket)
+        return 0
 
+    }
 
 
     const Count = (e, int) => {
@@ -59,7 +63,6 @@ const Basket = (props) => {
                             <th>Сумма</th>
                             <th>удаление</th>
                         </tr>
-                        <br/>
                         {basket.map((int, element) => {
                                 return (
                                     <tr key={int.id}>
@@ -91,7 +94,7 @@ const Basket = (props) => {
                         </tbody>
                     </Table>
                     <strong>Rashet:</strong>
-                    <strong className="p-5">0</strong>
+                    <strong className="p-5">{total()}</strong>
                 </div>
 
                 <button className="w-100 mb-5 mt-5  bg-white border-0" onClick={() => {

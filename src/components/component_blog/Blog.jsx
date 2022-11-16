@@ -66,7 +66,7 @@ const BlogNavComponent = () => {
                     <Row>
                         {arrBlog.map((int, element) => {
                             return (
-                                <Col sm={12} md={6} className="my-5">
+                                <Col sm={12} md={6} className="my-5" key={element}>
                                     <div className="mb-3 border-0">
                                         <div className="row g-0">
                                             <div className="col-sm-4 Rounded">

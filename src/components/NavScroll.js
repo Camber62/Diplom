@@ -1,5 +1,6 @@
 
 
+
 document.querySelectorAll('a.yacor').forEach(link=>{
     link.addEventListener('click' , function (e){
         e.preventDefault()
