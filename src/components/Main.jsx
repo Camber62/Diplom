@@ -1,9 +1,7 @@
 import React,{useState} from 'react';
 import Header from "./Header";
-// import {BrowserRouter} from "react-router-dom";
 import IndividualOrders from "./individualOrders";
 import Basket from "./Basket";
-// import Slideshow from "./Carusel_blog";
 import Picture1 from "../icons/Picture1.png"
 import Picture2 from "../icons/Picture2.png"
 import Picture3 from "../icons/Picture3.png"

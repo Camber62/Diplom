@@ -5,12 +5,14 @@ import {Button} from "react-bootstrap";
 const CardElement = (props) => {
     const navigate = useNavigate()
     const { name } = useParams();
+    const setShowBtn= props.setShowBtn
+
     return (
 
 
         <div>
             <p>{name}</p>
-            <Button onClick={() => navigate(-1)}>Back</Button>
+            <Button onClick={() => {navigate(-1);setShowBtn(false)}}>Back</Button>
 
         </div>
 

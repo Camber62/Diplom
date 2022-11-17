@@ -10,6 +10,7 @@ const AddCardsElement = (props) => {
 
     const setBasket = props.setBasket
     const basket = props.basket
+    const setShowBtn= props.setShowBtn
 
     const addBasket = (e) => {
         let siInArray = false
@@ -29,17 +30,18 @@ const AddCardsElement = (props) => {
             {props.elem.map((int, element) => {
                 return (
                     <Col className="m-1 bg_All_Cards" key={element}>
-                        <p className="img_All_Cards"><Link to={`/${int.name}`}><Image src={int.src} alt="alt"
+                        <p className="img_All_Cards"><Link onClick={()=>{setShowBtn(true)}} to={`/${int.name}`}><Image src={int.src} alt="alt"
                                                                                       width="100"/></Link></p>
                         <p key={element}>
-                            <p className="h6"><Link to={`/${int.name}`}>{int.name}</Link></p>
-                            <p className="textAnnouncement"><Link
+                            <p className="h6"><Link onClick={()=>{setShowBtn(true)}} to={`/${int.name}`}>{int.name}</Link></p>
+                            <p className="textAnnouncement"><Link onClick={()=>{setShowBtn(true)}}
                                 to={`/${int.name}`}>{int.TextAnnouncement}</Link>
                             </p>
                             <p>{int.price}</p>
                             <AwesomeButton type="primary" onPress={(e) => {
-                                e.preventDefault()
-                                addBasket(int)
+                                e.preventDefault();
+                                addBasket(int);
+
                             }}><h6>Добавить в заказ</h6></AwesomeButton>
                         </p>
                     </Col>

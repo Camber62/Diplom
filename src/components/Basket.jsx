@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
 import FormExample from "./Form";
-import {forEach} from "react-bootstrap/ElementChildren";
 
 const Basket = (props) => {
     const setBasket = props.setBasket
