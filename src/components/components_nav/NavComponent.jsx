@@ -33,61 +33,88 @@ const NavComponent = (props) => {
 
     return (
         <>
-            <Container fluid="md" className="p-0">
+            <Container fluid="md">
                 <Row className="pt-3">
                     <Col sm={4} className="p-0">
-                        <div className="mb-1 text-center container_nav_catalog Rounded text-white">
-                            <h4 id="catalog">Каталог</h4>
+                        <div className="mb-1">
+                            <div className="text-center Rounded text-white container_nav_catalog"><h4
+                                id="catalog">Каталог</h4></div>
+                            <div className=" mt-3 pb-5 mt-sm-1 bg-white Rounded text_color">
+                                <p>-ПОДАЧА БЛЮД</p>
+                                <p>-СЕРВИРОВКА</p>
+                                <p>-ИНТЕРЬЕР МЕБЕЛЬ</p>
+                                <p>-ТОРЦЕВЫЕ ДОСКИ</p>
+                                <p>-БИРКИ/РЕЗЕРВ</p>
+                                <p>-ЧАЙНЫЕ СТАНЦИИ</p>
+                                <p>-ПОДНОСЫ</p>
+                            </div>
+                            <div className="mt-3 text-center text_color"><h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ НАТУРАЛЬНОГО ДЕРЕВА
+                                ДЛЯ ВАШЕГО
+                                БИЗНЕСА</h5></div>
                         </div>
-                        <div className="pt-5 text-center"><h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ НАТУРАЛЬНОГО ДЕРЕВА ДЛЯ ВАШЕГО
-                            БИЗНЕСА</h5></div>
+
                     </Col>
-                    <Col sm={8} className="p-0">{/*<SimpleBar style={{Height: 600}}>*/}
+                    <Col sm={8} className=" pt-xs-3">
                         <Slider/>
-                        {/*</SimpleBar>*/}
                     </Col>
                 </Row>
 
                 <Row className=" m-0 mt-5">
 
                     {showContainerCol ?
-                        <Col sm={12} >
+                        <Col sm={12}>
                             <p>В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА.ЕСЛИ ЗДЕСЬ НЕТ ТОГО,ЧТО ВАМ
                                 НУЖНО,ПЕРЕЙДИТЕ В РАЗДЕЛ ИДИВИДУАЛЬНЫЙ ЗАКАЗ</p>
-                            <Nav className="p-3 ps-5 h-auto Rounded">
-                                <div className='col-sm-3 text-center'><img src={servingDishes} className="m-auto w-75 h-75 d-block rounded"
-                                                           alt="ServingImg"/> <Link onClick={() => {
-                                    setShowContainerCol(false)
-                                }} to="/ServingDishes">ПОДАЧА БЛЮД</Link></div>
-                                <div className='col-sm-3 text-center'><img src={ServingImg} className="m-auto w-75 h-75 d-block rounded"
-                                                           alt="ServingImg"/><Link
-                                    onClick={() => {
-                                        setShowContainerCol(false)
-                                    }}
-                                    to="/Serving">СЕРВИРОВКА СТОЛА</Link></div>
-                                <div className='col-sm-3 text-center'><img src={priceTags} className="m-auto w-75 h-75 d-block rounded"
-                                                           alt="priceTags"/><Link onClick={() => {
-                                    setShowContainerCol(false)
-                                }} to="/priceTags">ЦЕННИКИ ТЕЙБЛ-ТЕНТЫ</Link></div>
-                                <div className='col-sm-3 text-center'><img src={endBoards} className="m-auto w-75 h-75 d-block rounded"
-                                                           alt="ServingImg"/><Link onClick={() => {
-                                    setShowContainerCol(false)
-                                }} to="/EndBoards">ТОРЦЕВЫЕ ДОСКИ</Link></div>
-                                <div className='col-sm-3 text-center'><img src={chair} className="m-auto w-75 h-75 d-block rounded"
-                                                           alt="ServingImg"/><Link onClick={() => {
-                                    setShowContainerCol(false)
-                                }} to="/chair">ИНТЕРЬЕР И МЕБЕЛЬ</Link></div>
-                                <div className='col-sm-3 text-center'><img src={platestags} className="m-auto w-75 h-75 d-block rounded"
-                                                           alt="platestags"/><Link onClick={() => {
-                                    setShowContainerCol(false)
-                                }} to="/platestags">ТАБЛИЧКИ/БИРКИ</Link></div>
-                                <div className='col-sm-3 text-center'><img src={tea} className="m-auto w-75 h-75 d-block rounded"
-                                                           alt="tea"/><Link onClick={() => {
-                                    setShowContainerCol(false)
-                                }} to="/TeaStationsTrays">ЧАЙНЫЕ СТАНЦИИ</Link></div>
+                            <Nav className="p-3 h-auto Rounded justify-content-around">
+                                <div className=' col-9 col-sm-5 col-md-3 text-center'>
+                                    <Link onClick={() => {setShowContainerCol(false)}} to="/ServingDishes">
+                                    <img src={servingDishes} className="justify-content-center w-100 h-75 d-block rounded" alt="ServingDishesImg"/>
+                                        <p>ПОДАЧА БЛЮД</p>
+                                    </Link>
+                                </div>
 
+                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                    <Link onClick={() => {setShowContainerCol(false)}} to="/Serving">
+                                    <img src={ServingImg} className="justify-content-center w-100 h-75 d-block rounded" alt="ServingImg"/>
+                                        <p>СЕРВИРОВКА СТОЛА</p>
+                                    </Link>
+                                </div>
 
+                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                    <Link onClick={() => {setShowContainerCol(false)}} to="/priceTags">
+                                    <img src={priceTags} className="justify-content-center w-100 h-75 d-block rounded" alt="priceTagsImg"/>
+                                        <p>ЦЕННИКИ ТЕЙБЛ-ТЕНТЫ</p>
+                                    </Link>
+                                </div>
 
+                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                    <Link
+                                    onClick={() => {setShowContainerCol(false)}} to="/EndBoards">
+                                    <img src={endBoards} className="justify-content-center w-100 h-75 d-block rounded" alt="EndBoardsImg"/>
+                                    <p>ТОРЦЕВЫЕ ДОСКИ</p>
+                                </Link>
+                                </div>
+
+                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                    <Link onClick={() => {setShowContainerCol(false)}} to="/chair">
+                                    <img src={chair} className="justify-content-center w-100 h-75 d-block rounded" alt="chairImg"/>
+                                        <p>ИНТЕРЬЕР И МЕБЕЛЬ</p>
+                                    </Link>
+                                </div>
+
+                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                    <Link onClick={() => {setShowContainerCol(false)}} to="/platestags">
+                                    <img src={platestags} className="justify-content-center w-100 h-75 d-block rounded" alt="platestagsImg"/>
+                                        <p>ТАБЛИЧКИ/БИРКИ</p>
+                                    </Link>
+                                </div>
+
+                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                    <Link onClick={() => {setShowContainerCol(false)}} to="/TeaStationsTrays">
+                                    <img src={tea} className="justify-content-center w-100 h-75 d-block rounded" alt="TeaStationsTraysImg"/>
+                                        <p>ЧАЙНЫЕ СТАНЦИИ</p>
+                                    </Link>
+                                </div>
 
 
                             </Nav>
@@ -106,6 +133,16 @@ const NavComponent = (props) => {
                                 }
                                 <Routes>
 
+
+                                    {/*<Route path="/chair"*/}
+                                    {/*       element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}*/}
+                                    {/*                                 setBasket={setBasket} elem={chair}/>}/>*/}
+                                    {/*<Route path="/platestags"*/}
+                                    {/*       element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}*/}
+                                    {/*                                 setBasket={setBasket} elem={platestags}/>}/>*/}
+                                    {/*<Route path="/priceTags"*/}
+                                    {/*       element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}*/}
+                                    {/*                                 setBasket={setBasket} elem={priceTags}/>}/>*/}
 
                                     <Route path="/Serving"
                                            element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}

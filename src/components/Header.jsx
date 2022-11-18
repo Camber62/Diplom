@@ -14,13 +14,15 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsev-navbar-nav"/>
                 <Navbar.Collapse className="justify-content-around" id="responsev-navbar-nav" >
 
-                <Nav     defaultActiveKey="/home" >
+                <Nav defaultActiveKey="/home" >
                         <Nav.Link href="#catalog">КАТАЛОГ</Nav.Link>
                         <Nav.Link href="#AboutUs" eventKey="link-1">О НАС</Nav.Link>
                         <Nav.Link href="#blog" eventKey="link-2">БЛОГ</Nav.Link>
                         <Nav.Link href="#form" eventKey="link-3">ДОСТАВКА И ОПЛАТА</Nav.Link>
                         <Nav.Link href="#form" eventKey="link-4">ИНДМВИДУАЛЬНЫЙ ЗАКАЗ</Nav.Link>
-                    <div className="me-2"><Nav.Link href="#Contacts" eventKey="link-5">КОНТАКТЫ</Nav.Link></div>
+                    <div className="me-2">
+                        <Nav.Link href="#Contacts" eventKey="link-5">КОНТАКТЫ</Nav.Link>
+                    </div>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
