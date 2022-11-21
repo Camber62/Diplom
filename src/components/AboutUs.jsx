@@ -29,7 +29,7 @@ const AboutUs = () => {
                     <li>Элементы декора (полки и подставки, стеллажи для цветов и т.д.);</li>
                     <li>Некоторые варианты мебели (для летних веранд, кофейные столики из спилов).</li>
                 </ul>
-                <img className="Rounded col-md-6" src={img} alt=""/>
+                <img className="rounded-5 col-md-6" src={img} alt=""/>
             </div>
 
 
