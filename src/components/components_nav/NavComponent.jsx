@@ -39,7 +39,7 @@ const NavComponent = (props) => {
                         <div className="mb-1">
                             <div className="text-center Rounded text-white container_nav_catalog"><h4
                                 id="catalog">Каталог</h4></div>
-                            <div className=" mt-3 pb-5 mt-sm-1 bg-white Rounded text_color">
+                            <div className=" mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
                                 <p>-ПОДАЧА БЛЮД</p>
                                 <p>-СЕРВИРОВКА</p>
                                 <p>-ИНТЕРЬЕР МЕБЕЛЬ</p>
@@ -48,7 +48,7 @@ const NavComponent = (props) => {
                                 <p>-ЧАЙНЫЕ СТАНЦИИ</p>
                                 <p>-ПОДНОСЫ</p>
                             </div>
-                            <div className="mt-3 text-center text_color"><h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ НАТУРАЛЬНОГО ДЕРЕВА
+                            <div className="mt-3 text-left text_color"><h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ НАТУРАЛЬНОГО ДЕРЕВА
                                 ДЛЯ ВАШЕГО
                                 БИЗНЕСА</h5></div>
                         </div>
@@ -66,28 +66,28 @@ const NavComponent = (props) => {
                             <p>В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА.ЕСЛИ ЗДЕСЬ НЕТ ТОГО,ЧТО ВАМ
                                 НУЖНО,ПЕРЕЙДИТЕ В РАЗДЕЛ ИДИВИДУАЛЬНЫЙ ЗАКАЗ</p>
                             <Nav className="p-3 h-auto Rounded justify-content-around">
-                                <div className=' col-9 col-sm-5 col-md-3 text-center'>
+                                <div className=' col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link onClick={() => {setShowContainerCol(false)}} to="/ServingDishes">
                                     <img src={servingDishes} className="justify-content-center w-100 h-75 d-block rounded" alt="ServingDishesImg"/>
                                         <p>ПОДАЧА БЛЮД</p>
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link onClick={() => {setShowContainerCol(false)}} to="/Serving">
                                     <img src={ServingImg} className="justify-content-center w-100 h-75 d-block rounded" alt="ServingImg"/>
                                         <p>СЕРВИРОВКА СТОЛА</p>
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link onClick={() => {setShowContainerCol(false)}} to="/priceTags">
                                     <img src={priceTags} className="justify-content-center w-100 h-75 d-block rounded" alt="priceTagsImg"/>
                                         <p>ЦЕННИКИ ТЕЙБЛ-ТЕНТЫ</p>
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link
                                     onClick={() => {setShowContainerCol(false)}} to="/EndBoards">
                                     <img src={endBoards} className="justify-content-center w-100 h-75 d-block rounded" alt="EndBoardsImg"/>
@@ -95,24 +95,30 @@ const NavComponent = (props) => {
                                 </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link onClick={() => {setShowContainerCol(false)}} to="/chair">
                                     <img src={chair} className="justify-content-center w-100 h-75 d-block rounded" alt="chairImg"/>
                                         <p>ИНТЕРЬЕР И МЕБЕЛЬ</p>
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link onClick={() => {setShowContainerCol(false)}} to="/platestags">
                                     <img src={platestags} className="justify-content-center w-100 h-75 d-block rounded" alt="platestagsImg"/>
                                         <p>ТАБЛИЧКИ/БИРКИ</p>
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link onClick={() => {setShowContainerCol(false)}} to="/TeaStationsTrays">
                                     <img src={tea} className="justify-content-center w-100 h-75 d-block rounded" alt="TeaStationsTraysImg"/>
                                         <p>ЧАЙНЫЕ СТАНЦИИ</p>
+                                    </Link>
+                                </div>
+                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
+                                    <Link onClick={() => {setShowContainerCol(false)}} to="/?">
+                                        <img src={"?"} className="justify-content-center w-100 h-75 d-block rounded" alt="?"/>
+                                        <p>?</p>
                                     </Link>
                                 </div>
 

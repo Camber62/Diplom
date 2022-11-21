@@ -2,9 +2,9 @@ import React from "react";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
-
+import Banner1 from "../../icons/Banner1.jpg"
 const News = [
-    {id: 0, name: "Stocks", about: "StocksStocksStocks", img: "/"},
+    {id: 0, name: "Stocks", about: "StocksStocksStocks", img:Banner1},
     {id: 1, name: "Stocks1", about: "StocksStocksStocks1", img: "/"},
     {id: 2, name: "Stocks2", about: "StocksStocksStocks2", img: "/"},
 ]
@@ -21,11 +21,12 @@ const Slider = () => {
             >
                 {News.map((int, element) => {
                     return (
-                        <div key={element}>
-                            <img alt="qwe" src={int.img}/>
-                            <h3>{int.name}</h3>
-                            <p>{int.about}</p>
-                        </div>
+                        <div className="w-100 h-100" key={element}>
+                            <img key={element} className="w-100 h-100" alt="qwe" src={int.img}/>
+                            {/*<h3>{int.name}</h3>*/}
+                            {/*<p>{int.about}</p>*/}
+                         </div>
+
                     );
                 })}
             </AutoplaySlider>
