@@ -3,6 +3,7 @@ import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
 import Banner1 from "../../icons/Banner1.jpg"
+import {AwesomeButton} from "react-awesome-button";
 const News = [
     {id: 0, name: "Stocks", about: "StocksStocksStocks", img:Banner1},
     {id: 1, name: "Stocks1", about: "StocksStocksStocks1", img: "/"},
@@ -25,6 +26,10 @@ const Slider = () => {
                             <img key={element} className="w-100 h-100" alt="qwe" src={int.img}/>
                             {/*<h3>{int.name}</h3>*/}
                             {/*<p>{int.about}</p>*/}
+                            <AwesomeButton type="primary" onPress={(e) => {
+                                e.preventDefault();
+
+                            }}><h6>Подробнее</h6></AwesomeButton>
                          </div>
 
                     );
