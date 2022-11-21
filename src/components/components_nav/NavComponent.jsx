@@ -39,7 +39,7 @@ const NavComponent = (props) => {
                         <div className="mb-1">
                             <div className="text-center Rounded text-white container_nav_catalog"><h4
                                 id="catalog">Каталог</h4></div>
-                            <div className=" mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
+                            <div className="px-3 mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
                                 <p>-ПОДАЧА БЛЮД</p>
                                 <p>-СЕРВИРОВКА</p>
                                 <p>-ИНТЕРЬЕР МЕБЕЛЬ</p>
