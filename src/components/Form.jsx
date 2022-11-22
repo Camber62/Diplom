@@ -8,7 +8,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
-// import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container';
 
 function FormExample() {
 
@@ -30,7 +30,7 @@ function FormExample() {
 
 
     return (
-// <Container>
+<Container>
         <Form id="tg" className="telegram-form form" noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-3">
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -189,12 +189,10 @@ function FormExample() {
                 />
             </Form.Group>
 
-            <AwesomeButton type="primary"
-            onPress="asda"
-            >Button</AwesomeButton>
+            <AwesomeButton className="mb-5" type="primary" >Button</AwesomeButton>
 
         </Form>
-// </Container>
+ </Container>
     );
 }
 

@@ -50,13 +50,13 @@ const NavComponent = (props) => {
                             <div className="text-center Rounded text-white container_nav_catalog"><h4
                                 id="catalog">Каталог</h4></div>
                             <div className="px-3 mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
-                                <p>-ПОДАЧА БЛЮД</p>
-                                <p>-СЕРВИРОВКА</p>
-                                <p>-ИНТЕРЬЕР МЕБЕЛЬ</p>
-                                <p>-ТОРЦЕВЫЕ ДОСКИ</p>
-                                <p>-БИРКИ/РЕЗЕРВ</p>
-                                <p>-ЧАЙНЫЕ СТАНЦИИ</p>
-                                <p>-ПОДНОСЫ</p>
+                                <b>-ПОДАЧА БЛЮД</b><br/>
+                                <b>-СЕРВИРОВКА</b><br/>
+                                <b>-ИНТЕРЬЕР МЕБЕЛЬ</b><br/>
+                                <b>-ТОРЦЕВЫЕ ДОСКИ</b><br/>
+                                <b>-БИРКИ/РЕЗЕРВ</b><br/>
+                                <b>-ЧАЙНЫЕ СТАНЦИИ</b><br/>
+                                <b>-ПОДНОСЫ</b>
                             </div>
                             <div className="mt-3 text-left text_color"><h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ НАТУРАЛЬНОГО ДЕРЕВА
                                 ДЛЯ ВАШЕГО
@@ -73,10 +73,9 @@ const NavComponent = (props) => {
                 <Row className=" m-0 mt-5">
 
                     {showContainerCol ?
-                        <Col sm={12}>
-                            <p>В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА.ЕСЛИ ЗДЕСЬ НЕТ ТОГО,ЧТО ВАМ
-                                НУЖНО,ПЕРЕЙДИТЕ В РАЗДЕЛ ИДИВИДУАЛЬНЫЙ ЗАКАЗ</p>
-                            <Nav className="p-3 h-auto Rounded justify-content-around">
+                        <Col sm={12} >
+                            <p className="text-center">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </p>
+                            <Nav id="Catalog" className="p-3 h-auto Rounded justify-content-around">
                                 <div className=' col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
@@ -84,7 +83,7 @@ const NavComponent = (props) => {
                                         <img src={servingDishes}
                                              className="justify-content-center w-100 h-75 d-block rounded"
                                              alt="ServingDishesImg"/>
-                                        <p>ПОДАЧА БЛЮД</p>
+                                        <b>ПОДАЧА БЛЮД</b>
                                     </Link>
                                 </div>
 
@@ -95,7 +94,7 @@ const NavComponent = (props) => {
                                         <img src={ServingImg}
                                              className="justify-content-center w-100 h-75 d-block rounded"
                                              alt="ServingImg"/>
-                                        <p>СЕРВИРОВКА СТОЛА</p>
+                                        <b>СЕРВИРОВКА СТОЛА</b>
                                     </Link>
                                 </div>
 
@@ -106,7 +105,7 @@ const NavComponent = (props) => {
                                         <img src={priceTags}
                                              className="justify-content-center w-100 h-75 d-block rounded"
                                              alt="priceTagsImg"/>
-                                        <p>ЦЕННИКИ ТЕЙБЛ-ТЕНТЫ</p>
+                                        <b>ЦЕННИКИ ТЕЙБЛ-ТЕНТЫ</b>
                                     </Link>
                                 </div>
 
@@ -118,7 +117,7 @@ const NavComponent = (props) => {
                                         <img src={endBoards}
                                              className="justify-content-center w-100 h-75 d-block rounded"
                                              alt="EndBoardsImg"/>
-                                        <p>ТОРЦЕВЫЕ ДОСКИ</p>
+                                        <b>ТОРЦЕВЫЕ ДОСКИ</b>
                                     </Link>
                                 </div>
 
@@ -128,7 +127,7 @@ const NavComponent = (props) => {
                                     }} to="/chair">
                                         <img src={chair} className="justify-content-center w-100 h-75 d-block rounded"
                                              alt="chairImg"/>
-                                        <p>ИНТЕРЬЕР И МЕБЕЛЬ</p>
+                                        <b>ИНТЕРЬЕР И МЕБЕЛЬ</b>
                                     </Link>
                                 </div>
 
@@ -139,7 +138,7 @@ const NavComponent = (props) => {
                                         <img src={platestags}
                                              className="justify-content-center w-100 h-75 d-block rounded"
                                              alt="platestagsImg"/>
-                                        <p>ТАБЛИЧКИ/БИРКИ</p>
+                                        <b>ТАБЛИЧКИ/БИРКИ</b>
                                     </Link>
                                 </div>
 
@@ -149,18 +148,18 @@ const NavComponent = (props) => {
                                     }} to="/TeaStationsTrays">
                                         <img src={tea} className="justify-content-center w-100 h-75 d-block rounded"
                                              alt="TeaStationsTraysImg"/>
-                                        <p>ЧАЙНЫЕ СТАНЦИИ</p>
+                                        <b>ЧАЙНЫЕ СТАНЦИИ</b>
                                     </Link>
                                 </div>
-                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
-                                    <Link onClick={() => {
-                                        setShowContainerCol(false)
-                                    }} to="/?">
-                                        <img src={"?"} className="justify-content-center w-100 h-75 d-block rounded"
-                                             alt="?"/>
-                                        <p>?</p>
-                                    </Link>
-                                </div>
+                                {/*<div className=' col-9 col-sm-5 col-md-3 px-3 text-center'>*/}
+                                {/*    <Nav.Link href="#catalog" onClick={() => {*/}
+                                {/*        // setShowContainerCol(false)*/}
+                                {/*    }} to="/?">*/}
+                                {/*        <img src="https://img.icons8.com/ios/50/null/question-mark--v1.png" className="bg-white justify-content-center w-100 h-75 d-block rounded"*/}
+                                {/*             alt="?"/>*/}
+                                {/*        <b>ИНДИВИДУАЛЬНЫЙ ЗАКАЗ</b>*/}
+                                {/*    </Nav.Link>*/}
+                                {/*</div>*/}
 
 
                             </Nav>

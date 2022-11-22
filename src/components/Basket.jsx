@@ -49,7 +49,7 @@ const Basket = (props) => {
 
 
     return (
-        <Container fluid className="p-0 mt-5 bg-white">
+        <Container className="p-0 mt-5 bg-white Rounded">
             <Container>
                 <h4 id="form">Форма заказа</h4>
                 <div className=" bg-white border_radius">
@@ -106,7 +106,7 @@ const Basket = (props) => {
                             alt="img"/>}
 
                 </button>
-                {openForm ? <FormExample/> : <></>}
+                <FormExample/>
             </Container>
         </Container>
     )
