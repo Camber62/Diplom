@@ -74,11 +74,11 @@ const BlogNavComponent = () => {
                                                 <img alt="qwe" src={int.img}/></div>
                                             <div className="col-md-8">
                                                 <div className="card-body">
-                                                    <h5 className="card-title">{int.name}</h5>
-                                                    <p className="card-text">{int.TextAnnouncement}</p>
-                                                    <AwesomeButton className="mb-5" type="primary"  onPress={() => {
-                                                        CardBlog(int)
-                                                    }}>cklic</AwesomeButton>
+                                                    {/*<h5 className="card-title">{int.name}</h5>*/}
+                                                    {/*<p className="card-text">{int.TextAnnouncement}</p>*/}
+                                                    {/*<AwesomeButton className="mb-5" type="primary"  onPress={() => {*/}
+                                                    {/*    CardBlog(int)*/}
+                                                    {/*}}>cklic</AwesomeButton>*/}
                                                 </div>
                                             </div>
                                         </div>

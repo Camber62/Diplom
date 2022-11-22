@@ -3,7 +3,7 @@ import img from "../icons/photo_2022-11-15_14-48-08.jpg"
 
 const AboutUs = () => {
     return (
-        <Container className="p-0 pt-5">
+        <Container className=" pt-5">
             <h4 id="AboutUs">О НАС</h4>
 
             <p className="p-3 bg-white Rounded"><h5>Добро пожаловать в гости к KARGO WOOD!</h5>
@@ -16,7 +16,7 @@ const AboutUs = () => {
                 подносе, мы бы сделали крутые чайные станции. И так абсолютно во всем. И в кондитерских, и в пекарнях)
             </p>
             <div className="row">
-                <ul className="p-0 col-md-6">
+                <ul className="py-0  col-md-12 col-lg-6">
                     <h5>Чем мы занимаемся:</h5>
                     <li>Индивидуальные решения из дерева для баров, ресторанов, ресторанов, отелей, кафе (изделия для
                         подачи и
@@ -29,7 +29,7 @@ const AboutUs = () => {
                     <li>Элементы декора (полки и подставки, стеллажи для цветов и т.д.);</li>
                     <li>Некоторые варианты мебели (для летних веранд, кофейные столики из спилов).</li>
                 </ul>
-                <img className="rounded-5 col-md-6" src={img} alt=""/>
+                <img className="rounded-5 col-md-12 col-lg-6" src={img} alt=""/>
             </div>
 
 
