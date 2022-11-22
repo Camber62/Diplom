@@ -49,8 +49,7 @@ const Basket = (props) => {
 
 
     return (
-        <Container className="p-0 mt-5 bg-white Rounded">
-            <Container>
+        <Container className="p-3 mt-5 mb-5 bg-white Rounded">
                 <h4 id="form">Форма заказа</h4>
                 <div className=" bg-white border_radius">
                     <Table>
@@ -95,19 +94,7 @@ const Basket = (props) => {
                     <strong>Rashet:</strong>
                     <strong className="p-5">{total()}</strong>
                 </div>
-
-                <button className="w-100 mb-5 mt-5  bg-white border-0" onClick={() => {
-                    setOpenForm(!openForm)
-                }}>
-                    {openForm ?
-                        <img src="https://img.icons8.com/office/64/000000/ostrich-head-in-sand.png" alt="img"/> :
-                        <img
-                            src="https://img.icons8.com/external-icongeek26-flat-icongeek26/64/000000/external-ostrich-birds-icongeek26-flat-icongeek26.png"
-                            alt="img"/>}
-
-                </button>
                 <FormExample/>
-            </Container>
         </Container>
     )
 

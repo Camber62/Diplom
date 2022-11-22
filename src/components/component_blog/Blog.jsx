@@ -3,14 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Button} from "react-bootstrap";
-
+import { AwesomeButton } from 'react-awesome-button';
+import vlog1 from '../../icons/баннер уход скругленный.jpg'
 const BlogNavComponent = () => {
 
     const [classContainer, setClassContainer] = useState(false)
     const [showContainer, setShowContainer] = useState(false)
     const arrBlog = [
         {
-            img: '1',
+            img: vlog1,
             name: 'Blog1',
             textContent: 'Blog1textContent',
             TextAnnouncement: 'Blog1TextAnnouncement',
@@ -75,9 +76,9 @@ const BlogNavComponent = () => {
                                                 <div className="card-body">
                                                     <h5 className="card-title">{int.name}</h5>
                                                     <p className="card-text">{int.TextAnnouncement}</p>
-                                                    <Button onClick={() => {
+                                                    <AwesomeButton className="mb-5" type="primary"  onPress={() => {
                                                         CardBlog(int)
-                                                    }}>cklic</Button>
+                                                    }}>cklic</AwesomeButton>
                                                 </div>
                                             </div>
                                         </div>

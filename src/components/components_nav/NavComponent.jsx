@@ -45,11 +45,11 @@ const NavComponent = (props) => {
 
             <Container fluid="md">
                 <Row className="pt-3">
-                    <Col sm={4} className="p-0">
+                    <Col  lg={5} className="p-0">
                         <div className="mb-1">
                             <div className="text-center Rounded text-white container_nav_catalog"><h4
                                 id="catalog">Каталог</h4></div>
-                            <div className="px-3 mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
+                            <div className="text-center px-3 mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
                                 <b>-ПОДАЧА БЛЮД</b><br/>
                                 <b>-СЕРВИРОВКА</b><br/>
                                 <b>-ИНТЕРЬЕР МЕБЕЛЬ</b><br/>
@@ -64,7 +64,7 @@ const NavComponent = (props) => {
                         </div>
 
                     </Col>
-                    <Col sm={8} className=" pt-xs-3">
+                    <Col  lg={7} className=" pt-xs-3">
                         <Slider modalShow={modalShow} setModalShow={setModalShow} modalBlog={modalBlog}
                                 setModalBlog={setModalBlog}/>
                     </Col>
@@ -83,7 +83,7 @@ const NavComponent = (props) => {
                                         <img src={servingDishes}
                                              className="justify-content-center w-100 h-75 d-block rounded"
                                              alt="ServingDishesImg"/>
-                                        <b>ПОДАЧА БЛЮД</b>
+                                        <b className='pb-1'>ПОДАЧА БЛЮД</b>
                                     </Link>
                                 </div>
 
@@ -171,23 +171,24 @@ const NavComponent = (props) => {
 
                             <Nav className="Rounded  bg-white ">
                                 {showBtn ?
-                                    <></> : <Button onClick={() => {
+                                    <></> : <button className="border-0 bg-white" onClick={() => {
                                         navigate(-1);
                                         setShowContainerCol(true)
-                                    }}>Back</Button>
+                                    }}>                <img src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
+                                    </button>
                                 }
                                 <Routes>
 
 
-                                    {/*<Route path="/chair"*/}
-                                    {/*       element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}*/}
-                                    {/*                                 setBasket={setBasket} elem={chair}/>}/>*/}
-                                    {/*<Route path="/platestags"*/}
-                                    {/*       element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}*/}
-                                    {/*                                 setBasket={setBasket} elem={platestags}/>}/>*/}
-                                    {/*<Route path="/priceTags"*/}
-                                    {/*       element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}*/}
-                                    {/*                                 setBasket={setBasket} elem={priceTags}/>}/>*/}
+                                    <Route path="/chair"
+                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                                                     setBasket={setBasket} elem={Serving}/>}/>
+                                    <Route path="/platestags"
+                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                                                     setBasket={setBasket} elem={Serving}/>}/>
+                                    <Route path="/priceTags"
+                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                                                     setBasket={setBasket} elem={Serving}/>}/>
 
                                     <Route path="/Serving"
                                            element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
