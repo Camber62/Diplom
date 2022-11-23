@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import {Navbar,Nav} from "react-bootstrap";
 
 
-const Header = () => {
+const  = () => {
     return (
         <>
 
