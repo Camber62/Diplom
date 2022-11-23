@@ -67,19 +67,19 @@ const Basket = (props) => {
                                         <td>{int.name}</td>
                                         <td>{int.price}</td>
                                         <td>
-                                            <button value="-" onClick={(e) => {
+                                            <button className="bg-white border-0" value="-" onClick={(e) => {
                                                 Count(e, int)
                                             }}>-
                                             </button>
                                             {int.count}
-                                            <button value="+" onClick={(e) => {
+                                            <button className="bg-white border-0" value="+" onClick={(e) => {
                                                 Count(e, int)
                                             }}>+
                                             </button>
                                         </td>
                                         <td>{int.totalPrice}</td>
                                         <td>
-                                            <button onClick={() => {
+                                            <button  onClick={() => {
                                                 DeleteBasket(element)
                                             }}>Del
                                             </button>

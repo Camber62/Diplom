@@ -3,8 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Button} from "react-bootstrap";
-import { AwesomeButton } from 'react-awesome-button';
-import vlog1 from '../../icons/баннер уход скругленный.jpg'
+// import { AwesomeButton } from 'react-awesome-button';
+import vlog1 from '../../icons/блог уход скругленные.jpg'
+
 const BlogNavComponent = () => {
 
     const [classContainer, setClassContainer] = useState(false)
@@ -14,7 +15,7 @@ const BlogNavComponent = () => {
             img: vlog1,
             name: 'Blog1',
             textContent: 'Blog1textContent',
-            TextAnnouncement: 'Blog1TextAnnouncement',
+            TextAnnouncement: 'Всего несколько рекомендаций,следуя которым Вы увеличите срок жизни изделий.',
         },
         {
             img: '2',
@@ -43,15 +44,16 @@ const BlogNavComponent = () => {
     ]
 
 
-
     const CardBlog = (int) => {
-        // console.log(int)
         setShowContainer(true)
         setClassContainer(true)
         return (
             <div>
                 <p>{int.name}</p>
-                <Button onClick={()=>{setShowContainer(false);setClassContainer(false)}}>Back
+                <Button onClick={() => {
+                    setShowContainer(false);
+                    setClassContainer(false)
+                }}>Back
                 </Button>
             </div>
         )
@@ -61,26 +63,18 @@ const BlogNavComponent = () => {
     return (
         <>
 
-            <Container className={classContainer ? 'overContainerAnimacia' : 'overContainer' }>
-                <h4>БЛОГ|кейсы,новости,полезные материалы</h4>
-                {showContainer ? <CardBlog/>:
-                    <Row>
+            <Container className={classContainer ? 'overContainerAnimacia' : 'overContainer'}>
+                <h4 id="blog">БЛОГ|кейсы,новости,полезные материалы</h4>
+
+                {showContainer ? <CardBlog/> :
+                    <Row className='h5'>
                         {arrBlog.map((int, element) => {
                             return (
-                                <Col sm={12} md={6} className="my-5" key={element}>
-                                    <div className="mb-3 border-0">
-                                        <div className="row g-0">
-                                            <div className="col-sm-4 Rounded">
-                                                <img alt="qwe" src={int.img}/></div>
-                                            <div className="col-md-8">
-                                                <div className="card-body">
-                                                    {/*<h5 className="card-title">{int.name}</h5>*/}
-                                                    {/*<p className="card-text">{int.TextAnnouncement}</p>*/}
-                                                    {/*<AwesomeButton className="mb-5" type="primary"  onPress={() => {*/}
-                                                    {/*    CardBlog(int)*/}
-                                                    {/*}}>cklic</AwesomeButton>*/}
-                                                </div>
-                                            </div>
+                                <Col sm={12} className="p-0 px-md-5 my-3" key={element}>
+                                    <div className=" border-0">
+                                        <div className=" w-100 d-flex bg-white align-items-center">
+                                            <img className='col-sm-7 col-md-6  vlog_img' alt="vlog1" src={int.img}/>
+                                            <p className='col-sm-5 col-md-6 px-sm-3'>{int.TextAnnouncement}</p>
                                         </div>
                                     </div>
                                 </Col>
@@ -90,11 +84,13 @@ const BlogNavComponent = () => {
 
                 }
             </Container>
-            <div className= {showContainer ? "none":"text-center arrowOpaciti"}>
-                <img alt="alt" src= {classContainer ? "https://img.icons8.com/windows/56/000000/circled-chevron-up.png"
-                :
-                "https://img.icons8.com/windows/56/null/circled-chevron-down.png"} onClick={()=>{setClassContainer(!classContainer)}}/>
-                </div>
+            <div className={showContainer ? "none" : "text-center arrowOpaciti"}>
+                <img alt="alt" src={classContainer ? "https://img.icons8.com/windows/56/000000/circled-chevron-up.png"
+                    :
+                    "https://img.icons8.com/windows/56/null/circled-chevron-down.png"} onClick={() => {
+                    setClassContainer(!classContainer)
+                }}/>
+            </div>
 
         </>
     )

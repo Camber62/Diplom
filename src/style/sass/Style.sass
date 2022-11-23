@@ -1,4 +1,5 @@
-
+$color-one: #574343
+$color-two: #ebe2dd
 
 html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   margin: 0
@@ -41,9 +42,7 @@ p
 div
   a
     &:hover
-      font-size: 15px
-      color: #3a3131
-
+      //color: #3a3131
 
 
 blockquote, q
@@ -68,44 +67,49 @@ table
 body
   background-color: #ebe2dd!important
 .bgNavbar
-  background-color: #574343
+  background-color: $color-one
 .Rounded
   border-radius: 15px
 .text_color
-  color: #574343
+  color: $color-one
 
             // nav banner
+
 .awssld__bullets
   display: none!important
 .awssld__content
   border-radius: 15px
 
-  //slaider
+            //slaider
+
 .awssld__controls button
   top: calc(90% - (0.5 * var(--control-button-height)))!important
 
 .awssld__prev
   left: 81%!important
 
+
+
+          //Castom button
+.aws-btn--primary .aws-btn__content
+  background-color: $color-one!important
+.aws-btn--primary .aws-btn__wrapper:before
+  background-color: #3a3131 !important
 .aws-btn
   width: 150px
   top: -15%
   left: 5%
 
-          //Castom button
-.aws-btn--primary .aws-btn__content
-  background-color: #574343!important
-.aws-btn--primary .aws-btn__wrapper:before
-  background-color: #3a3131 !important
-
 .bg_All_Cards
     text-align: center
+.position_btn
+  position: inherit!important
 
 
             //Header
 
 .container_nav_catalog
-  background: #574343
+  background: $color-one
   height: 50px
 
 a.nav-link.active
@@ -117,6 +121,7 @@ a.nav-link.active
 
 h4
   scroll-margin-top: 100px
+
 .nav_link
   margin-left: 100px
 
@@ -130,12 +135,22 @@ h4
   margin-left: 32rem
 .overContainer
   overflow: hidden
-  max-height: 250px
+  height: 500px
   transition: ease .5s
   transform: translateY(0px)
 .overContainerAnimacia
   transition: ease .5s
   transform: translateY(15px)
+//.vlog_text
+//  position: absolute
+//  text-align: center
+//  top: 130px
+//  right: 100px
+//  width: min-content
+.vlog_img
+  width: 45vw
+  height: 50vh
+
 
           //modal
 .modalWindow

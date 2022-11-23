@@ -25,7 +25,7 @@ const NavComponent = (props) => {
     const ServingDishes = props.ServingDishes
     const TeaStationsTrays = props.TeaStationsTrays
     const EndBoards = props.EndBoards
-    const [showContainerCol, setShowContainerCol] = useState(false)
+    const [showContainerCol, setShowContainerCol] = useState(true)
     const [showBtn, setShowBtn] = useState(false)
     const navigate = useNavigate()
     const [modalShow, setModalShow] = useState(false)
@@ -151,17 +151,6 @@ const NavComponent = (props) => {
                                         <b>ЧАЙНЫЕ СТАНЦИИ</b>
                                     </Link>
                                 </div>
-                                {/*<div className=' col-9 col-sm-5 col-md-3 px-3 text-center'>*/}
-                                {/*    <Nav.Link href="#catalog" onClick={() => {*/}
-                                {/*        // setShowContainerCol(false)*/}
-                                {/*    }} to="/?">*/}
-                                {/*        <img src="https://img.icons8.com/ios/50/null/question-mark--v1.png" className="bg-white justify-content-center w-100 h-75 d-block rounded"*/}
-                                {/*             alt="?"/>*/}
-                                {/*        <b>ИНДИВИДУАЛЬНЫЙ ЗАКАЗ</b>*/}
-                                {/*    </Nav.Link>*/}
-                                {/*</div>*/}
-
-
                             </Nav>
 
 
@@ -205,7 +194,8 @@ const NavComponent = (props) => {
                                     <Route path="/:name" element={<CardElement setShowBtn={setShowBtn}/>}/>
                                 </Routes>
                             </Nav>
-                        </Col>}
+                        </Col>
+                    }
                 </Row>
             </Container>
         </>
