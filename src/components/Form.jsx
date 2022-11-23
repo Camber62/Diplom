@@ -9,10 +9,21 @@ import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import Container from 'react-bootstrap/Container';
 
+
 function FormExample() {
 
+
+    const [valueName, setValueName] = useState('');
+    const [valueLastName, setValueLastName] = useState('');
+    const [valueLastEmail, setValueLastEmail] = useState('');
+    const [valueLogo, setValueLogo] = useState('');
+    const [valuePayment, setValuePayment] = useState('');
+    const [valueDelivery, setValueDelivery] = useState('');
+    const [valueSity, setValueSity] = useState('');
+    const [valueStreet, setValueStreet] = useState('');
+
+
     const [validated, setValidated] = useState(false);
-    const [cargo, setCargo] = useState('')
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -39,6 +50,7 @@ function FormExample() {
                         type="text"
                         placeholder="First name"
                         name="name"
+                        onChange={e => setValueName( e.target.value )}
                     />
                     <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                 </Form.Group>
@@ -49,6 +61,8 @@ function FormExample() {
                         type="text"
                         placeholder="Last name"
                         name="lastName"
+                        onChange={e => setValueLastName( e.target.value )}
+
 
                     />
                     <Form.Control.Feedback>Верно!</Form.Control.Feedback>
@@ -63,6 +77,8 @@ function FormExample() {
                             aria-describedby="inputGroupPrepend"
                             required
                             name='Email'
+                            onChange={e => setValueLastEmail( e.target.value )}
+
                         />
                         <Form.Control.Feedback type="invalid">
                             Please choose a email.
@@ -80,19 +96,19 @@ function FormExample() {
                     <h5 className="mb-3 mt-3">НАНЕСЕНИЕ ЛОГОТИПА</h5>
                     <ToggleButtonGroup className="w-25" type="radio" name="options-logo" defaultValue={2}
                                        onClick={(e) => {
-                                           console.log(e.target.id)
+                                           setValueLogo(e.target.id)
                                        }}>
                         <ToggleButton
                             variant='outline-primary'
                             className="m-1"
-                            id="tbg-radio-1"
+                            id="Лого"
                             value={1}>
                             С Лого
                         </ToggleButton>
                         <ToggleButton
                             variant="outline-primary"
                             className="m-1"
-                            id="tbg-radio-2 "
+                            id="Без Лого"
                             value={2}>
                             Без Лого
                         </ToggleButton>
@@ -109,20 +125,20 @@ function FormExample() {
                     <h5 className="mb-3 mt-3">ОПЛАТА</h5>
                     <ToggleButtonGroup className="w-50" type="radio" name="options-prise" defaultValue={1}
                                        onClick={(e) => {
-                                           // console.log(e.target.defaultValue)
+                                           setValuePayment(e.target.defaultValue)
 
                                        }}>
                         <ToggleButton
                             variant='outline-primary'
                             className="m-1"
-                            id="radio-1"
+                            id="Расчетный счет(отправьте КП на kargowood@yandex.ru)"
                             value={1}>
                             Расчетный счет(отправьте КП на kargowood@yandex.ru)
                         </ToggleButton>
                         <ToggleButton
                             variant="outline-primary"
                             className="m-1"
-                            id="radio-2 "
+                            id="QR код"
                             value={2}>
                             QR код
                         </ToggleButton>
@@ -140,10 +156,10 @@ function FormExample() {
                 <ToggleButtonGroup className="w-50" type="radio" name="options-cargo" defaultValue={1}
                                    onClick={(e) => {
                                        if(e.target.id === "cargo-1"){
-                                           setCargo("Самовывоз г. Екатеринбург")
+                                           setValueDelivery("Самовывоз г. Екатеринбург")
                                        }
                                        else if(e.target.id === "cargo-2"){
-                                           setCargo("Доставка")}
+                                           setValueDelivery("Доставка")}
                                        else return
                                        // console.log(e.target.id)
                                        }
@@ -163,30 +179,42 @@ function FormExample() {
                         Доставка в другие регионы
                     </ToggleButton>
                 </ToggleButtonGroup>
-                {cargo==="Доставка" ? <div className={cargo==="Доставка" ? "" : "none"}>
+                {valueDelivery==="Доставка" ? <div className={valueDelivery==="Доставка" ? "" : "none"}>
                     <Form.Group  md="6" controlId="validationCustom03">
                         <Form.Label>Город</Form.Label>
-                        <Form.Control type="text" placeholder="Город" required/>
+                        <Form.Control
+                            type="text"
+                            placeholder="Город"
+                            required
+                            onChange={e => setValueStreet( e.target.value )}
+
+                        />
                         <Form.Control.Feedback type="invalid">
                             Please provide a valid city.
                         </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group md="3" controlId="validationCustom04">
                         <Form.Label>Улица</Form.Label>
-                        <Form.Control type="text" placeholder="Улица" required/>
+                        <Form.Control
+                            type="text"
+                            placeholder="Улица"
+                            required
+                            onChange={e => setValueSity ( e.target.value )}
+
+                        />
                         <Form.Control.Feedback type="invalid">
                             Please provide a valid state.
                         </Form.Control.Feedback>
                     </Form.Group></div> : <></>}
             </Row>
-            <Form.Group className="mb-3">
-                <Form.Check
-                    required
-                    label="Agree to terms and conditions"
-                    feedback="You must agree before submitting."
-                    feedbackType="invalid"
-                />
-            </Form.Group>
+            {/*<Form.Group className="mb-3">*/}
+            {/*    <Form.Check*/}
+            {/*        required*/}
+            {/*        label="Agree to terms and conditions"*/}
+            {/*        feedback="You must agree before submitting."*/}
+            {/*        feedbackType="invalid"*/}
+            {/*    />*/}
+            {/*</Form.Group>*/}
 
             <AwesomeButton className="mb-5" type="primary" >Button</AwesomeButton>
 
