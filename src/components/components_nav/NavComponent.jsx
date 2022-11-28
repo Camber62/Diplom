@@ -8,7 +8,7 @@ import React, {useState} from 'react';
 import Slider from "./Slaider";
 import CardElement from "./CardElement";
 import AddCardsElement from "./AllCardsElement";
-import {Button} from "react-bootstrap";
+import { Anchor } from 'antd';
 import chair from "../../icons/chair.jpg"
 import endBoards from "../../icons/end boards.jpg"
 import ServingImg from "../../icons/Serving.jpg"
@@ -30,6 +30,7 @@ const NavComponent = (props) => {
     const navigate = useNavigate()
     const [modalShow, setModalShow] = useState(false)
     const [modalBlog, setModalBlog] = useState(false)
+    // const { Link } = Anchor;
 
 
     return (
@@ -45,36 +46,38 @@ const NavComponent = (props) => {
 
             <Container fluid="md">
                 <Row className="pt-3">
-                    <Col  lg={5} className="p-0">
+                    <Col lg={5} className="p-0">
                         <div className="mb-1">
                             <div className="text-center Rounded text-white container_nav_catalog"><h4
                                 id="catalog">Каталог</h4></div>
                             <div className="text-center px-3 mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
-                                <b>-ПОДАЧА БЛЮД</b><br/>
-                                <b>-СЕРВИРОВКА</b><br/>
-                                <b>-ИНТЕРЬЕР МЕБЕЛЬ</b><br/>
-                                <b>-ТОРЦЕВЫЕ ДОСКИ</b><br/>
-                                <b>-БИРКИ/РЕЗЕРВ</b><br/>
-                                <b>-ЧАЙНЫЕ СТАНЦИИ</b><br/>
-                                <b>-ПОДНОСЫ</b>
+                                {/*<Link href="#katalog" title="Basic demo" />*/}
+                                <Link onClick={() => {scroll(), setShowContainerCol(false)}} to="/ServingDishes"><b>-ПОДАЧА БЛЮД</b><br/></Link>
+                                <Link onClick={() => {setShowContainerCol(false)}} to="/Serving"><b>-СЕРВИРОВКА</b><br/></Link>
+                                <Link onClick={() => {setShowContainerCol(false)}} to="/priceTags"><b>-ИНТЕРЬЕР МЕБЕЛЬ</b><br/></Link>
+                                <Link onClick={() => {setShowContainerCol(false)}} to="/EndBoards"><b>-ТОРЦЕВЫЕ ДОСКИ</b><br/></Link>
+                                <Link onClick={() => {setShowContainerCol(false)}} to="/chair"><b>-БИРКИ/РЕЗЕРВ</b><br/></Link>
+                                <Link onClick={() => {setShowContainerCol(false)}} to="/platestags"><b>-ЧАЙНЫЕ СТАНЦИИ</b><br/></Link>
+                                <Link onClick={() => {setShowContainerCol(false)}} to="/TeaStationsTrays"><b>-ПОДНОСЫ</b></Link>
                             </div>
-                            <div className="mt-3 text-left text_color"><h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ НАТУРАЛЬНОГО ДЕРЕВА
+                            <div className="mt-3 text-left text_color"><h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ
+                                НАТУРАЛЬНОГО ДЕРЕВА
                                 ДЛЯ ВАШЕГО
                                 БИЗНЕСА</h5></div>
                         </div>
 
                     </Col>
-                    <Col  lg={7} className=" pt-xs-3">
+                    <Col lg={7} className=" pt-xs-3">
                         <Slider modalShow={modalShow} setModalShow={setModalShow} modalBlog={modalBlog}
                                 setModalBlog={setModalBlog}/>
                     </Col>
                 </Row>
+                <p id='katalog' className="text-center">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </p>
 
                 <Row className=" m-0 mt-5">
 
                     {showContainerCol ?
-                        <Col sm={12} >
-                            <p className="text-center">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </p>
+                        <Col sm={12}>
                             <Nav id="Catalog" className="p-3 h-auto Rounded justify-content-around">
                                 <div className=' col-9 col-sm-5 col-md-3 px-3 text-center'>
                                     <Link onClick={() => {
@@ -163,7 +166,7 @@ const NavComponent = (props) => {
                                     <></> : <button className="border-0 bg-white" onClick={() => {
                                         navigate(-1);
                                         setShowContainerCol(true)
-                                    }}>                <img src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
+                                    }}><img src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
                                     </button>
                                 }
                                 <Routes>

@@ -72,7 +72,7 @@ const BlogNavComponent = () => {
                             return (
                                 <Col sm={12} className="p-0 px-md-5 my-3" key={element}>
                                     <div className=" border-0">
-                                        <div className=" w-100 d-flex bg-white align-items-center">
+                                        <div className=" w-100 d-flex bg-white align-items-center flex-column flex-sm-row">
                                             <img className='col-sm-7 col-md-6  vlog_img' alt="vlog1" src={int.img}/>
                                             <p className='col-sm-5 col-md-6 px-sm-3'>{int.TextAnnouncement}</p>
                                         </div>
