@@ -7,8 +7,8 @@ import 'simplebar/dist/simplebar.min.css';
 import React, {useState} from 'react';
 import Slider from "./Slaider";
 import CardElement from "./CardElement";
-import AddCardsElement from "./AllCardsElement";
-import { Anchor } from 'antd';
+import AllCardsElement from "./AllCardsElement";
+// import { Anchor } from 'antd';
 import chair from "../../icons/chair.jpg"
 import endBoards from "../../icons/end boards.jpg"
 import ServingImg from "../../icons/Serving.jpg"
@@ -30,8 +30,7 @@ const NavComponent = (props) => {
     const navigate = useNavigate()
     const [modalShow, setModalShow] = useState(false)
     const [modalBlog, setModalBlog] = useState(false)
-    // const { Link } = Anchor;
-
+    const [elementCard, setElementCard] = useState('')
 
     return (
         <>
@@ -53,18 +52,26 @@ const NavComponent = (props) => {
                             <div className="text-center px-3 mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
                                 {/*<Link href="#katalog" title="Basic demo" />*/}
                                 {/* eslint-disable-next-line no-restricted-globals */}
-                                <Link onClick={() => {scrollTo(0, 500)}} to="/ServingDishes"><b>-ПОДАЧА БЛЮД</b><br/></Link>
-                                <Link onClick={() => {setShowContainerCol(false)}} to="/Serving"><b>-СЕРВИРОВКА</b><br/></Link>
-                                <Link onClick={() => {setShowContainerCol(false)}} to="/priceTags"><b>-ИНТЕРЬЕР МЕБЕЛЬ</b><br/></Link>
-                                <Link onClick={() => {setShowContainerCol(false)}} to="/EndBoards"><b>-ТОРЦЕВЫЕ ДОСКИ</b><br/></Link>
-                                <Link onClick={() => {setShowContainerCol(false)}} to="/chair"><b>-БИРКИ/РЕЗЕРВ</b><br/></Link>
-                                <Link onClick={() => {setShowContainerCol(false)}} to="/platestags"><b>-ЧАЙНЫЕ СТАНЦИИ</b><br/></Link>
-                                <Link onClick={() => {setShowContainerCol(false)}} to="/TeaStationsTrays"><b>-ПОДНОСЫ</b></Link>
+                                <Link onClick={() => {scrollTo(0, 450);setShowContainerCol(false)}} to="/ServingDishes"><b>-ПОДАЧА БЛЮД</b><br/></Link>
+                                {/* eslint-disable-next-line no-restricted-globals */}
+                                <Link onClick={() => {scrollTo(0, 450);setShowContainerCol(false)}} to="/Serving"><b>-СЕРВИРОВКА</b><br/></Link>
+                                {/* eslint-disable-next-line no-restricted-globals */}
+                                <Link onClick={() => {scrollTo(0, 450);setShowContainerCol(false)}} to="/priceTags"><b>-ИНТЕРЬЕР МЕБЕЛЬ</b><br/></Link>
+                                {/* eslint-disable-next-line no-restricted-globals */}
+                                <Link onClick={() => {scrollTo(0, 450);setShowContainerCol(false)}} to="/EndBoards"><b>-ТОРЦЕВЫЕ ДОСКИ</b><br/></Link>
+                                {/* eslint-disable-next-line no-restricted-globals */}
+                                <Link onClick={() => {scrollTo(0, 450);setShowContainerCol(false)}} to="/chair"><b>-БИРКИ/РЕЗЕРВ</b><br/></Link>
+                                {/* eslint-disable-next-line no-restricted-globals */}
+                                <Link onClick={() => {scrollTo(0, 450);setShowContainerCol(false)}} to="/platestags"><b>-ЧАЙНЫЕ СТАНЦИИ</b><br/></Link>
+                                {/* eslint-disable-next-line no-restricted-globals */}
+                                <Link onClick={() => {scrollTo(0, 450);setShowContainerCol(false)}} to="/TeaStationsTrays"><b>-ПОДНОСЫ</b></Link>
                             </div>
-                            <div className="mt-3 text-left text_color"><h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ
+                            <div className="mt-3 text-left text_color">
+                                <h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ
                                 НАТУРАЛЬНОГО ДЕРЕВА
                                 ДЛЯ ВАШЕГО
-                                БИЗНЕСА</h5></div>
+                                БИЗНЕСА</h5>
+                            </div>
                         </div>
 
                     </Col>
@@ -167,35 +174,35 @@ const NavComponent = (props) => {
                                     <></> : <button className="border-0 bg-white" onClick={() => {
                                         navigate(-1);
                                         setShowContainerCol(true)
-                                    }}><img src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
+                                    }}><img alt='alt' src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
                                     </button>
                                 }
                                 <Routes>
 
 
                                     <Route path="/chair"
-                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                           element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
                                                                      setBasket={setBasket} elem={Serving}/>}/>
                                     <Route path="/platestags"
-                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                           element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
                                                                      setBasket={setBasket} elem={Serving}/>}/>
                                     <Route path="/priceTags"
-                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                           element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
                                                                      setBasket={setBasket} elem={Serving}/>}/>
 
                                     <Route path="/Serving"
-                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                           element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
                                                                      setBasket={setBasket} elem={Serving}/>}/>
                                     <Route path="/ServingDishes"
-                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                           element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
                                                                      setBasket={setBasket} elem={ServingDishes}/>}/>
                                     <Route path="/TeaStationsTrays"
-                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                           element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
                                                                      setBasket={setBasket} elem={TeaStationsTrays}/>}/>
                                     <Route path="/EndBoards"
-                                           element={<AddCardsElement setShowBtn={setShowBtn} basket={basket}
+                                           element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
                                                                      setBasket={setBasket} elem={EndBoards}/>}/>
-                                    <Route path="/:name" element={<CardElement setShowBtn={setShowBtn}/>}/>
+                                    <Route path="/:name" element={<CardElement elementCard={elementCard} setShowBtn={setShowBtn}  />}/>
                                 </Routes>
                             </Nav>
                         </Col>

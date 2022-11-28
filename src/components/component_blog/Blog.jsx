@@ -23,24 +23,8 @@ const BlogNavComponent = () => {
             textContent: 'Blog2textContent',
             TextAnnouncement: 'Blog2TextAnnouncement',
         },
-        {
-            img: '3',
-            name: 'Blog3',
-            textContent: 'Blog3textContent',
-            TextAnnouncement: 'Blog3TextAnnouncement',
-        },
-        {
-            img: '4',
-            name: 'Blog4',
-            textContent: 'Blog4extContent',
-            TextAnnouncement: 'Blog4TextAnnouncement',
-        },
-        {
-            img: '5',
-            name: 'Blog5',
-            textContent: 'Blog5textContent',
-            TextAnnouncement: 'Blog5TextAnnouncement',
-        },
+
+
     ]
 
 

@@ -14,6 +14,7 @@
     "axios": "^1.1.3",
     "bootstrap": "^5.2.0-beta1",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "framer-motion": "^7.6.4",
     "jquery": "^3.6.1",
@@ -43,10 +44,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:backend": "node ./src/backend.js",
+    "start:backend": "node src/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:dev": "npx nodemon src/server.js",
+    "start:bot": "node src/server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +70,7 @@
     ]
   },
   "devDependencies": {
+    "nodemon": "^2.0.20",
     "react-hamburger-menus": "^1.0.16"
   }
 }

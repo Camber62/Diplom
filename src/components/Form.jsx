@@ -24,7 +24,22 @@ function FormExample() {
 
 
     const [validated, setValidated] = useState(false);
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const url = "http://localhost:8080/send-order";
+
+        const res = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify({
+                valueName,
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();

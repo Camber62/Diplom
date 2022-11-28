@@ -6,11 +6,12 @@ import {Image} from "react-bootstrap";
 import {AwesomeButton} from "react-awesome-button";
 
 
-const AddCardsElement = (props) => {
+const AllCardsElement = (props) => {
 
     const setBasket = props.setBasket
     const basket = props.basket
     const setShowBtn = props.setShowBtn
+    const setElementCard=props.setElementCard
 
     const addBasket = (e) => {
         let siInArray = false
@@ -30,21 +31,12 @@ const AddCardsElement = (props) => {
             {props.elem.map((int, element) => {
                 return (
                     <Col className="m-1 bg_All_Cards" key={element}>
-                        <Link onClick={() => {
-                            setShowBtn(true)
-                        }} to={`/${int.name}`}><Image src={int.src} alt="alt" width="100"/></Link>
+                        <Link onClick={() => {setElementCard(int);setShowBtn(true)}} to={`/${int.name}`}><Image src={int.src} alt="alt" width="100"/></Link>
 
                         <div key={element}>
+                            <div className="h6"><Link onClick={() => {setElementCard(int);setShowBtn(true)}} to={`/${int.name}`}>{int.name}</Link></div>
 
-                            <div className="h6"><Link onClick={() => {
-                                setShowBtn(true)
-                            }} to={`/${int.name}`}>{int.name}</Link></div>
-
-                            <div className="textAnnouncement"><Link onClick={() => {
-                                setShowBtn(true)
-                            }}
-                                                                    to={`/${int.name}`}>{int.TextAnnouncement}</Link>
-                            </div>
+                            <div className="textAnnouncement"><Link onClick={() => {setElementCard(int);setShowBtn(true)}} to={`/${int.name}`}>{int.TextAnnouncement}</Link></div>
 
                             <div>{int.price}</div>
 
@@ -53,8 +45,7 @@ const AddCardsElement = (props) => {
                                 type="primary"
                                 onPress={(e) => {
                                 e.preventDefault();
-                                addBasket(int);
-                            }}>
+                                addBasket(int);}}>
                                 <h6>Добавить в заказ</h6>
                             </AwesomeButton>
 
@@ -65,5 +56,4 @@ const AddCardsElement = (props) => {
         </Row>
     )
 }
-export default AddCardsElement
-
+export default AllCardsElement
