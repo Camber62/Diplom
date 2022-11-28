@@ -52,7 +52,7 @@ const NavComponent = (props) => {
                                 id="catalog">Каталог</h4></div>
                             <div className="text-center px-3 mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
                                 {/*<Link href="#katalog" title="Basic demo" />*/}
-                                <Link onClick={() => {scroll(), setShowContainerCol(false)}} to="/ServingDishes"><b>-ПОДАЧА БЛЮД</b><br/></Link>
+                                <Link onClick={() => {setShowContainerCol(false)}} to="/ServingDishes"><b>-ПОДАЧА БЛЮД</b><br/></Link>
                                 <Link onClick={() => {setShowContainerCol(false)}} to="/Serving"><b>-СЕРВИРОВКА</b><br/></Link>
                                 <Link onClick={() => {setShowContainerCol(false)}} to="/priceTags"><b>-ИНТЕРЬЕР МЕБЕЛЬ</b><br/></Link>
                                 <Link onClick={() => {setShowContainerCol(false)}} to="/EndBoards"><b>-ТОРЦЕВЫЕ ДОСКИ</b><br/></Link>
