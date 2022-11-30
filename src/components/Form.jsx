@@ -27,7 +27,7 @@ function FormExample() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const url = "http://localhost:8080/send-order";
+        const url = "https://doski2.onrender.com/send-order";
 
         const res = fetch(url, {
             method: "POST",
