@@ -24,12 +24,12 @@ function FormExample() {
 
 
     const [validated, setValidated] = useState(false);
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const url = "https://doski2.onrender.com/send-order";
 
-        const res = fetch(url, {
+        const res = await fetch(url, {
             method: "POST",
             body: JSON.stringify({
                 valueName,
