@@ -15,7 +15,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsev-navbar-nav">
 
                         <Nav defaultActiveKey="/home">
-                            <div className=''>
+                            <div>
                                 <Nav.Link href="#catalog">КАТАЛОГ</Nav.Link>
                                 <Nav.Link href="#AboutUs" eventKey="link-1">О НАС</Nav.Link>
                                 <Nav.Link href="#blog" eventKey="link-2">БЛОГ</Nav.Link>
