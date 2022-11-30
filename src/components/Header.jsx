@@ -14,7 +14,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsev-navbar-nav"/>
                     <Navbar.Collapse id="responsev-navbar-nav">
 
-                        <Nav defaultActiveKey="/home">
+                        <Nav className='justify-content-between' defaultActiveKey="/home">
                             <div>
                                 <Nav.Link href="#catalog">КАТАЛОГ</Nav.Link>
                                 <Nav.Link href="#AboutUs" eventKey="link-1">О НАС</Nav.Link>
