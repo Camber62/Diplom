@@ -169,9 +169,9 @@ const NavComponent = (props) => {
                         :
                         <Col sm={12} className="mt-1 mt-sm-0">
 
-                            <Nav className="Rounded  bg-white ">
+                            <Nav className="Rounded  ">
                                 {showBtn ?
-                                    <></> : <button className="border-0 bg-white" onClick={() => {
+                                    <></> : <button className="back border-0" onClick={() => {
                                         navigate(-1);
                                         setShowContainerCol(true)
                                     }}><img alt='alt' src="https://img.icons8.com/ios-filled/50/000000/left.png"/>

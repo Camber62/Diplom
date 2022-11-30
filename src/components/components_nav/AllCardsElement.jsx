@@ -27,7 +27,7 @@ const AllCardsElement = (props) => {
 
     return (
 
-        <Row className=" m-0 justify-content-around" md={3} sm={1} xs={1}>
+        <Row className="bg-white m-0 justify-content-around" md={3} sm={1} xs={1}>
             {props.elem.map((int, element) => {
                 return (
                     <Col className="m-1 bg_All_Cards" key={element}>
