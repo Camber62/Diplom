@@ -24,6 +24,7 @@ function FormExample() {
 
 
     const [validated, setValidated] = useState(false);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -32,7 +33,7 @@ function FormExample() {
         const res = await fetch(url, {
             method: "POST",
             body: JSON.stringify({
-                valueName,
+               valueName,
             }),
             headers: {
                 "Content-Type": "application/json"
