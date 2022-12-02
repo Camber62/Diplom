@@ -12,18 +12,19 @@ const Header = () => {
                 <Container className="container-fluid">
                     <Navbar.Brand href="responsev-navbar-nav">Web</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsev-navbar-nav"/>
-                    <Navbar.Collapse id="responsev-navbar-nav">
-
-                        <Nav className='justify-content-between' defaultActiveKey="/home">
-                            <div>
-                                <Nav.Link href="#catalog">КАТАЛОГ</Nav.Link>
-                                <Nav.Link href="#AboutUs" eventKey="link-1">О НАС</Nav.Link>
-                                <Nav.Link href="#blog" eventKey="link-2">БЛОГ</Nav.Link>
-                                <Nav.Link href="#form" eventKey="link-3">ДОСТАВКА И ОПЛАТА</Nav.Link>
-                                <Nav.Link href="#form" eventKey="link-4">ИНДМВИДУАЛЬНЫЙ ЗАКАЗ</Nav.Link>
-                            </div>
-                            <div><Nav.Link href="#Contacts" eventKey="link-5">КОНТАКТЫ</Nav.Link></div>
-                        </Nav>
+                    <Navbar.Collapse className='justify-content-center' id="responsev-navbar-nav">
+                            <Nav className='justify-content-center' defaultActiveKey="/home">
+                                {/*<div>*/}
+                                    <Nav.Link href="#catalog">КАТАЛОГ</Nav.Link>
+                                    <Nav.Link href="#AboutUs" eventKey="link-1">О НАС</Nav.Link>
+                                    <Nav.Link href="#blog" eventKey="link-2">БЛОГ</Nav.Link>
+                                    <Nav.Link href="#form" eventKey="link-3">ДОСТАВКА И ОПЛАТА</Nav.Link>
+                                    <Nav.Link href="#form" eventKey="link-4">ИНДМВИДУАЛЬНЫЙ ЗАКАЗ</Nav.Link>
+                                {/*</div>*/}
+                                <div>
+                                    <Nav.Link href="#Contacts" eventKey="link-5">КОНТАКТЫ</Nav.Link>
+                                </div>
+                            </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

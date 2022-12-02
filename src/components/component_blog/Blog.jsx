@@ -3,12 +3,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Button} from "react-bootstrap";
-// import { AwesomeButton } from 'react-awesome-button';
-import vlog1 from '../../icons/блог уход скругленные.jpg'
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';import vlog1 from '../../icons/блог уход скругленные.jpg'
 
 const BlogNavComponent = () => {
 
-    const [classContainer, setClassContainer] = useState(false)
     const [showContainer, setShowContainer] = useState(false)
     const arrBlog = [
         {
@@ -17,26 +16,16 @@ const BlogNavComponent = () => {
             textContent: 'Blog1textContent',
             TextAnnouncement: 'Всего несколько рекомендаций,следуя которым Вы увеличите срок жизни изделий.',
         },
-        {
-            img: '2',
-            name: 'Blog2',
-            textContent: 'Blog2textContent',
-            TextAnnouncement: 'Blog2TextAnnouncement',
-        },
-
-
     ]
 
 
     const CardBlog = (int) => {
         setShowContainer(true)
-        setClassContainer(true)
         return (
             <div>
                 <p>{int.name}</p>
                 <Button onClick={() => {
                     setShowContainer(false);
-                    setClassContainer(false)
                 }}>Back
                 </Button>
             </div>
@@ -47,38 +36,44 @@ const BlogNavComponent = () => {
     return (
         <>
 
-            <Container className={classContainer ? 'overContainerAnimacia' : 'overContainer'}>
+            <Container className='overContainer p-0'>
                 <h4 id="blog">БЛОГ|кейсы,новости,полезные материалы</h4>
 
                 {showContainer ? <CardBlog/> :
-                    <Row className='h5'>
+                    <CarouselProvider
+                        naturalSlideWidth={70}
+                        naturalSlideHeight={45}
+                        totalSlides={3}
+                    >
                         {arrBlog.map((int, element) => {
                             return (
-                                <Col sm={12} className="p-0 px-md-5 my-3" key={element}>
-                                    <div className=" border-0">
-                                        <div className=" w-100 d-flex bg-white align-items-center flex-column flex-sm-row">
-                                            <img className='col-sm-7 col-md-6  vlog_img' alt="vlog1" src={int.img}/>
-                                            <p className='col-sm-5 col-md-6 px-sm-3'>{int.TextAnnouncement}</p>
-                                        </div>
-                                    </div>
-                                </Col>
-                            )
-                        })}
-                    </Row>
+                        <Slider>
+                            <Slide index={0} > <img className='Rounded w-100 h-100' alt="vlog1" src={int.img}/>.</Slide>
+                            <Slide index={1}>I am the second Slide.</Slide>
+                            <Slide index={2}>I am the third Slide.</Slide>
+                        </Slider>)})}
+
+                        <ButtonBack>Back</ButtonBack>
+                        <ButtonNext>Next</ButtonNext>
+                    </CarouselProvider>
 
                 }
             </Container>
-            <div className={showContainer ? "none" : "text-center arrowOpaciti"}>
-                <img alt="alt" src={classContainer ? "https://img.icons8.com/windows/56/000000/circled-chevron-up.png"
-                    :
-                    "https://img.icons8.com/windows/56/null/circled-chevron-down.png"} onClick={() => {
-                    setClassContainer(!classContainer)
-                }}/>
-            </div>
+
 
         </>
     )
 }
+
+
+
+
+
+
+
+
+
+
 
 
 export default BlogNavComponent
