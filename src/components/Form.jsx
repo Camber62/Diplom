@@ -115,14 +115,14 @@ function FormExample() {
                 <Row>
                     <InputGroup className="flex-column">
                         <h5 className="mb-3 mt-3">НАНЕСЕНИЕ ЛОГОТИПА</h5>
-                        <ToggleButtonGroup className="w-25" type="radio" name="options-logo" defaultValue={2}
+                        <ToggleButtonGroup className="w-25" type="radio" name="options-logo"
                                            onClick={(e) => {
                                                setValueLogo(e.target.id)
                                            }}>
                             <ToggleButton
                                 variant='outline-primary'
                                 className="m-1"
-                                id="Лого"
+                                id="C Лого"
                                 value={1}>
                                 С Лого
                             </ToggleButton>
@@ -144,9 +144,9 @@ function FormExample() {
 
                     <InputGroup className="flex-column">
                         <h5 className="mb-3 mt-3">ОПЛАТА</h5>
-                        <ToggleButtonGroup className="w-50" type="radio" name="options-prise" defaultValue={1}
+                        <ToggleButtonGroup className="w-50" type="radio" name="options-prise"
                                            onClick={(e) => {
-                                               setValuePayment(e.target.defaultValue)
+                                               setValuePayment(e.target.id)
 
                                            }}>
                             <ToggleButton
@@ -154,7 +154,7 @@ function FormExample() {
                                 className="m-1"
                                 id="Расчетный счет(отправьте КП на kargowood@yandex.ru)"
                                 value={1}>
-                                Расчетный счет(отправьте КП на kargowood@yandex.ru)
+                                Расчетный счет(отправлен КП на kargowood@yandex.ru)
                             </ToggleButton>
                             <ToggleButton
                                 variant="outline-primary"
@@ -174,7 +174,7 @@ function FormExample() {
                 <Row className="mb-3 mt-3">
                     <h5 className="mb-3">ДОСТАВКА</h5>
 
-                    <ToggleButtonGroup className="w-50" type="radio" name="options-cargo" defaultValue={1}
+                    <ToggleButtonGroup className="w-50" type="radio" name="options-cargo"
                                        onClick={(e) => {
                                            if (e.target.id === "cargo-1") {
                                                setValueDelivery("Самовывоз г. Екатеринбург")

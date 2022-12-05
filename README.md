@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Доски
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ссылка на проект [Render.com](https://doski.onrender.com).
 
 ## Available Scripts
 
