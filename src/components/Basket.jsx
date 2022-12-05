@@ -62,6 +62,7 @@ const Basket = (props) => {
                             <th>удаление</th>
                         </tr>
                         {basket.map((int, element) => {
+                            setOpenForm( [] , int.totalPrice)
                                 return (
                                     <tr key={int.id}>
                                         <td>{int.name}</td>
