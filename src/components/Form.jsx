@@ -115,7 +115,7 @@ const basket=props.basket
 
 
                 <Row>
-                    <InputGroup className="flex-column">
+                    <InputGroup className="flex-column" >
                         <h5 className="mb-3 mt-3">НАНЕСЕНИЕ ЛОГОТИПА</h5>
                         <ToggleButtonGroup className="w-25" type="radio" name="options-logo"
                                            onClick={(e) => {
