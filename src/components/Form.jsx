@@ -154,9 +154,9 @@ const basket=props.basket
                             <ToggleButton
                                 variant='outline-primary'
                                 className="m-1"
-                                id="Расчетный счет(отправьте КП на kargowood@yandex.ru)"
+                                id="Расчетный счет(отправлен КП на kargowood@yandex.ru)"
                                 value={1}>
-                                Расчетный счет(отправлен КП на kargowood@yandex.ru)
+                                Расчетный счет(отправте КП на kargowood@yandex.ru)
                             </ToggleButton>
                             <ToggleButton
                                 variant="outline-primary"
