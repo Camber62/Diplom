@@ -14,7 +14,7 @@ function FormExample() {
 
 
     const [valueName, setValueName] = useState('');
-    const [valueLastName, setValueLastName] = useState('');
+    const [valueSurName, setValueSurName] = useState('');
     const [valueLastEmail, setValueLastEmail] = useState('');
     const [valueLogo, setValueLogo] = useState('');
     const [valuePayment, setValuePayment] = useState('');
@@ -25,15 +25,17 @@ function FormExample() {
 
     const [validated, setValidated] = useState(false);
 
-    const handleSubmit = async (event) => {
+    const handleSubmit =  (event) => {
         event.preventDefault();
-
+// if(validated===true){}
         const url = "https://doski2.onrender.com/send-order";
 
-        const res = await fetch(url, {
+        const res =  fetch(url, {
             method: "POST",
             body: JSON.stringify({
-               valueName,
+                valueName,
+                valueSurName,
+
             }),
             headers: {
                 "Content-Type": "application/json"
@@ -73,7 +75,7 @@ function FormExample() {
                             type="text"
                             placeholder="Last name"
                             name="lastName"
-                            onChange={e => setValueLastName(e.target.value)}
+                            onChange={e => setValueSurName(e.target.value)}
 
 
                         />
@@ -220,16 +222,16 @@ function FormExample() {
                         </Form.Group></div>
                     {/*: <></>}*/}
                 </Row>
-                <Form.Group className="mb-3">
-                    <Form.Check
-                        required
-                        label="Agree to terms and conditions"
-                        feedback="You must agree before submitting."
-                        feedbackType="invalid"
-                    />
-                </Form.Group>
+                {/*<Form.Group className="mb-3">*/}
+                {/*    <Form.Check*/}
+                {/*        required*/}
+                {/*        label="Agree to terms and conditions"*/}
+                {/*        feedback="You must agree before submitting."*/}
+                {/*        feedbackType="invalid"*/}
+                {/*    />*/}
+                {/*</Form.Group>*/}
 
-                <AwesomeButton className="mb-5" type="primary">Button</AwesomeButton>
+                <AwesomeButton className="mb-5" type="primary" >Button</AwesomeButton>
             </Form>
         </Container>
     );

@@ -46,7 +46,7 @@ const BlogNavComponent = () => {
 
                 {showContainer ? <CardBlog/> :
                     <CarouselProvider
-                        naturalSlideWidth={70}
+                        naturalSlideWidth={60}
                         naturalSlideHeight={45}
                         totalSlides={arrBlog.length}
                     >
