@@ -16,17 +16,16 @@ server.get('/ping', function(request, response){
 server.post('/send-order', async (req,res)=>{
 
     await telegram.sendToPrivateChat(`
-<ul>
-<li><b>Name:</b> ${ req.body.valueName }</li>
-<!--<b>${req.body.valueName}</b>-->
-<li>${req.body.valueSurName}</li>
-<li>${req.body.valueLastEmail}</li>
-<li>${req.body.valueLogo}</li>
-<li>${req.body.valuePayment}</li>
-<li>${req.body.valueDelivery}</li>
-<li>${req.body.valueSity}</li>
-<li>${req.body.valueStreet}</li>
-</ul>
+
+<b>${req.body.valueName}</b>
+<b>${req.body.valueSurName}</b>
+<b>${req.body.valueLastEmail}</b>
+<b>${req.body.valueLogo}</b>
+<b>${req.body.valuePayment}</b>
+<b>${req.body.valueDelivery}</b>
+<b>${req.body.valueSity}</b>
+<b>${req.body.valueStreet}</b>
+
 
 `)
 

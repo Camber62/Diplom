@@ -25,15 +25,15 @@ function FormExample() {
 
     const [validated, setValidated] = useState(false);
 
-    const handleSubmit =  (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
 // if(validated===true){}
         const url = "https://doski2.onrender.com/send-order";
 
-        const res =  fetch(url, {
+        const res = fetch(url, {
             method: "POST",
             body: JSON.stringify({
-               'name': valueName,
+                valueName,
                 valueSurName,
                 valueLastEmail,
                 valueLogo,
@@ -62,7 +62,7 @@ function FormExample() {
 
     return (
         <Container>
-            <Form noValidate  id="tg" className="telegram-form form"  validated={validated} onSubmit={handleSubmit}>
+            <Form noValidate id="tg" className="telegram-form form" validated={validated} onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} md="4" controlId="validationCustom01">
                         <Form.Label>First name</Form.Label>
@@ -238,7 +238,7 @@ function FormExample() {
                 {/*    />*/}
                 {/*</Form.Group>*/}
 
-                <AwesomeButton className="mb-5" type="primary" >Button</AwesomeButton>
+                <AwesomeButton className="mb-5" type="primary">Button</AwesomeButton>
             </Form>
         </Container>
     );
