@@ -35,6 +35,13 @@ function FormExample() {
             body: JSON.stringify({
                 valueName,
                 valueSurName,
+                valueLastEmail,
+                valueLogo,
+                valuePayment,
+                valueDelivery,
+                valueSity,
+                valueStreet
+
 
             }),
             headers: {

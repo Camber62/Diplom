@@ -17,7 +17,7 @@ server.post('/send-order', async (req,res)=>{
 
     await telegram.sendToPrivateChat(`
 
-<b>${req.body.valueName}</b>
+<b>Имя : ${req.body.valueName}</b>
 <b>${req.body.valueSurName}</b>
 <b>${req.body.valueLastEmail}</b>
 <b>${req.body.valueLogo}</b>
