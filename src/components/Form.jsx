@@ -33,7 +33,7 @@ function FormExample() {
         const res =  fetch(url, {
             method: "POST",
             body: JSON.stringify({
-                valueName,
+               'name': valueName,
                 valueSurName,
                 valueLastEmail,
                 valueLogo,
