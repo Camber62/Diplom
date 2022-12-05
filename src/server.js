@@ -19,12 +19,13 @@ server.post('/send-order', async (req,res)=>{
 
 <b>Имя: ${req.body.valueName}</b>
 <b>Фамилия: ${req.body.valueSurName}</b>
-<b>Емайл:${req.body.valueLastEmail}</b>
-<b>${req.body.valueLogo}</b>
-<b>${req.body.valuePayment}</b>
-<b>${req.body.valueDelivery}</b>
-<b>${req.body.valueSity}</b>
-<b>${req.body.valueStreet}</b>
+<b>Емайл: ${req.body.valueLastEmail}</b>
+<b>Лого: ${req.body.valueLogo}</b>
+<b>Оплата: ${req.body.valuePayment}</b>
+<b>Доставка: ${req.body.valueDelivery}</b>
+<b>Город: ${req.body.valueSity}</b>
+<b>Улица: ${req.body.valueStreet}</b>
+<b>Товары: ${req.body.basket}</b>
 
 
 `)

@@ -10,8 +10,8 @@ import 'react-awesome-button/dist/styles.css';
 import Container from 'react-bootstrap/Container';
 
 
-function FormExample() {
-
+function FormExample(props) {
+const basket=props.basket
 
     const [valueName, setValueName] = useState('');
     const [valueSurName, setValueSurName] = useState('');
@@ -40,7 +40,8 @@ function FormExample() {
                 valuePayment,
                 valueDelivery,
                 valueSity,
-                valueStreet
+                valueStreet,
+                basket
 
 
             }),

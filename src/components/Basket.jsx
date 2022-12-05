@@ -94,7 +94,7 @@ const Basket = (props) => {
                     <strong>Rashet:</strong>
                     <strong className="p-5">{total()}</strong>
                 </div>
-                <FormExample/>
+                <FormExample basket={basket}/>
         </Container>
     )
 
