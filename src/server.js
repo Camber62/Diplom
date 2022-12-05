@@ -25,10 +25,9 @@ server.post('/send-order', async (req,res)=>{
 <b>Доставка: ${req.body.valueDelivery}</b>
 <b>Город: ${req.body.valueSity}</b>
 <b>Улица: ${req.body.valueStreet}</b>
-<b>Товары: ${req.body.basket}</b>
-
-
-`)
+<b>Товары: ${req.body.basket}.name.toString());</b>
+`
+)
 
 
 console.log(req.body)

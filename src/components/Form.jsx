@@ -26,6 +26,7 @@ const basket=props.basket
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
+        console.log(basket)
         event.preventDefault();
 // if(validated===true){}
         const url = "https://doski2.onrender.com/send-order";
