@@ -14,8 +14,7 @@ server.get('/ping', function(request, response){
 
 //Создадим обработчик
 server.post('/send-order', async (req,res)=>{
-
-    await telegram.sendToPrivateChat(`
+    let message = `
 
 <b>Имя: ${req.body.valueName}</b>
 <b>Фамилия: ${req.body.valueSurName}</b>
@@ -25,9 +24,15 @@ server.post('/send-order', async (req,res)=>{
 <b>Доставка: ${req.body.valueDelivery}</b>
 <b>Город: ${req.body.valueSity}</b>
 <b>Улица: ${req.body.valueStreet}</b>
-<b>Товары: ${req.body.basket.name.toString()};</b>
+<b>Товары:</b>
 `
-)
+
+    for (let i = 0; i < req.body.basket.length; i++) {
+        message += `${i + 1}. ${req.body.basket[i].name}`
+    }
+
+    await telegram.sendToPrivateChat(message)
+
 
 
 console.log(req.body)
