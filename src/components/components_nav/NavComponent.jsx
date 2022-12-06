@@ -8,7 +8,6 @@ import React, {useState} from 'react';
 import Slider from "./Slaider";
 import CardElement from "./CardElement";
 import AllCardsElement from "./AllCardsElement";
-// import { Anchor } from 'antd';
 import chair from "../../icons/chair.jpg"
 import endBoards from "../../icons/end boards.jpg"
 import ServingImg from "../../icons/Serving.jpg"
@@ -25,6 +24,13 @@ const NavComponent = (props) => {
     const ServingDishes = props.ServingDishes
     const TeaStationsTrays = props.TeaStationsTrays
     const EndBoards = props.EndBoards
+    const PriceTags = props.PriceTags
+    const Furniture = props.Furniture
+    const SignsTags = props.SignsTags
+
+
+
+
     const [showContainerCol, setShowContainerCol] = useState(true)
     const [showBtn, setShowBtn] = useState(false)
     const navigate = useNavigate()
@@ -80,7 +86,7 @@ const NavComponent = (props) => {
                                 setModalBlog={setModalBlog}/>
                     </Col>
                 </Row>
-                <p id='katalog' className="text-center">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </p>
+                <h4 id='katalog' className="pt-5 text-center fw-bold">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </h4>
 
                 <Row className=" m-0 mt-5">
 
@@ -182,13 +188,13 @@ const NavComponent = (props) => {
 
                                     <Route path="/chair"
                                            element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
-                                                                     setBasket={setBasket} elem={Serving}/>}/>
+                                                                     setBasket={setBasket} elem={Furniture}/>}/>
                                     <Route path="/platestags"
                                            element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
-                                                                     setBasket={setBasket} elem={Serving}/>}/>
+                                                                     setBasket={setBasket} elem={SignsTags}/>}/>
                                     <Route path="/priceTags"
                                            element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
-                                                                     setBasket={setBasket} elem={Serving}/>}/>
+                                                                     setBasket={setBasket} elem={PriceTags}/>}/>
 
                                     <Route path="/Serving"
                                            element={<AllCardsElement setElementCard={setElementCard} setShowBtn={setShowBtn} basket={basket}
