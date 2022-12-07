@@ -25,7 +25,7 @@ const Header = () => {
                                     <Nav.Link href="#AboutUs" eventKey="link-1">О НАС</Nav.Link>
                                     <Nav.Link href="#blog" eventKey="link-2">БЛОГ</Nav.Link>
                                     <Nav.Link href="#form" eventKey="link-3">ДОСТАВКА И ОПЛАТА</Nav.Link>
-                                    <Nav.Link href="#form" eventKey="link-4">ИНДМВИДУАЛЬНЫЙ ЗАКАЗ</Nav.Link>
+                                    <Nav.Link href="#individualOrders" eventKey="link-4">ИНДМВИДУАЛЬНЫЙ ЗАКАЗ</Nav.Link>
                                 {/*</div>*/}
                                 <div>
                                     <Nav.Link href="#Contacts" eventKey="link-5">КОНТАКТЫ</Nav.Link>

@@ -8,13 +8,13 @@ import React, {useState} from 'react';
 import Slider from "./Slaider";
 import CardElement from "./CardElement";
 import AllCardsElement from "./AllCardsElement";
-import chair from "../../icons/chair.jpg"
-import endBoards from "../../icons/end boards.jpg"
-import ServingImg from "../../icons/Serving.jpg"
-import tea from "../../icons/tea stations.jpg"
-import priceTags from "../../icons/price tags.jpg"
-import platestags from "../../icons/platestags.jpg"
-import servingDishes from "../../icons/serving dishes.jpg"
+import chair from "../../icons/Мебель/chair.jpg"
+import endBoards from "../../icons/Торцевые доски/end boards.jpg"
+import ServingImg from "../../icons/Сервировка стола/Serving.jpg"
+import tea from "../../icons/Чайные станции/tea stations.jpg"
+import priceTags from "../../icons/Ценники/price tags.jpg"
+import platestags from "../../icons/Таблички/platestags.jpg"
+import servingDishes from "../../icons/Подача блюд/serving dishes.jpg"
 
 
 const NavComponent = (props) => {
@@ -53,8 +53,9 @@ const NavComponent = (props) => {
                 <Row className="pt-3">
                     <Col lg={5} className="p-0">
                         <div className="mb-1">
-                            <div className="text-center Rounded text-white container_nav_catalog"><h4
-                                id="catalog">Каталог</h4></div>
+                            <div className="text-center Rounded text-white container_nav_catalog">
+                                <h5 className='p-3' >Каталог</h5>
+                            </div>
                             <div className="text-center px-3 mt-3 pb-5 mt-sm-1 bg-white Rounded text_color pl-5">
                                 {/*<Link href="#katalog" title="Basic demo" />*/}
                                 {/* eslint-disable-next-line no-restricted-globals */}
@@ -86,7 +87,7 @@ const NavComponent = (props) => {
                                 setModalBlog={setModalBlog}/>
                     </Col>
                 </Row>
-                <h4 id='katalog' className="pt-5 text-center fw-bold">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </h4>
+                <h4 id='catalog' className="pt-5 text-center fw-bold">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </h4>
 
                 <Row className=" m-0 mt-5">
 
@@ -98,7 +99,7 @@ const NavComponent = (props) => {
                                         setShowContainerCol(false)
                                     }} to="/ServingDishes">
                                         <img src={servingDishes}
-                                             className="justify-content-center w-100 h-75 d-block rounded"
+                                             className="imgHover justify-content-center w-100 h-75 d-block rounded"
                                              alt="ServingDishesImg"/>
                                         <b className='pb-1'>ПОДАЧА БЛЮД</b>
                                     </Link>
@@ -109,7 +110,7 @@ const NavComponent = (props) => {
                                         setShowContainerCol(false)
                                     }} to="/Serving">
                                         <img src={ServingImg}
-                                             className="justify-content-center w-100 h-75 d-block rounded"
+                                             className="imgHover justify-content-center w-100 h-75 d-block rounded"
                                              alt="ServingImg"/>
                                         <b>СЕРВИРОВКА СТОЛА</b>
                                     </Link>

@@ -2,33 +2,34 @@ import React, {useState} from 'react';
 import Header from "./Header";
 import IndividualOrders from "./individualOrders";
 import Basket from "./Basket";
-import Picture1 from "../icons/Picture1.png"
-import Picture2 from "../icons/Picture2.png"
-import Picture3 from "../icons/Picture3.png"
-import Picture4 from "../icons/Picture4.png"
-import Picture5 from "../icons/Picture5.png"
-import Picture6 from "../icons/Picture6.png"
+import Picture1 from "../icons/Подача блюд/Picture1.png"
+import Picture2 from "../icons/Подача блюд/Picture2.png"
+import Picture3 from "../icons/Подача блюд/Picture3.png"
+import Picture4 from "../icons/Подача блюд/Picture4.png"
+import Picture5 from "../icons/Подача блюд/Picture5.png"
+import Picture6 from "../icons/Подача блюд/Picture6.png"
 import NavComponent from "./components_nav/NavComponent";
 import Contacts from "./Contactsю";
 import AboutUs from "./AboutUs";
 import BlogNavComponent from "./component_blog/Blog";
 // import  from "@types/react";
-import Picture7 from "../icons/Picture7.png"
-import Picture8 from "../icons/Ящик для приборов.jpg"
-import Picture9 from "../icons/Салфетница.jpg"
-import Picture10 from "../icons/Набор для специй и салфетница.jpg"
-import Picture11 from "../icons/Стакан с приборами.jpg"
+import Picture7 from "../icons/Подача блюд/Picture7.png"
+import Picture8 from "../icons/Сервировка стола/Ящик для приборов.jpg"
+import Picture9 from "../icons/Сервировка стола/Салфетница.jpg"
+import Picture10 from "../icons/Сервировка стола/Набор для специй и салфетница.jpg"
+import Picture11 from "../icons/Сервировка стола/Стакан с приборами.jpg"
+import Picture19 from "../icons/Сервировка стола/Набор для специй.png"
 //
-import Picture12 from "../icons/Ценники.png"
+import Picture12 from "../icons/Ценники/Ценники.png"
 //
-import Picture13 from "../icons/Набор торцевых досок.png"
-import Picture14 from "../icons/Набор торцевых досок малых.png"
+import Picture13 from "../icons/Торцевые доски/Набор торцевых досок.png"
+import Picture14 from "../icons/Торцевые доски/Набор торцевых досок малых.png"
 //
-import Picture15 from "../icons/Чайная станция mini.png"
-import Picture16 from "../icons/Чайная станция №1.png"
+import Picture15 from "../icons/Чайные станции/Чайная станция mini.png"
+import Picture16 from "../icons/Чайные станции/Чайная станция №1.png"
 //
-import Picture17 from "../icons/Штендер.png"
-import Picture18 from "../icons/Штендер 1.png"
+import Picture17 from "../icons/Мебель/Штендер.png"
+import Picture18 from "../icons/Мебель/Штендер 1.png"
 
 
 
@@ -42,7 +43,7 @@ const Serving = [
         price: 1690,
         totalPrice: 1690,
         about: "Стильный и универсальный набор для специй. Изготовлен из дуба, обработан профессиональными маслами и карнаубским воском.Общий размер:   Размер каждой ёмкости:",
-        src:'' ,
+        src: Picture19 ,
         count: 1
     },
     {

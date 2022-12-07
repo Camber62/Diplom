@@ -38,17 +38,18 @@ const BlogNavComponent = () => {
     const CardBlog = (props) => {
         const cardBlog = props.cardBlog
         setShowContainer(true)
-        return (
-            <div className='px-3 Rounded bg-white d-flex align-items-center flex-column'>
-                <button className='bg-white border-0 mr'
+        return (<>
+                <button className='border-0 mr back'
                         onClick={() => {
                             setShowContainer(false);
                         }}><img alt='alt' src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
                 </button>
-                <p className='px-3'>{cardBlog.textContent}</p>
-                <img  src={cardBlog.imgVlog} alt="imgVlog"/>
+            <div className='px-3 Rounded bg-white d-flex align-items-center flex-column'>
 
+                <p className='text-center px-3'>{cardBlog.textContent}</p>
+                <img className='imgVlog'  src={cardBlog.imgVlog} alt="imgVlog"/>
             </div>
+            </>
         )
     }
 
@@ -61,8 +62,8 @@ const BlogNavComponent = () => {
 
                 {showContainer ? <CardBlog cardBlog={cardBlog}/> :
                     <CarouselProvider
-                        naturalSlideWidth={60}
-                        naturalSlideHeight={45}
+                        naturalSlideWidth={100}
+                        naturalSlideHeight={60}
                         totalSlides={arrBlog.length}
                     >
 
@@ -71,7 +72,7 @@ const BlogNavComponent = () => {
                                 return (
                                     <Slide index={element}>
                                         <img
-                                        className='Rounded w-100 h-100'
+                                        className='rounded-5 w-100 h-100'
                                         alt="vlog1"
                                         src={int.img}
                                         onClick={() => {

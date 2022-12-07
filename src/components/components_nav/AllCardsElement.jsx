@@ -30,8 +30,10 @@ const AllCardsElement = (props) => {
         <Row className="bg-white m-0 justify-content-around Rounded" md={3} sm={1} xs={1}>
             {props.elem.map((int, element) => {
                 return (
-                    <Col className="m-1 bg_All_Cards" key={element}>
-                        <Link onClick={() => {setElementCard(int);setShowBtn(true)}} to={`/${int.name}`}><Image src={int.src} alt="alt" width="100"/></Link>
+                    <Col className="m-1 bg_All_Cards border-bottom border-3" key={element}>
+                        <Link onClick={() => {setElementCard(int);setShowBtn(true)}} to={`/${int.name}`}>
+                            <Image src={int.src} alt="alt" width="100"/>
+                        </Link>
 
                         <div key={element}>
                             <div className="h6"><Link onClick={() => {setElementCard(int);setShowBtn(true)}} to={`/${int.name}`}>{int.name}</Link></div>

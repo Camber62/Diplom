@@ -84,7 +84,7 @@ const basket=props.basket
                             type="text"
                             placeholder="Фамилия"
                             name="lastName"
-                            // onChange={e => setValueSurName(e.target.value)}
+                            onChange={e => setValueSurName(e.target.value)}
                         />
                         <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                     </Form.Group>

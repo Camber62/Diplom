@@ -1,6 +1,6 @@
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Picture7 from "../icons/Picture7.png"
+import Picture7 from "../icons/Подача блюд/Picture7.png"
 import Picture1_1 from "../icons/Picture1_1.png"
 import Picture1_2 from "../icons/Pictur1_2.png"
 import Container from "react-bootstrap/Container";

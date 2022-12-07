@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
 import FormExample from "./Form";
@@ -6,19 +6,17 @@ import FormExample from "./Form";
 const Basket = (props) => {
     const setBasket = props.setBasket
     const basket = props.basket
-    const [openForm, setOpenForm] = useState(0)
+    const totalPrice = getTotalPrice()
 
+    function getTotalPrice() {
+        let sum = 0
 
-    // function total() {
-    //     for(let i=0 ; i < basket.length; i++)
-    //     {
-    //         setOpenForm( openForm + basket[i].totalPrice)
-    //     }
-    //         console.log(openForm)
-    //     return 0
-    //
-    // }
+        for (let b of basket) {
+            sum += b.totalPrice
+        }
 
+        return sum
+    }
 
     const Count = (e, int) => {
         e.preventDefault()
@@ -69,12 +67,12 @@ const Basket = (props) => {
                                     <tr key={int.id}>
                                         <td>{int.name}</td>
                                         <td>{int.price}</td>
-                                        <td>
+                                        <td >
                                             <button className="bg-white border-0" value="-" onClick={(e) => {
                                                 Count(e, int)
                                             }}>-
                                             </button>
-                                            {int.count}
+                                            <p className='d-block d-md-inline my-3'>{int.count}</p>
                                             <button className="bg-white border-0" value="+" onClick={(e) => {
                                                 Count(e, int)
                                             }}>+
@@ -82,9 +80,9 @@ const Basket = (props) => {
                                         </td>
                                         <td>{int.totalPrice}</td>
                                         <td>
-                                            <button  onClick={() => {
+                                            <button className='border-0 bg-white'  onClick={() => {
                                                 DeleteBasket(element)
-                                            }}>Del
+                                            }}>X
                                             </button>
                                         </td>
                                     </tr>
@@ -95,7 +93,7 @@ const Basket = (props) => {
                         </tbody>
                     </Table>
                     <strong>Rashet:</strong>
-                    <strong className="p-5">{openForm}</strong>
+                    <strong className="p-5">{totalPrice}</strong>
                 </div>
                 <FormExample basket={basket}/>
         </Container>
