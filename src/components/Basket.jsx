@@ -6,19 +6,22 @@ import FormExample from "./Form";
 const Basket = (props) => {
     const setBasket = props.setBasket
     const basket = props.basket
-    const [openForm, setOpenForm] = useState(false)
+    const [openForm, setOpenForm] = useState(0)
 
 
-    function total() {
-        console.log('basket', basket)
-        return 0
-
-    }
+    // function total() {
+    //     for(let i=0 ; i < basket.length; i++)
+    //     {
+    //         setOpenForm( openForm + basket[i].totalPrice)
+    //     }
+    //         console.log(openForm)
+    //     return 0
+    //
+    // }
 
 
     const Count = (e, int) => {
         e.preventDefault()
-        // console.log(int.id, e)
 
         for (let i = 0; i < basket.length; i++) {
             if (basket[i].id === int.id) {
@@ -62,7 +65,6 @@ const Basket = (props) => {
                             <th>удаление</th>
                         </tr>
                         {basket.map((int, element) => {
-                            // setOpenForm( [] , int.totalPrice)
                                 return (
                                     <tr key={int.id}>
                                         <td>{int.name}</td>
@@ -93,7 +95,7 @@ const Basket = (props) => {
                         </tbody>
                     </Table>
                     <strong>Rashet:</strong>
-                    <strong className="p-5">{total()}</strong>
+                    <strong className="p-5">{openForm}</strong>
                 </div>
                 <FormExample basket={basket}/>
         </Container>

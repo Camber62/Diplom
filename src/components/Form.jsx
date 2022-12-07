@@ -64,31 +64,58 @@ const basket=props.basket
 
     return (
         <Container>
-            <Form noValidate id="tg" className="telegram-form form" validated={validated} onSubmit={handleSubmit}>
+            <Form noValidate id="tg" className="telegram-form form pt-5" validated={validated} onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} md="4" controlId="validationCustom01">
-                        <Form.Label>First name</Form.Label>
+                        <Form.Label>Имя</Form.Label>
                         <Form.Control
                             required
                             type="text"
-                            placeholder="First name"
+                            placeholder="Имя"
                             name="name"
                             onChange={e => setValueName(e.target.value)}
                         />
                         <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="4" controlId="validationCustom02">
-                        <Form.Label>Last name</Form.Label>
+                        <Form.Label>Фамилия</Form.Label>
                         <Form.Control
                             required
                             type="text"
-                            placeholder="Last name"
+                            placeholder="Фамилия"
                             name="lastName"
-                            onChange={e => setValueSurName(e.target.value)}
-
-
+                            // onChange={e => setValueSurName(e.target.value)}
                         />
                         <Form.Control.Feedback>Верно!</Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group as={Col} md="4" controlId="validationCustom02">
+                        <Form.Label>Отчество</Form.Label>
+                        <Form.Control
+                            required
+                            type="text"
+                            placeholder="Отчество"
+                            name="lastName"
+                            // onChange={e => setValueSurName(e.target.value)}
+                        />
+                        <Form.Control.Feedback>Верно!</Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group as={Col} md="4" controlId="validationCustomPhone">
+                        <Form.Label>Телефон</Form.Label>
+                        <InputGroup hasValidation>
+                            <InputGroup.Text id="inputGroupPrependPhone">📱</InputGroup.Text>
+                            <Form.Control
+                                type='tel'
+                                placeholder="Телефон"
+                                aria-describedby="inputGroupPrepend"
+                                required
+                                name='Phone'
+                                // onChange={e => setValueLastEmail(e.target.value)}
+
+                            />
+                            <Form.Control.Feedback type="invalid">
+                                Пожалуйста введите номер телефон.
+                            </Form.Control.Feedback>
+                        </InputGroup>
                     </Form.Group>
                     <Form.Group as={Col} md="4" controlId="validationCustomEmail">
                         <Form.Label>Email</Form.Label>
