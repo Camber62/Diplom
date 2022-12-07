@@ -83,7 +83,6 @@ const BlogNavComponent = () => {
                                 )
                             })}
                         </Slider>
-
                         <div className='d-flex justify-content-center position-relative'>
                             <ButtonBack className=' Rounded border-0'><img alt='left'
                                                                            src="https://img.icons8.com/windows/64/null/long-arrow-left.png"/></ButtonBack>
