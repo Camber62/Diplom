@@ -22,7 +22,7 @@ const Basket = (props) => {
         e.preventDefault()
 
         for (let i = 0; i < basket.length; i++) {
-            if (basket[i].id === int.id) {
+            if (basket[i].name === int.name) {
                 if (e.target.value === "+") {
                     basket[i].count++
                     basket[i].totalPrice = basket[i].count * basket[i].price
@@ -57,17 +57,17 @@ const Basket = (props) => {
                         <tbody>
                         <tr>
                             <th>Товар</th>
-                            <th>Цена</th>
-                            <th>Кол-во</th>
-                            <th>Сумма</th>
-                            <th>удаление</th>
+                            <th className='text-center'>Цена</th>
+                            <th className='text-center'>Кол-во</th>
+                            <th className='text-center'>Сумма</th>
+                            <th className='text-center'>Удаление</th>
                         </tr>
                         {basket.map((int, element) => {
                                 return (
-                                    <tr key={int.id}>
+                                    <tr key={element}>
                                         <td>{int.name}</td>
-                                        <td>{int.price}</td>
-                                        <td >
+                                        <td className='text-center'>{int.price}</td>
+                                        <td className='text-center'>
                                             <button className="bg-white border-0" value="-" onClick={(e) => {
                                                 Count(e, int)
                                             }}>-
@@ -78,11 +78,11 @@ const Basket = (props) => {
                                             }}>+
                                             </button>
                                         </td>
-                                        <td>{int.totalPrice}</td>
-                                        <td>
+                                        <td className='text-center'>{int.totalPrice}</td>
+                                        <td className='text-center'>
                                             <button className='border-0 bg-white'  onClick={() => {
                                                 DeleteBasket(element)
-                                            }}>X
+                                            }}><img alt='delete' src="https://img.icons8.com/material-sharp/24/null/delete-sign.png"/>
                                             </button>
                                         </td>
                                     </tr>
@@ -92,7 +92,7 @@ const Basket = (props) => {
                         }
                         </tbody>
                     </Table>
-                    <strong>Rashet:</strong>
+                    <strong>Общая сумма:</strong>
                     <strong className="p-5">{totalPrice}</strong>
                 </div>
                 <FormExample basket={basket}/>

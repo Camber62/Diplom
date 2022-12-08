@@ -101,7 +101,7 @@ const NavComponent = (props) => {
                                         <img src={servingDishes}
                                              className="imgHover justify-content-center w-100 h-75 d-block rounded"
                                              alt="ServingDishesImg"/>
-                                        <b className='pb-1'>ПОДАЧА БЛЮД</b>
+                                        <b>ПОДАЧА БЛЮД</b>
                                     </Link>
                                 </div>
 
@@ -121,7 +121,7 @@ const NavComponent = (props) => {
                                         setShowContainerCol(false)
                                     }} to="/priceTags">
                                         <img src={priceTags}
-                                             className="justify-content-center w-100 h-75 d-block rounded"
+                                             className="imgHover justify-content-center w-100 h-75 d-block rounded"
                                              alt="priceTagsImg"/>
                                         <b>ЦЕННИКИ ТЕЙБЛ-ТЕНТЫ</b>
                                     </Link>
@@ -133,7 +133,7 @@ const NavComponent = (props) => {
                                             setShowContainerCol(false)
                                         }} to="/EndBoards">
                                         <img src={endBoards}
-                                             className="justify-content-center w-100 h-75 d-block rounded"
+                                             className="imgHover justify-content-center w-100 h-75 d-block rounded"
                                              alt="EndBoardsImg"/>
                                         <b>ТОРЦЕВЫЕ ДОСКИ</b>
                                     </Link>
@@ -143,7 +143,7 @@ const NavComponent = (props) => {
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
                                     }} to="/chair">
-                                        <img src={chair} className="justify-content-center w-100 h-75 d-block rounded"
+                                        <img src={chair} className="imgHover justify-content-center w-100 h-75 d-block rounded"
                                              alt="chairImg"/>
                                         <b>ИНТЕРЬЕР И МЕБЕЛЬ</b>
                                     </Link>
@@ -154,7 +154,7 @@ const NavComponent = (props) => {
                                         setShowContainerCol(false)
                                     }} to="/platestags">
                                         <img src={platestags}
-                                             className="justify-content-center w-100 h-75 d-block rounded"
+                                             className="imgHover justify-content-center w-100 h-75 d-block rounded"
                                              alt="platestagsImg"/>
                                         <b>ТАБЛИЧКИ/БИРКИ</b>
                                     </Link>
@@ -164,7 +164,7 @@ const NavComponent = (props) => {
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
                                     }} to="/TeaStationsTrays">
-                                        <img src={tea} className="justify-content-center w-100 h-75 d-block rounded"
+                                        <img src={tea} className="imgHover justify-content-center w-100 h-75 d-block rounded"
                                              alt="TeaStationsTraysImg"/>
                                         <b>ЧАЙНЫЕ СТАНЦИИ</b>
                                     </Link>

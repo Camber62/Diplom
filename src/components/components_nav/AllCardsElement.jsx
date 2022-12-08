@@ -16,7 +16,7 @@ const AllCardsElement = (props) => {
     const addBasket = (e) => {
         let siInArray = false
         basket.forEach(el => {
-            if (el.id === e.id)
+            if (el.name === e.name)
                 siInArray = true
         })
         if (!siInArray)
@@ -47,7 +47,8 @@ const AllCardsElement = (props) => {
                                 type="primary"
                                 onPress={(e) => {
                                 e.preventDefault();
-                                addBasket(int);}}>
+                                addBasket(int);
+                                    }}>
                                 <h6>Добавить в заказ</h6>
                             </AwesomeButton>
 

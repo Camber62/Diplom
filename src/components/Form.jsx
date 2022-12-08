@@ -258,14 +258,7 @@ const basket=props.basket
                         </Form.Group></div>
                     {/*: <></>}*/}
                 </Row>
-                {/*<Form.Group className="mb-3">*/}
-                {/*    <Form.Check*/}
-                {/*        required*/}
-                {/*        label="Agree to terms and conditions"*/}
-                {/*        feedback="You must agree before submitting."*/}
-                {/*        feedbackType="invalid"*/}
-                {/*    />*/}
-                {/*</Form.Group>*/}
+
 
                 <AwesomeButton className="mb-5" type="primary">Button</AwesomeButton>
             </Form>
