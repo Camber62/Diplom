@@ -27,7 +27,7 @@ server.post('/send-order', async (req,res)=>{
 <b>Товары:</b>
 `
     for (let i = 0; i < req.body.basket.length; i++) {
-        message += ` \n ${i + 1}. ${req.body.basket[i].name}`
+        message += `  ${i + 1}. ${req.body.basket[i].name} \n`
     }
 
     await telegram.sendToPrivateChat(message)
