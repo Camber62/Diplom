@@ -16,20 +16,21 @@ server.get('/ping', function(request, response){
 server.post('/send-order', async (req,res)=>{
     let message = `
 
-<b>Имя: ${req.body.valueName}</b>
-<b>Фамилия: ${req.body.valueSurName}</b>
-<b>Емайл: ${req.body.valueLastEmail}</b>
-<b>Лого: ${req.body.valueLogo}</b>
-<b>Оплата: ${req.body.valuePayment}</b>
-<b>Доставка: ${req.body.valueDelivery}</b>
-<b>Город: ${req.body.valueSity}</b>
-<b>Улица: ${req.body.valueStreet}</b>
+<b>Имя:</b> ${req.body.valueName}
+<b>Фамилия:</b> ${req.body.valueSurName}
+<b>Емайл:</b> ${req.body.valueLastEmail}
+<b>Лого:</b> ${req.body.valueLogo}
+<b>Оплата:</b> ${req.body.valuePayment}
+<b>Доставка:</b> ${req.body.valueDelivery}
+<b>Город:</b> ${req.body.valueSity}
+<b>Улица:</b> ${req.body.valueStreet}
 <b>Товары:</b>
 `
     for (let i = 0; i < req.body.basket.length; i++) {
-        message += `  ${i + 1}. ${req.body.basket[i].name} \n`
+        message += `  ${i + 1}. ${req.body.basket[i].name} \n
+        `
     }
-
+    message += `${req.body.valueStreet}`
     await telegram.sendToPrivateChat(message)
 
 

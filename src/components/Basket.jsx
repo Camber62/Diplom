@@ -55,7 +55,7 @@ const Basket = (props) => {
                 <div className=" bg-white border_radius">
                     <Table>
                         <tbody>
-                        <tr>
+                        <tr className='bg-light rounded_top'>
                             <th>Товар</th>
                             <th className='text-center'>Цена</th>
                             <th className='text-center'>Кол-во</th>
