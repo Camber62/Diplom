@@ -93,7 +93,7 @@ const Basket = (props) => {
                         </tbody>
                     </Table>
                     <strong>Общая сумма:</strong>
-                    <strong className="p-5">{totalPrice}рублей</strong>
+                    <strong className="p-5">{totalPrice} рублей</strong>
                 </div>
                 <FormExample totalPrice={totalPrice} basket={basket}/>
         </Container>
