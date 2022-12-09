@@ -95,7 +95,7 @@ const Basket = (props) => {
                     <strong>Общая сумма:</strong>
                     <strong className="p-5">{totalPrice}</strong>
                 </div>
-                <FormExample basket={basket}/>
+                <FormExample totalPrice={totalPrice} basket={basket}/>
         </Container>
     )
 

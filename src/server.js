@@ -30,12 +30,12 @@ server.post('/send-order', async (req,res)=>{
         message += `  ${i + 1}. ${req.body.basket[i].name} \n
         `
     }
-    message += `${req.body.valueStreet}`
+    message += `${req.body.totalPrice}`
     await telegram.sendToPrivateChat(message)
 
 
 
-console.log(req.body)
+// console.log(req.body)
     res.send()
 })
 

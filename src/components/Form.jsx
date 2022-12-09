@@ -12,6 +12,7 @@ import Container from 'react-bootstrap/Container';
 
 function FormExample(props) {
 const basket=props.basket
+const totalPrice=props.totalPrice
 
     const [valueName, setValueName] = useState('');
     const [valueSurName, setValueSurName] = useState('');
@@ -42,8 +43,8 @@ const basket=props.basket
                 valueDelivery,
                 valueSity,
                 valueStreet,
-                basket
-
+                basket,
+                totalPrice
 
             }),
             headers: {
