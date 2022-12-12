@@ -9,6 +9,7 @@ import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import Container from 'react-bootstrap/Container';
 import Toastr from './Toastr/Toastr2';
+import InputMask from 'react-input-mask';
 
 
 function FormExample(props) {
@@ -30,40 +31,55 @@ const totalPrice=props.totalPrice
 
     const [validated, setValidated] = useState(false);
 
-    const handleSubmit = (event) => {
-        // console.log(basket)
-        event.preventDefault();
-        const url = "https://doski2.onrender.com/send-order";
-
-        const res = fetch(url, {
-            method: "POST",
-            body: JSON.stringify({
-                valueName,
-                valueSurName,
-                valueLastEmail,
-                valueLogo,
-                valuePayment,
-                valueDelivery,
-                valueSity,
-                valueStreet,
-                basket,
-                totalPrice
-
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-
-
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
+    const handleSubmit = async (event) => {
+        try {
             event.preventDefault();
-            event.stopPropagation();
-        }
+            const url = "https://doski2.onrender.com/send-order";
 
-        setValidated(true);
+            const res = await fetchWithTimeout(url, {
+                method: "POST",
+                body: JSON.stringify({
+                    valueName,
+                    valueSurName,
+                    valueLastEmail,
+                    valueLogo,
+                    valuePayment,
+                    valueDelivery,
+                    valueSity,
+                    valueStreet,
+                    basket,
+                    totalPrice
+
+                }),
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            }, 5000);
+
+            console.log(res)
+            console.log(res.status)
+
+            const form = event.currentTarget;
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            setValidated(true);
+        } catch(err) {
+            console.log('error')
+            console.error(err)
+        }
     };
+
+    const fetchWithTimeout = function (url, options, timeout = 7000) {
+        return Promise.race([
+            fetch(url, options),
+            new Promise((_, reject) =>
+                setTimeout(() => reject(new Error('timeout')), timeout)
+            )
+        ]);
+    }
 
 
     return (
@@ -108,15 +124,18 @@ const totalPrice=props.totalPrice
                         <Form.Label>Телефон</Form.Label>
                         <InputGroup hasValidation>
                             <InputGroup.Text id="inputGroupPrependPhone">📱</InputGroup.Text>
+
                             <Form.Control
                                 type='tel'
                                 placeholder="Телефон"
                                 aria-describedby="inputGroupPrepend"
                                 required
                                 name='Phone'
+
                                 // onChange={e => setValueLastEmail(e.target.value)}
 
                             />
+
                             <Form.Control.Feedback type="invalid">
                                 Пожалуйста введите номер телефон.
                             </Form.Control.Feedback>
