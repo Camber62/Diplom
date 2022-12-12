@@ -8,11 +8,15 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import Container from 'react-bootstrap/Container';
+import Toastr from './Toastr/Toastr2';
 
 
 function FormExample(props) {
 const basket=props.basket
 const totalPrice=props.totalPrice
+
+
+
 
     const [valueName, setValueName] = useState('');
     const [valueSurName, setValueSurName] = useState('');
@@ -27,9 +31,8 @@ const totalPrice=props.totalPrice
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
-        console.log(basket)
+        // console.log(basket)
         event.preventDefault();
-// if(validated===true){}
         const url = "https://doski2.onrender.com/send-order";
 
         const res = fetch(url, {
@@ -65,6 +68,7 @@ const totalPrice=props.totalPrice
 
     return (
         <Container>
+
             <Form noValidate id="tg" className="telegram-form form pt-5" validated={validated} onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -260,8 +264,20 @@ const totalPrice=props.totalPrice
                     {/*: <></>}*/}
                 </Row>
 
+                <Toastr
+                    title="Заявка успешно отправлена!"
+                    message="С вами свяжутся в скором времени."
+                    color="info"
+                    position="bottom-center"
+                >
+                    {({
+                          onShow,
+                          // onHide,
+                          // state
+                      }) => {
+                        return  <AwesomeButton onPress={onShow}  className="mb-5 " type="primary"><h6 >Сделать заказ</h6></AwesomeButton>}}
+                </Toastr>
 
-                <AwesomeButton className="mb-5" type="primary">Button</AwesomeButton>
             </Form>
         </Container>
     );

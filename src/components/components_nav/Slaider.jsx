@@ -32,7 +32,7 @@ const News = [
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 const Slider = (props) => {
-    const modalShow = props.modalShow
+    // const modalShow = props.modalShow
     const setModalShow = props.setModalShow
     // const modalBlog=props.modalBlog
     const setModalBlog = props.setModalBlog

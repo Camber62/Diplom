@@ -49,7 +49,7 @@ const NavComponent = (props) => {
                 </div> :
                 <></>}
 
-            <Container fluid="md">
+            <Container fluid="md" >
                 <Row className="pt-3">
                     <Col lg={5} className="p-0">
                         <div className="mb-1">
@@ -176,7 +176,7 @@ const NavComponent = (props) => {
                         :
                         <Col sm={12} className="mt-1 mt-sm-0">
 
-                            <Nav className="Rounded  ">
+                            <Nav className="Rounded  flex-column">
                                 {showBtn ?
                                     <></> : <button className="back border-0" onClick={() => {
                                         navigate(-1);
