@@ -275,7 +275,7 @@ const totalPrice=props.totalPrice
                           // onHide,
                           // state
                       }) => {
-                        return  <AwesomeButton onPress={onShow}  className="mb-5 " type="primary"><h6 >Сделать заказ</h6></AwesomeButton>}}
+                        return  <AwesomeButton onPress={onShow}  className="mb-5 btn_form" type="primary"><h6 >Сделать заказ</h6></AwesomeButton>}}
                 </Toastr>
 
             </Form>
