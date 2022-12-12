@@ -34,7 +34,7 @@ const AboutUs = () => {
 
 
             <p>
-                Напишите нам на kargowood@yandex.ru. Мы понравимся друг другу 
+                Напишите нам на kargowood@yandex.ru. Мы понравимся друг другу :-)
             </p>
         </Container>
     )
