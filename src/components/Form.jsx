@@ -9,14 +9,11 @@ import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import Container from 'react-bootstrap/Container';
 import Toastr from './Toastr/Toastr2';
-import InputMask from 'react-input-mask';
 
 
 function FormExample(props) {
-const basket=props.basket
-const totalPrice=props.totalPrice
-
-
+    const basket = props.basket
+    const totalPrice = props.totalPrice
 
 
     const [valueName, setValueName] = useState('');
@@ -56,9 +53,7 @@ const totalPrice=props.totalPrice
                 },
             }, 5000);
 
-            console.log(res)
-            console.log(res.status)
-
+            // console.log(res);
             const form = event.currentTarget;
             if (form.checkValidity() === false) {
                 event.preventDefault();
@@ -66,12 +61,14 @@ const totalPrice=props.totalPrice
             }
 
             setValidated(true);
-        } catch(err) {
+        }
+
+
+        catch (err) {
             console.log('error')
             console.error(err)
         }
     };
-
     const fetchWithTimeout = function (url, options, timeout = 7000) {
         return Promise.race([
             fetch(url, options),
@@ -166,7 +163,7 @@ const totalPrice=props.totalPrice
 
 
                 <Row>
-                    <InputGroup className="flex-column" >
+                    <InputGroup className="flex-column">
                         <h5 className="mb-3 mt-3">НАНЕСЕНИЕ ЛОГОТИПА</h5>
                         <ToggleButtonGroup className="w-25" type="radio" name="options-logo"
                                            onClick={(e) => {
@@ -291,10 +288,12 @@ const totalPrice=props.totalPrice
                 >
                     {({
                           onShow,
-                          // onHide,
-                          // state
+                          onHide,
+                          state
                       }) => {
-                        return  <AwesomeButton onPress={onShow}  className="mb-5 btn_form" type="primary"><h6 >Сделать заказ</h6></AwesomeButton>}}
+                        return <AwesomeButton onPress={onShow} className="mb-5 btn_form" type="primary"><h6>Сделать
+                            заказ</h6></AwesomeButton>
+                    }}
                 </Toastr>
 
             </Form>
