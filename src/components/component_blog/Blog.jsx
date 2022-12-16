@@ -70,7 +70,7 @@ const BlogNavComponent = () => {
                         <Slider>
                             {arrBlog.map((int, element) => {
                                 return (
-                                    <Slide index={element}>
+                                    <Slide key={element} index={element}>
                                         <img
                                         className='rounded-5 w-100 h-100'
                                         alt="vlog1"

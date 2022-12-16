@@ -5,7 +5,7 @@ import {Navbar, Nav} from "react-bootstrap";
 import Logo from "../icons/Лого.png"
 
 const Scroll =(event)=>{
-    // event.preventDefault();
+    event.preventDefault();
 
     window.scrollTo(0,0)
 }

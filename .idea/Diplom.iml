@@ -8,5 +8,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="axios" level="application" />
     <orderEntry type="library" name="js-cookie" level="application" />
+    <orderEntry type="library" name="jquery-3.6.1" level="application" />
   </component>
 </module>

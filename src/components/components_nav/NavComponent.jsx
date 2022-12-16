@@ -94,7 +94,7 @@ const NavComponent = (props) => {
                     {showContainerCol ?
                         <Col sm={12}>
                             <Nav id="Catalog" className="p-3 h-auto Rounded justify-content-around">
-                                <div className=' col-9 col-sm-5 col-md-3 px-3 text-center'>
+                                <div className=' col-9 col-sm-5 col-md-6 col-lg-3 px-3 text-center'>
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
                                     }} to="/ServingDishes">
@@ -105,7 +105,7 @@ const NavComponent = (props) => {
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-6 col-lg-3 px-3 text-center'>
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
                                     }} to="/Serving">
@@ -116,7 +116,7 @@ const NavComponent = (props) => {
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-6 col-lg-3 px-3 text-center'>
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
                                     }} to="/priceTags">
@@ -127,7 +127,7 @@ const NavComponent = (props) => {
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-6 col-lg-3 px-3 text-center'>
                                     <Link
                                         onClick={() => {
                                             setShowContainerCol(false)
@@ -139,7 +139,7 @@ const NavComponent = (props) => {
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-6 col-lg-3 px-3 text-center'>
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
                                     }} to="/chair">
@@ -149,7 +149,7 @@ const NavComponent = (props) => {
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-6 col-lg-3 px-3 text-center'>
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
                                     }} to="/platestags">
@@ -160,7 +160,7 @@ const NavComponent = (props) => {
                                     </Link>
                                 </div>
 
-                                <div className='col-9 col-sm-5 col-md-3 px-3 text-center'>
+                                <div className='col-9 col-sm-5 col-md-6 col-lg-3 px-3 text-center'>
                                     <Link onClick={() => {
                                         setShowContainerCol(false)
                                     }} to="/TeaStationsTrays">

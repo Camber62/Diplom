@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -27,10 +27,42 @@ function FormExample(props) {
 
 
     const [validated, setValidated] = useState(false);
+    const [valueShow, setValueShow] = useState(false);
 
-    const handleSubmit = async (event) => {
-        try {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
             event.preventDefault();
+            event.stopPropagation();
+        }
+        setValidated(true);
+
+
+    };
+
+    function Strata() {
+            if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '') {
+                setValueShow(false)
+            } else {
+                setValueShow(true)
+            }
+
+
+            console.log(valueShow)
+
+
+            if (valueShow){
+                zapros()
+            }
+    }
+
+
+    const zapros = async (event) => {
+        try {
+            // event.preventDefault();
             const url = "https://doski2.onrender.com/send-order";
 
             const res = await fetchWithTimeout(url, {
@@ -53,22 +85,13 @@ function FormExample(props) {
                 },
             }, 5000);
 
-            // console.log(res);
-            const form = event.currentTarget;
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-
-            setValidated(true);
-        }
-
-
-        catch (err) {
+        } catch (err) {
             console.log('error')
             console.error(err)
         }
-    };
+
+    }
+
     const fetchWithTimeout = function (url, options, timeout = 7000) {
         return Promise.race([
             fetch(url, options),
@@ -94,6 +117,9 @@ function FormExample(props) {
                             onChange={e => setValueName(e.target.value)}
                         />
                         <Form.Control.Feedback>Верно!</Form.Control.Feedback>
+                        <Form.Control.Feedback type="invalid">
+                            Пожалуйста введите Имя
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="4" controlId="validationCustom02">
                         <Form.Label>Фамилия</Form.Label>
@@ -105,6 +131,9 @@ function FormExample(props) {
                             onChange={e => setValueSurName(e.target.value)}
                         />
                         <Form.Control.Feedback>Верно!</Form.Control.Feedback>
+                        <Form.Control.Feedback type="invalid">
+                            Пожалуйста введите фамилию
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="4" controlId="validationCustom02">
                         <Form.Label>Отчество</Form.Label>
@@ -116,6 +145,9 @@ function FormExample(props) {
                             // onChange={e => setValueSurName(e.target.value)}
                         />
                         <Form.Control.Feedback>Верно!</Form.Control.Feedback>
+                        <Form.Control.Feedback type="invalid">
+                            Пожалуйста введите Отчество
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="4" controlId="validationCustomPhone">
                         <Form.Label>Телефон</Form.Label>
@@ -291,7 +323,10 @@ function FormExample(props) {
                           onHide,
                           state
                       }) => {
-                        return <AwesomeButton onPress={onShow} className="mb-5 btn_form" type="primary"><h6>Сделать
+                        return <AwesomeButton onPress={() => {
+                            Strata();
+                        }} className="mb-5 btn_form"
+                                              type="primary"><h6>Сделать
                             заказ</h6></AwesomeButton>
                     }}
                 </Toastr>
