@@ -27,7 +27,7 @@ server.post('/send-order', async (req,res)=>{
 <b>Товары:</b>
 `
     for (let i = 0; i < req.body.basket.length; i++) {
-        message += ` \n <b>${i + 1}.</b> ${req.body.basket[i].name} ${req.body.basket[i].count}штук`
+        message += ` \n <b>${i + 1}.</b> ${req.body.basket[i].name} Колличество: ${req.body.basket[i].count}`
     }
     message += `\n <b>Общая стоимость:</b>${req.body.totalPrice}`
     await telegram.sendToPrivateChat(message)

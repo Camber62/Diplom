@@ -26,7 +26,6 @@ const News = [
 
 
     {id: 1, name: "Stocks1", about: "StocksStocksStocks1", img: "/"},
-    {id: 2, name: "Stocks2", about: "StocksStocksStocks2", img: "/"},
 ]
 
 
