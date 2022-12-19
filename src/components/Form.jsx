@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -27,7 +27,6 @@ function FormExample(props) {
 
 
     const [validated, setValidated] = useState(false);
-    const [valueSending, setValueSending] = useState(false);
 
 
     const handleSubmit = (event) => {
@@ -43,20 +42,15 @@ function FormExample(props) {
 
     };
 
-    function Sending() {
+    async function Sending() {
             if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '') {
-                setValueSending(false)
-            } else {
-                setValueSending(true)
+                return false
             }
 
 
-            console.log(valueSending)
+            await zapros()
 
-
-            // if (valueShow){
-            //     zapros()
-            // }
+            return true
     }
 
 
@@ -64,8 +58,7 @@ function FormExample(props) {
         try {
             // event.preventDefault();
             const url = "https://doski2.onrender.com/send-order";
-
-            const res = await fetchWithTimeout(url, {
+            await fetchWithTimeout(url, {
                 method: "POST",
                 body: JSON.stringify({
                     valueName,
@@ -84,7 +77,6 @@ function FormExample(props) {
                     "Content-Type": "application/json"
                 },
             }, 5000);
-
         } catch (err) {
             console.log('error')
             console.error(err)
@@ -323,8 +315,12 @@ function FormExample(props) {
                           onHide,
                           state
                       }) => {
-                        return <AwesomeButton onPress={() => {
-                            Sending();
+                        return <AwesomeButton onPress={async () => {
+                            const ces = await Sending();
+
+                            if (ces) {
+                                onShow();
+                            }
                         }} className="mb-5 btn_form"
                                               type="primary"><h6>Сделать
                             заказ</h6></AwesomeButton>
