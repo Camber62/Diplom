@@ -40,7 +40,7 @@ const AllCardsElement = (props) => {
 
                             <div className="textAnnouncement"><Link onClick={() => {setElementCard(int);setShowBtn(true)}} to={`/${int.name}`}>{int.TextAnnouncement}</Link></div>
 
-                            <div>{int.price}</div>
+                            <div>{int.price}руб</div>
 
                             <AwesomeButton
                                 className="my-2 position_btn"
