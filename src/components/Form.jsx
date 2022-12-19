@@ -27,7 +27,7 @@ function FormExample(props) {
 
 
     const [validated, setValidated] = useState(false);
-    const [valueShow, setValueShow] = useState(false);
+    const [valueSending, setValueSending] = useState(false);
 
 
     const handleSubmit = (event) => {
@@ -43,20 +43,20 @@ function FormExample(props) {
 
     };
 
-    function Strata() {
+    function Sending() {
             if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '') {
-                setValueShow(false)
+                setValueSending(false)
             } else {
-                setValueShow(true)
+                setValueSending(true)
             }
 
 
-            console.log(valueShow)
+            console.log(valueSending)
 
 
-            if (valueShow){
-                zapros()
-            }
+            // if (valueShow){
+            //     zapros()
+            // }
     }
 
 
@@ -324,7 +324,7 @@ function FormExample(props) {
                           state
                       }) => {
                         return <AwesomeButton onPress={() => {
-                            Strata();
+                            Sending();
                         }} className="mb-5 btn_form"
                                               type="primary"><h6>Сделать
                             заказ</h6></AwesomeButton>

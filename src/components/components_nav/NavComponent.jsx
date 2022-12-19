@@ -74,7 +74,7 @@ const NavComponent = (props) => {
                                 <Link onClick={() => {scrollTo(0, 450);setShowContainerCol(false)}} to="/TeaStationsTrays"><b>-ПОДНОСЫ</b></Link>
                             </div>
                             <div className="mt-3 text-left text_color">
-                                <h5>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ
+                                <h5 className='text-center'>МАСТЕРСКАЯ ИЗДЕЛИЙ ИЗ
                                 НАТУРАЛЬНОГО ДЕРЕВА
                                 ДЛЯ ВАШЕГО
                                 БИЗНЕСА</h5>
@@ -87,7 +87,7 @@ const NavComponent = (props) => {
                                 setModalBlog={setModalBlog}/>
                     </Col>
                 </Row>
-                <h4 id='catalog' className="pt-5 text-center fw-bold">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </h4>
+                <h4 id='catalog' className="pt-5 text-center ">В КАТАЛОГЕ ПРЕДСТАВЛЕННЫ ГОТОВЫЕ ФОРМЫ ИЗДЕЛИЙ ИЗ ДЕРЕВА. </h4>
 
                 <Row className=" m-0 mt-5">
 
