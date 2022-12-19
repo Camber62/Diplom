@@ -44,7 +44,7 @@ const BlogNavComponent = () => {
                             setShowContainer(false);
                         }}><img alt='alt' src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
                 </button>
-            <div className='px-3 Rounded bg-white d-flex align-items-center flex-column'>
+            <div className='vlog px-3 Rounded bg-white d-flex align-items-center flex-column'>
 
                 <p className='text-center px-3'>{cardBlog.textContent}</p>
                 <img className='imgVlog'  src={cardBlog.imgVlog} alt="imgVlog"/>
