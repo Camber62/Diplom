@@ -22,7 +22,7 @@ function FormExample(props) {
     const [valueLogo, setValueLogo] = useState('');
     const [valuePayment, setValuePayment] = useState('');
     const [valueDelivery, setValueDelivery] = useState('');
-    // const [valueSity, setValueSity] = useState('');
+    const [valueSity, setValueSity] = useState('');
     const [valueStreet, setValueStreet] = useState('');
 
 
@@ -43,7 +43,7 @@ function FormExample(props) {
     };
 
     async function Sending() {
-        if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '') {
+        if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '' || valueSity === '') {
             return false
         }
 
@@ -67,7 +67,7 @@ function FormExample(props) {
                     valueLogo,
                     valuePayment,
                     valueDelivery,
-                    // valueSity,
+                    valueSity,
                     valueStreet,
                     basket,
                     totalPrice
@@ -153,7 +153,7 @@ function FormExample(props) {
                                 required
                                 name='Phone'
 
-                                // onChange={e => setValueLastEmail(e.target.value)}
+                                onChange={e => setValueSity(e.target.value)}
 
                             />
 
