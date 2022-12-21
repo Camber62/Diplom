@@ -18,6 +18,7 @@ server.post('/send-order', async (req,res)=>{
 
 <b>Имя:</b> ${req.body.valueName}
 <b>Фамилия:</b> ${req.body.valueSurName}
+<b>Отчество:</b> ${req.body.valueSurName2}
 <b>Емайл:</b> ${req.body.valueLastEmail}
 <b>Телефон:</b> ${req.body.valueSity}
 <b>Лого:</b> ${req.body.valueLogo}

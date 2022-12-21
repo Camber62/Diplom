@@ -18,6 +18,7 @@ function FormExample(props) {
 
     const [valueName, setValueName] = useState('');
     const [valueSurName, setValueSurName] = useState('');
+    const [valueSurName2, setValueSurName2] = useState('');
     const [valueLastEmail, setValueLastEmail] = useState('');
     const [valueLogo, setValueLogo] = useState('');
     const [valuePayment, setValuePayment] = useState('');
@@ -43,7 +44,7 @@ function FormExample(props) {
     };
 
     async function Sending() {
-        if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '' || valueSity === '') {
+        if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '' || valueSity === '' || valueSurName2 === '') {
             return false
         }
 
@@ -70,7 +71,8 @@ function FormExample(props) {
                     valueSity,
                     valueStreet,
                     basket,
-                    totalPrice
+                    totalPrice,
+                    valueSurName2
 
                 }),
                 headers: {
@@ -134,7 +136,7 @@ function FormExample(props) {
                             type="text"
                             placeholder="Отчество"
                             name="lastName"
-                            onChange={e => setValueSurName(e.target.value)}
+                            onChange={e => setValueSurName2(e.target.value)}
                         />
                         <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                         <Form.Control.Feedback type="invalid">
