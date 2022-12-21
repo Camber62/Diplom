@@ -134,7 +134,7 @@ function FormExample(props) {
                             type="text"
                             placeholder="Отчество"
                             name="lastName"
-                            // onChange={e => setValueSurName(e.target.value)}
+                            onChange={e => setValueSurName(e.target.value)}
                         />
                         <Form.Control.Feedback>Верно!</Form.Control.Feedback>
                         <Form.Control.Feedback type="invalid">
@@ -152,7 +152,6 @@ function FormExample(props) {
                                 aria-describedby="inputGroupPrepend"
                                 required
                                 name='Phone'
-
                                 onChange={e => setValueSity(e.target.value)}
 
                             />
