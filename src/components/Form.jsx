@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -22,7 +22,7 @@ function FormExample(props) {
     const [valueLogo, setValueLogo] = useState('');
     const [valuePayment, setValuePayment] = useState('');
     const [valueDelivery, setValueDelivery] = useState('');
-    const [valueSity, setValueSity] = useState('');
+    // const [valueSity, setValueSity] = useState('');
     const [valueStreet, setValueStreet] = useState('');
 
 
@@ -43,14 +43,14 @@ function FormExample(props) {
     };
 
     async function Sending() {
-            if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '') {
-                return false
-            }
+        if (valueName === '' || valueSurName === '' || valueLastEmail === '' || valueLogo === '' || valuePayment === '' || valueDelivery === '') {
+            return false
+        }
 
 
-            await zapros()
+        await zapros()
 
-            return true
+        return true
     }
 
 
@@ -67,7 +67,7 @@ function FormExample(props) {
                     valueLogo,
                     valuePayment,
                     valueDelivery,
-                    valueSity,
+                    // valueSity,
                     valueStreet,
                     basket,
                     totalPrice
@@ -276,31 +276,32 @@ function FormExample(props) {
                     {/*{valueDelivery==="Доставка" ?*/}
                     <div className={valueDelivery === "Доставка" ? "" : "none"}>
                         <Form.Group md="6" controlId="validationCustom03">
-                            <Form.Label>Город</Form.Label>
+                            <Form.Label>Ваш адрес</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Город"
+                                placeholder="Адрес"
                                 required
                                 onChange={e => setValueStreet(e.target.value)}
 
                             />
                             <Form.Control.Feedback type="invalid">
-                                Please provide a valid city.
+                                Введите пожалуйста ваш адрес.
                             </Form.Control.Feedback>
                         </Form.Group>
-                        <Form.Group md="3" controlId="validationCustom04">
-                            <Form.Label>Улица</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Улица"
-                                required
-                                onChange={e => setValueSity(e.target.value)}
+                        {/*<Form.Group md="3" controlId="validationCustom04">*/}
+                        {/*    <Form.Label>Улица</Form.Label>*/}
+                        {/*    <Form.Control*/}
+                        {/*        type="text"*/}
+                        {/*        placeholder="Улица"*/}
+                        {/*        required*/}
+                        {/*        onChange={e => setValueSity(e.target.value)}*/}
 
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                Please provide a valid state.
-                            </Form.Control.Feedback>
-                        </Form.Group></div>
+                        {/*    />*/}
+                        {/*    <Form.Control.Feedback type="invalid">*/}
+                        {/*        Please provide a valid state.*/}
+                        {/*    </Form.Control.Feedback>*/}
+                        {/*</Form.Group>*/}
+                    </div>
                     {/*: <></>}*/}
                 </Row>
 

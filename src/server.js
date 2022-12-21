@@ -22,8 +22,7 @@ server.post('/send-order', async (req,res)=>{
 <b>Лого:</b> ${req.body.valueLogo}
 <b>Оплата:</b> ${req.body.valuePayment}
 <b>Доставка:</b> ${req.body.valueDelivery}
-<b>Город:</b> ${req.body.valueSity}
-<b>Улица:</b> ${req.body.valueStreet}
+<b>Адрес доставки:</b> ${req.body.valueStreet}
 <b>Товары:</b>
 `
     for (let i = 0; i < req.body.basket.length; i++) {
