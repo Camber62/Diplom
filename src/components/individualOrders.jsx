@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 const IndividualOrders = () => {
     return (
         <Container className="p-0 pt-5">
-            <h4 id='individualOrders '>ИНДИВИДУЛЬНЫЕ ЗАКАЗЫ</h4>
+            <h4 id='individualOrders'>ИНДИВИДУЛЬНЫЕ ЗАКАЗЫ</h4>
             <p>Мы готовы воплотить в жизнь Ваши идеи. Необычная форма, обжиг, брашировка, нестандартный размер? Любые
                 Ваши пожелания отправьте на нашу почту kargowood@yandex.ru. Если у Вас есть примерное фото желаемого –
                 приложите его к письму.</p>

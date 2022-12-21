@@ -72,7 +72,7 @@ const BlogNavComponent = () => {
                                 return (
                                     <Slide className='text-center' key={element} index={element}>
                                         <img
-                                        className='rounded-5 w-75 h-100'
+                                        className='cursor rounded-5 w-75 h-100'
                                         alt="vlog1"
                                         src={int.img}
                                         onClick={() => {

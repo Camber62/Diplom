@@ -68,14 +68,14 @@ const Basket = (props) => {
                                         <td>{int.name}</td>
                                         <td className='text-center'>{int.price}</td>
                                         <td className='text-center'>
-                                            <button className="bg-white border-0" value="-" onClick={(e) => {
+                                            <button className=" bg-white border-0" value="-" onClick={(e) => {
                                                 Count(e, int)
-                                            }}>-
+                                            }}> -
                                             </button>
                                             <p className='d-block d-md-inline my-3'>{int.count}</p>
-                                            <button className="bg-white border-0" value="+" onClick={(e) => {
+                                            <button className=" bg-white border-0" value="+" onClick={(e) => {
                                                 Count(e, int)
-                                            }}>+
+                                            }}> +
                                             </button>
                                         </td>
                                         <td className='text-center'>{int.totalPrice}</td>
