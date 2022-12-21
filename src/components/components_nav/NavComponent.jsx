@@ -42,7 +42,7 @@ const NavComponent = (props) => {
         <>
             {modalShow ?
                 <div className="modalWindow">
-                    <div className="w-50 bg-light m-5 p-5">
+                    <div className="w-50 bg-light m-5 p-0 p-sm-5">
                         <button className=" border-0  float-end" onClick={() => setModalShow(false)}>X</button>
                         <p>{modalBlog.name}</p>
                         <p>{modalBlog.about}</p></div>
