@@ -176,7 +176,7 @@ function FormExample(props) {
 
                             />
                             <Form.Control.Feedback type="invalid">
-                                Please choose a email.
+                                Введите корректный Email.
                             </Form.Control.Feedback>
                         </InputGroup>
                     </Form.Group>
